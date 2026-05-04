@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "岁月故事 · LifePoem — your memories, preserved forever",
+    "description": "LifePoem is a warm, AI-guided app that helps elderly users preserve life stories through voice or text—in Chinese, English, Malay, or Tamil."
+  },
+  "localeNames": {
+    "en": "English",
+    "zh": "中文",
+    "ms": "Bahasa Melayu",
+    "ta": "தமிழ்"
+  },
+  "nav": {
+    "language": "Language"
+  },
+  "legal": {
+    "home": "Home",
+    "linkPrivacy": "Privacy Policy",
+    "linkTerms": "Terms of Service"
+  },
+  "hero": {
+    "chineseTitle": "岁月故事",
+    "name": "LifePoem",
+    "tagline": "Your memories, preserved forever.",
+    "intro": "A warm, AI-guided chat for elderly storytellers: speak a memory, answer gentle questions, and watch it become a beautiful written story—in Chinese or English.",
+    "ctaApp": "See the app",
+    "ctaAbout": "Why LifePoem"
+  },
+  "valueProps": {
+    "heading": "Made for real conversations",
+    "sub": "Large touch targets, clear type, and no time pressure—so the focus stays on the person telling the story.",
+    "items": [
+      {
+        "title": "AI-guided storytelling",
+        "body": "Gentle follow-up questions across life stages so each memory becomes a full chapter—at a pace that never feels rushed."
+      },
+      {
+        "title": "Speak or type",
+        "body": "Hold to record with transcription, or use the keyboard. Stories can be written in Chinese or English anytime."
+      },
+      {
+        "title": "Save and share",
+        "body": "Streamed story text, readable fonts, and export to image cards for family on WhatsApp, WeChat, and more."
+      }
+    ]
+  },
+  "screenshots": {
+    "heading": "Inside the app",
+    "sub": "Use the arrows or dots to browse six screens from LifePoem.",
+    "slides": [
+      {
+        "title": "A gentle start",
+        "body": "A calm welcome and typing animation—no rush, no clutter—before the conversation begins.",
+        "alt": "LifePoem app — welcome or home"
+      },
+      {
+        "title": "Life stages",
+        "body": "Move through childhood, family, work, and more. Progress lives in one simple hub.",
+        "alt": "LifePoem app — life stages"
+      },
+      {
+        "title": "Chat that listens",
+        "body": "Speak or type; the app asks one warm question at a time so memories surface naturally.",
+        "alt": "LifePoem app — chat experience"
+      },
+      {
+        "title": "Your rhythm",
+        "body": "Large controls, readable type, and bilingual support—Chinese or English whenever you want.",
+        "alt": "LifePoem app — story or settings"
+      },
+      {
+        "title": "Stories take shape",
+        "body": "Watch chapters stream in with a typewriter feel, tuned for comfortable reading.",
+        "alt": "LifePoem app — story view"
+      },
+      {
+        "title": "Share the legacy",
+        "body": "Export a polished card to WhatsApp, WeChat, and other channels the family already uses.",
+        "alt": "LifePoem app — share or export"
+      }
+    ]
+  },
+  "footer": {
+    "brandLine": "岁月故事 · LifePoem",
+    "tagline": "Your memories, preserved forever.",
+    "ctaScreenshots": "Back to screenshots",
+    "copyright": "© 2026 Resetrix Pte. Ltd."
+  },
+  "a11y": {
+    "prevScreenshot": "Previous screenshot",
+    "nextScreenshot": "Next screenshot",
+    "screenshotSlides": "Screenshot slides",
+    "slideNumber": "Slide {current} of {total}"
+  }
+}

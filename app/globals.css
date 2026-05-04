@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* Palette from lib/app_theme.dart — AppTheme.bgColor, primaryBrown, textDark */
+:root {
+  --background: #f5efe4;
+  --foreground: #3e2b1a;
+  --lifepoem-bg: #f5efe4;
+  --lifepoem-card: #ffffff;
+  --lifepoem-primary: #8b4513;
+  --lifepoem-primary-hover: #6b3309;
+  --lifepoem-primary-soft: rgba(139, 69, 19, 0.12);
+  --lifepoem-text: #3e2b1a;
+  --lifepoem-text-muted: #5c4a3a;
+  --lifepoem-border: #d4c4b0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: "Source Serif 4", "Noto Serif SC", "Songti SC", Georgia, serif;
+}
+
+body {
+  background: var(--lifepoem-bg);
+  color: var(--lifepoem-text);
+  font-family:
+    "Source Sans 3",
+    "Noto Sans SC",
+    "Noto Sans Tamil",
+    var(--font-geist-sans),
+    system-ui,
+    sans-serif;
+}

@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "岁月故事 · LifePoem — ingatan anda, kekal selamanya",
+    "description": "LifePoem ialah aplikasi mesra yang dipandu AI untuk membantu warga emas merakam kisah hidup melalui suara atau teks—dalam Cina, Inggeris, Melayu, atau Tamil."
+  },
+  "localeNames": {
+    "en": "English",
+    "zh": "中文",
+    "ms": "Bahasa Melayu",
+    "ta": "தமிழ்"
+  },
+  "nav": {
+    "language": "Bahasa"
+  },
+  "legal": {
+    "home": "Laman utama",
+    "linkPrivacy": "Dasar Privasi",
+    "linkTerms": "Syarat Perkhidmatan"
+  },
+  "hero": {
+    "chineseTitle": "岁月故事",
+    "name": "LifePoem",
+    "tagline": "Ingatan anda, kekal selamanya.",
+    "intro": "Sembang hangat dipandu AI untuk pencerita warga emas: ucapkan memori, jawab soalan lembut, dan lihat ia menjadi cerita indah—dalam Cina atau Inggeris.",
+    "ctaApp": "Lihat aplikasi",
+    "ctaAbout": "Mengapa LifePoem"
+  },
+  "valueProps": {
+    "heading": "Dibina untuk perbualan sebenar",
+    "sub": "Sasaran sentuh besar, jenis huruf jelas, dan tiada tekanan masa—fokus kekal pada orang yang bercerita.",
+    "items": [
+      {
+        "title": "Penceritaan dipandu AI",
+        "body": "Soalan susulan lembut merentas fasa hidup supaya setiap memori menjadi bab penuh—pada rentak yang tidak terburu-buru."
+      },
+      {
+        "title": "Cakap atau taip",
+        "body": "Tahan untuk rakam dengan transkripsi, atau gunakan papan kekunci. Cerita boleh ditulis dalam Cina atau Inggeris bila-bila masa."
+      },
+      {
+        "title": "Simpan dan kongsi",
+        "body": "Teks cerita strim, font mudah dibaca, dan eksport ke kad bergambar untuk keluarga di WhatsApp, WeChat, dan lain-lain."
+      }
+    ]
+  },
+  "screenshots": {
+    "heading": "Dalaman aplikasi",
+    "sub": "Gunakan anak panah atau titik di bawah untuk melayari enam skrin LifePoem.",
+    "slides": [
+      {
+        "title": "Permulaan lembut",
+        "body": "Alu-aluan tenang dan animaasi menaip—tak sesak, tak tergesa—sebelum perbualan bermula.",
+        "alt": "Apl LifePoem — aluan atau laman utama"
+      },
+      {
+        "title": "Peringkat hidup",
+        "body": "Kanak-kanak, keluarga, kerja, dan seterusnya; kemajuan dipaparkan di satu hab ringkas.",
+        "alt": "Apl LifePoem — peringkat hidup"
+      },
+      {
+        "title": "Sembang yang mendengar",
+        "body": "Cakap atau taip; aplikasi bertanya satu soalan hangat pada satu masa supaya memori muncul secara semula jadi.",
+        "alt": "Apl LifePoem — pengalaman sembang"
+      },
+      {
+        "title": "Rentak anda",
+        "body": "Kawalan besar, huruf jelas, dan sokongan dwibahasa—Cina atau Inggeris bila-bila masa.",
+        "alt": "Apl LifePoem — cerita atau tetapan"
+      },
+      {
+        "title": "Cerita mengambil bentuk",
+        "body": "Perhatikan bab distrim seperti mesin taip, diperhalusi untuk bacaan selesa.",
+        "alt": "Apl LifePoem — paparan cerita"
+      },
+      {
+        "title": "Kongsi legasi",
+        "body": "Eksport kad kemas ke WhatsApp, WeChat, dan saluran keluarga lain.",
+        "alt": "Apl LifePoem — kongsi atau eksport"
+      }
+    ]
+  },
+  "footer": {
+    "brandLine": "岁月故事 · LifePoem",
+    "tagline": "Ingatan anda, kekal selamanya.",
+    "ctaScreenshots": "Kembali ke tangkap skrin",
+    "copyright": "© 2026 Resetrix Pte. Ltd."
+  },
+  "a11y": {
+    "prevScreenshot": "Tangkap skrin sebelumnya",
+    "nextScreenshot": "Tangkap skrin seterusnya",
+    "screenshotSlides": "Slaid tangkap skrin",
+    "slideNumber": "Slaid {current} daripada {total}"
+  }
+}

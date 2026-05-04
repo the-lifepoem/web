@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "title": "岁月故事 · LifePoem — 让回忆永存",
+    "description": "岁月故事（LifePoem）是一款温暖、由 AI 引导的应用，帮助长辈用语音或文字保存人生故事，支持中文、英语、马来语和泰米尔语。"
+  },
+  "localeNames": {
+    "en": "English",
+    "zh": "中文",
+    "ms": "Bahasa Melayu",
+    "ta": "தமிழ்"
+  },
+  "nav": {
+    "language": "语言"
+  },
+  "legal": {
+    "home": "首页",
+    "linkPrivacy": "隐私政策",
+    "linkTerms": "服务条款"
+  },
+  "hero": {
+    "chineseTitle": "岁月故事",
+    "name": "LifePoem",
+    "tagline": "让回忆永存。",
+    "intro": "为长辈设计的温暖 AI 陪聊：说出一段回忆、回答轻柔的追问，看它变成一篇优美的成文故事——支持中文与英文。",
+    "ctaApp": "看看应用",
+    "ctaAbout": "为何选择 LifePoem"
+  },
+  "valueProps": {
+    "heading": "为真实对话而造",
+    "sub": "大按钮、清晰字体、没有计时压力——让讲述的人始终被温柔对待。",
+    "items": [
+      {
+        "title": "AI 引导叙说",
+        "body": "按照人生阶段轻轻追问，让每一段记忆都能慢慢长成完整篇章，节奏从不催促。"
+      },
+      {
+        "title": "可说可写",
+        "body": "长按录音并转写，或直接用键盘输入。故事可随时用中文或英文书写。"
+      },
+      {
+        "title": "保存与分享",
+        "body": "故事文字流式呈现、字体易读，还可导出成精美图片卡片，发到微信、WhatsApp 等家人常用的渠道。"
+      }
+    ]
+  },
+  "screenshots": {
+    "heading": "应用一瞥",
+    "sub": "用左右箭头或下方圆点浏览 LifePoem 的六张界面截图。",
+    "slides": [
+      {
+        "title": "温柔开场",
+        "body": "舒缓的欢迎与打字动效——不拥挤、不催促，让对话从安心开始。",
+        "alt": "LifePoem 应用 — 欢迎或首页"
+      },
+      {
+        "title": "人生阶段",
+        "body": "童年、家庭、工作……一路走来；进度集中呈现在一处简洁的中心。",
+        "alt": "LifePoem 应用 — 人生阶段"
+      },
+      {
+        "title": "会倾听的对话",
+        "body": "可说可写；应用每次只问一个温暖的问题，让回忆自然浮现。",
+        "alt": "LifePoem 应用 — 对话界面"
+      },
+      {
+        "title": "你的节奏",
+        "body": "大号控件、清晰字型与双语界面——中文或英文随时切换。",
+        "alt": "LifePoem 应用 — 故事或设置"
+      },
+      {
+        "title": "故事成篇",
+        "body": "章节如打字机般流泻，版式为舒适阅读而调校。",
+        "alt": "LifePoem 应用 — 故事阅读"
+      },
+      {
+        "title": "把爱传下去",
+        "body": "导出精致卡片，分享到微信、WhatsApp 等家人所在的地方。",
+        "alt": "LifePoem 应用 — 分享或导出"
+      }
+    ]
+  },
+  "footer": {
+    "brandLine": "岁月故事 · LifePoem",
+    "tagline": "让回忆永存。",
+    "ctaScreenshots": "返回截图",
+    "copyright": "© 2026 Resetrix Pte. Ltd."
+  },
+  "a11y": {
+    "prevScreenshot": "上一张截图",
+    "nextScreenshot": "下一张截图",
+    "screenshotSlides": "截图幻灯片",
+    "slideNumber": "第 {current} 张，共 {total} 张"
+  }
+}
