@@ -29,6 +29,15 @@ export function LandingFooter() {
             >
               {dict.legal.linkTerms}
             </Link>
+            <span className="text-[var(--lifepoem-border)]" aria-hidden>
+              ·
+            </span>
+            <Link
+              className="text-[var(--lifepoem-primary)] underline-offset-2 hover:underline"
+              href={`/${locale}/contact`}
+            >
+              {dict.legal.linkContact}
+            </Link>
           </div>
           <p className="mt-6 text-xs text-[var(--lifepoem-text-muted)]">{dict.footer.copyright}</p>
         </div>

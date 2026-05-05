@@ -15,7 +15,21 @@
   "legal": {
     "home": "Home",
     "linkPrivacy": "Privacy Policy",
-    "linkTerms": "Terms of Service"
+    "linkTerms": "Terms of Service",
+    "linkContact": "Contact Us"
+  },
+  "contact": {
+    "metaTitle": "Contact Us · LifePoem",
+    "metaDescription": "Reach out to the LifePoem team for support or partnership inquiries.",
+    "heading": "Contact Us",
+    "body": "We would love to hear from you. Send us a message and our team will reply as soon as possible.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "How can we help you?",
+    "ctaSend": "Send message",
+    "successMessage": "Thanks for reaching out. We received your message.",
+    "errorMessage": "Please check your details and try again.",
+    "emailLine": "Messages are delivered to support@lifepoem.one"
   },
   "hero": {
     "chineseTitle": "岁月故事",

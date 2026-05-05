@@ -15,7 +15,21 @@
   "legal": {
     "home": "首页",
     "linkPrivacy": "隐私政策",
-    "linkTerms": "服务条款"
+    "linkTerms": "服务条款",
+    "linkContact": "联系我们"
+  },
+  "contact": {
+    "metaTitle": "联系我们 · LifePoem",
+    "metaDescription": "联系 LifePoem 团队，获取支持、反馈或合作咨询。",
+    "heading": "联系我们",
+    "body": "欢迎随时联系。请填写并提交留言，我们会尽快回复您。",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "您的邮箱",
+    "messagePlaceholder": "请告诉我们您需要什么帮助",
+    "ctaSend": "发送消息",
+    "successMessage": "感谢您的来信，我们已收到您的消息。",
+    "errorMessage": "请检查填写内容后再试一次。",
+    "emailLine": "消息将发送至 support@lifepoem.one"
   },
   "hero": {
     "chineseTitle": "岁月故事",

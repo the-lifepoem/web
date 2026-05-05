@@ -15,7 +15,21 @@
   "legal": {
     "home": "Laman utama",
     "linkPrivacy": "Dasar Privasi",
-    "linkTerms": "Syarat Perkhidmatan"
+    "linkTerms": "Syarat Perkhidmatan",
+    "linkContact": "Hubungi Kami"
+  },
+  "contact": {
+    "metaTitle": "Hubungi Kami · LifePoem",
+    "metaDescription": "Hubungi pasukan LifePoem untuk sokongan, maklum balas, atau pertanyaan kerjasama.",
+    "heading": "Hubungi Kami",
+    "body": "Kami ingin mendengar daripada anda. Hantar mesej anda dan pasukan kami akan membalas secepat mungkin.",
+    "namePlaceholder": "Nama anda",
+    "emailPlaceholder": "Emel anda",
+    "messagePlaceholder": "Bagaimana kami boleh membantu?",
+    "ctaSend": "Hantar mesej",
+    "successMessage": "Terima kasih. Kami telah menerima mesej anda.",
+    "errorMessage": "Sila semak maklumat anda dan cuba lagi.",
+    "emailLine": "Mesej dihantar ke support@lifepoem.one"
   },
   "hero": {
     "chineseTitle": "岁月故事",
