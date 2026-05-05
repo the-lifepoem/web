@@ -37,7 +37,8 @@
     "tagline": "让回忆永存。",
     "intro": "为长辈设计的温暖 AI 陪聊：说出一段回忆、回答轻柔的追问，看它变成一篇优美的成文故事——支持中文与英文。",
     "ctaApp": "看看应用",
-    "ctaAbout": "为何选择 LifePoem"
+    "ctaAbout": "为何选择 LifePoem",
+    "imageAlt": "LifePoem — 你的声音，你的故事。专为长辈打造的语音回忆录，支持 English、中文、Bahasa Melayu 与 தமிழ்。"
   },
   "valueProps": {
     "heading": "为真实对话而造",
