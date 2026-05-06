@@ -1,8 +1,8 @@
 "use server";
 
-import nodemailer from "nodemailer";
 import { redirect } from "next/navigation";
 
+import { deliverContactEmail } from "../../../lib/mailersend/send-contact-email";
 import type { Locale } from "../../../lib/i18n/config";
 
 type SendContactEmailArgs = {
@@ -24,24 +24,23 @@ export async function sendContactEmail({ locale }: SendContactEmailArgs, formDat
     redirect(`/${locale}/contact?status=invalid`);
   }
 
-  const smtpUser = process.env.MIGADU_EMAIL;
-  const smtpPass = process.env.MIGADU_PASSWORD;
-  if (!smtpUser || !smtpPass) redirect(`/${locale}/contact?status=error`);
+  const apiToken = process.env.MAILERSEND_API_TOKEN;
+  const fromEmail = process.env.MAILERSEND_FROM_EMAIL;
+  const toEmail = process.env.CONTACT_TO_EMAIL ?? "support@lifepoem.one";
+
+  if (!apiToken || !fromEmail) redirect(`/${locale}/contact?status=error`);
+
+  const subject = `New Contact Message from ${name}`;
+  const text = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: "smtp.migadu.com",
-      port: 465,
-      secure: true,
-      auth: { user: smtpUser, pass: smtpPass },
-    });
-
-    await transporter.sendMail({
-      from: '"LifePoem Website" <support@lifepoem.one>',
-      to: "support@lifepoem.one",
-      replyTo: email,
-      subject: `New Contact Message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    await deliverContactEmail({
+      apiToken,
+      fromEmail,
+      toEmail,
+      replyToEmail: email,
+      subject,
+      text,
     });
     redirect(`/${locale}/contact?status=success`);
   } catch (error) {
