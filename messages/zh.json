@@ -39,7 +39,8 @@
     "ctaApp": "看看应用",
     "ctaAbout": "为何选择 LifePoem",
     "imageAlt": "LifePoem — 你的声音，你的故事。专为长辈打造的语音回忆录，支持 English、中文、Bahasa Melayu 与 தமிழ்。",
-    "appStoreAlt": "在 App Store 下载 Life Poem"
+    "appStoreAlt": "在 App Store 下载 Life Poem",
+    "playStoreAlt": "在 Google Play 下载 Life Poem"
   },
   "valueProps": {
     "heading": "为真实对话而造",
