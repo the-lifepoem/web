@@ -2,129 +2,79 @@ import type { LegalDocument } from "../../legal-types";
 
 const doc: LegalDocument = {
   title: "Privacy Policy",
-  description:
-    "How Life Poem collects, uses, and protects personal data (Singapore PDPA; supplemental GDPR/CCPA notes).",
-  intro:
-    'This Privacy Policy explains how we collect, use, disclose, and protect your personal data when you use the Life Poem mobile application ("the App"). It is governed by the Personal Data Protection Act 2012 of Singapore ("PDPA") and supplemented, where applicable, by the rights described in Section 8 for users in other jurisdictions (e.g. the EU/UK GDPR and the California CCPA).\n\nBy installing and using Life Poem, you consent to the collection, use, and disclosure of your personal data as described in this Policy.',
+  description: "Personal-data handling in the LifePoem app and website under Singapore's PDPA.",
+  effectiveDate: "Effective date: 12 September 2026 · Version 2026-09-12-v2",
+  intro: "Resetrix Pte. Ltd. operates LifePoem. This policy covers our mobile app, website, support and print-order requests. It explains the purposes and recipients of personal data and your choices under Singapore's Personal Data Protection Act (PDPA). Reading this policy or continuing to use the service is not a substitute for consent where fresh consent is required.",
   crossLinkLabel: "Terms of Service",
   crossLinkPath: "terms",
   sections: [
     {
-      title: "1. Personal data we collect",
-      paragraphs: [
-        "We only collect what is necessary for the App to function. We do not run advertising, we do not sell your data, and we do not share it with data brokers.",
-      ],
+      title: "1. Data and purposes",
       bullets: [
-        "Phone number — provided when you sign in via SMS one-time password; held in Firebase Authentication and your account profile in Firestore.",
-        "Voice recordings — audio you record when answering an AI prompt; sent in real time to OpenAI Whisper for transcription via our Cloud Function. Resetrix does not retain audio after the request completes. OpenAI may retain API request payloads for up to 30 days for abuse-monitoring purposes per its API policy.",
-        "Photos — images you choose to attach to a story; uploaded to Firebase Cloud Storage, scoped to your account.",
-        "Story content and chat messages — your AI-guided conversation, story drafts, edits, and chosen writing style; sent to OpenAI (GPT-4o) for replies and story generation; stored in Firebase Firestore and cached locally in SQLite on your device.",
-        "Progress metadata — which life stage you are working on, and per-story timestamps; stored in Firebase Firestore.",
-        "User identifier — a Firebase Authentication user ID generated when you sign in, used as the key for all your data on our servers.",
-        "Device locale — the language setting of your device, used in-session to present the App in your language.",
+        "Account: your phone number goes to Firebase Authentication for SMS verification. A Firebase user identifier associates your data with your account; the app caches the phone number locally. Guest AI sessions use an anonymous Firebase identifier without cloud story sync.",
+        "Stories: text, conversation history, recordings, life stage, writing style and language are processed to transcribe your voice, reply and compose stories. Chat messages and stories are stored locally in SQLite; saved stories, progress and image metadata sync to Firestore for signed-in, non-guest accounts.",
+        "Photos: images you choose are copied into the app's private storage and, for signed-in accounts, uploaded to Firebase Storage to illustrate and restore your stories.",
+        "Printing: recipient name, phone, postal/street/unit address, country, selected story stages, quantities and order status are stored in Firestore and locally to handle your print request. Remembering an address is an optional local setting. Payment and final delivery arrangements are handled manually, not by an in-app payment SDK.",
+        "Support and website contact: name, email address and the message you submit are used to respond to your enquiry. They pass through our website server and MailerSend to our support mailbox. WhatsApp support and order correspondence are also handled by our team.",
+        "Privacy and operation: consent version, current decision, revision and timestamp are associated with your account/guest identifier. An offline withdrawal marker is kept locally until delivery. Minimal deletion-job records support retries. Service providers also process technical information needed to deliver and secure their services.",
       ],
     },
     {
-      title: "What we do not collect",
+      title: "2. AI processing and your choice",
       paragraphs: [
-        "We do not collect: location, contacts, calendar, health or fitness data, payment information, browsing or search history, advertising identifiers, or device-level identifiers (IDFA / Android Advertising ID). The App does not embed analytics, crash-reporting, performance-monitoring, or advertising SDKs.",
+        "Before AI use, the app asks you to agree to a versioned disclosure. Audio is sent through Firebase Cloud Functions to OpenAI Whisper; messages and conversation history are sent to OpenAI GPT-4o. OpenAI processes this content in the United States. Separate account phone-number fields and photos are not sent to OpenAI, but information you include in audio or text can contain personal details about you or others.",
+        "Each new AI request requires an online permission check and a current account/guest consent revision. Device microphone or photo permissions control device access; they are not a blanket agreement to unrelated data uses. OpenAI API content is not used for model training by default. Provider retention depends on the endpoint, applicable terms and account configuration; contact us for the arrangements applicable to your request.",
       ],
     },
     {
-      title: "2. Purposes of collection (PDPA notification obligation)",
-      paragraphs: ["We collect your personal data to:"],
+      title: "3. Withdrawal and changed purposes",
+      paragraphs: [
+        "Use Settings or Account → Data sharing → Revoke AI sharing. The app blocks AI sharing locally and sends withdrawal to the server. If offline, it shows that server delivery is pending; other devices may continue until the server receives it. Reconnect or contact support. A successful server withdrawal blocks new AI requests across your devices, including retries using an old grant. It cannot recall requests already dispatched.",
+        "Withdrawing AI sharing does not delete saved stories or withdraw every other data use. For broader withdrawal, access, correction or deletion requests, contact the DPO. We will explain the consequences and any applicable retention or other basis. Material new purposes requiring consent must be notified and accepted before that new use; a policy update alone does not provide that consent.",
+      ],
+    },
+    {
+      title: "4. Providers and other recipients",
       bullets: [
-        "authenticate your account (phone number, user ID);",
-        "transcribe your voice and generate AI guide responses (voice, chat, locale);",
-        "let you save, edit, and illustrate your life stories (story content, photos, progress metadata);",
-        "sync your stories across the devices you sign in on;",
-        "respond to support requests and comply with legal obligations.",
+        "Google Firebase: authentication, Firestore, Storage, Cloud Functions and Remote Config. Our Cloud Functions are configured in Singapore (asia-southeast1); other service locations depend on project/service configuration.",
+        "OpenAI: voice transcription, chat replies and story composition.",
+        "MailerSend and our support mailbox provider: delivery and handling of website enquiries, including the name, reply address and message.",
+        "WhatsApp: if you choose this order-contact option, the app previews and hands off your order number, recipient name, phone, delivery address and order details to WhatsApp for contact with our business. WhatsApp has its own terms and privacy practices. This is distinct from a contracted processor acting only on our instructions.",
+        "Print fulfilment: our team handles your request and confirms fulfilment arrangements manually. Contact us before ordering for information about the printer/courier recipients and the information they need.",
+        "User-selected sharing apps receive the content you choose to export under their own terms. We may also disclose information where legally required or otherwise lawfully permitted, subject to the applicable conditions.",
       ],
     },
     {
-      title: "3. Consent and withdrawal of consent",
+      title: "5. Overseas processing and protection",
       paragraphs: [
-        "How you give consent — you consent to this Policy when you create an account, when you grant the iOS microphone, camera, and photo-library permissions, and when you accept the in-app AI disclosure on first launch.",
-        "Withdrawing consent — you may withdraw consent at any time by deleting your account in the App (Settings → Account → Delete Account) or by emailing the DPO. Some App functions will not work after withdrawal — for example, voice transcription cannot operate without sending audio to OpenAI.",
+        "Providers may process data outside Singapore, including OpenAI in the United States. Contact the DPO for applicable recipients, locations, processing terms and transfer safeguards. Cross-border transfers must meet the applicable PDPA requirements; naming a provider or its certification alone does not establish those safeguards.",
+        "The implementation uses HTTPS/TLS, Firebase encryption at rest and owner-scoped access rules. Privacy-control records are changed through authenticated backend functions. Image download URLs contain access tokens and must be kept private. The OpenAI key is stored in Secret Manager. If a breach meets the PDPA notification criteria, we will handle notification to the PDPC and affected individuals within the applicable statutory requirements.",
       ],
     },
     {
-      title: "4. Disclosure to data intermediaries",
+      title: "6. Retention and deletion",
       paragraphs: [
-        "We use the following data intermediaries to operate the App. They process personal data on our behalf and only for the purposes listed:",
-      ],
-      bullets: [
-        "Google LLC (Firebase) — Authentication, Firestore database, Cloud Storage, Cloud Functions, Remote Config. Cloud Functions in Singapore (asia-southeast1); Firestore and Cloud Storage in the region configured at project setup.",
-        "OpenAI, L.L.C. — Whisper (speech-to-text) and GPT-4o (chat / story generation). Processed in the United States.",
+        "Account stories, photos, progress and print-order records remain until deleted or the account is deleted. In Account → Delete account, a recent sign-in authorises a durable server cleanup job. It blocks new account processing, deletes account-scoped Storage objects and Firestore documents (including nested images and print orders), then removes the sign-in identity. Interrupted jobs retry automatically. The app distinguishes completed cleanup from accepted requests that are still pending; immediate completion is not guaranteed.",
+        "On the requesting device, cleanup waits for tracked file operations and removes local database rows, app-managed story photos and recording/export temporary files. Interrupted local cleanup resumes when the app next starts. Other devices, files saved to your gallery, exported copies and independently controlled recipients' copies are not automatically erased by that device cleanup. Remove local copies on other devices and contact support about provider or business correspondence copies.",
+        "Recording files are temporary. Normal transcription attempts clean up their temporary files, but interrupted requests or older queued jobs can leave local files until cleanup; there is no promise that audio never exists on disk. OpenAI's retention is separate. Minimal server deletion status is retained for retry purposes and completed markers are removed after 30 days by scheduled cleanup.",
+        "Support emails, WhatsApp correspondence, manual fulfilment records, provider logs and any configured backups are outside the automatic account-data deletion job. Contact the DPO to include these in a request and obtain the applicable retention details. Any continued retention needs a specific legal or business justification; deletion of an account is not a promise that every provider backup or exported copy is instantly erased.",
       ],
     },
     {
-      title: "4 (continued). Other disclosure",
+      title: "7. Other people's information and younger users",
       paragraphs: [
-        "We do not disclose personal data to any other third party except (a) when you choose to share a story via your device's share sheet (the receiving app's privacy policy then applies), or (b) when required by law, court order, or to investigate fraud or abuse.",
-        "We do not sell personal data and we do not use it for advertising purposes.",
+        "LifePoem is designed especially for older adults. Being older does not remove a person's ability to choose. If helping someone use the app, let them make their own informed choices where possible. If acting as a representative, contact us about authority before giving consent on their behalf. Provide other people's stories, photos or delivery details only when you are authorised or otherwise have an appropriate basis.",
+        "The service is not directed at children under 13. The Terms require parental/guardian consent where the user is below the age of majority. Contact the DPO about younger users or representative authority; the app's AI agreement alone does not verify a guardian's authority.",
       ],
     },
     {
-      title: "5. Cross-border transfer (Section 26 PDPA)",
+      title: "8. Rights, contact and complaints",
       paragraphs: [
-        "Some of your personal data is transferred outside Singapore — in particular, voice and chat content sent to OpenAI is processed in the United States. Before relying on these processors, we have taken reasonable steps to satisfy ourselves that they provide a standard of protection for personal data comparable to that under the PDPA, through their published data processing terms, recognised security certifications (Google ISO 27001/27018; OpenAI SOC 2 Type II), and contractual commitments.",
+        "Under the Singapore PDPA you may request access to personal data and information about its use/disclosure in the preceding year, request correction, and withdraw consent. Email support@lifepoem.one or our DPO at vernonweehongkoh.developer@outlook.com. For deletion, use the subject ‘Account deletion request’ and identify the account; do not send a password or SMS code. We verify identity and authority proportionately and respond within 30 days, explaining any further steps, lawful fee or exception where applicable.",
+        "Where applicable, EU/UK GDPR rights also include portability, objection, erasure, restriction and complaints to a supervisory authority. California CCPA rights include knowing, deletion, opt-out of sale and non-discrimination. We do not sell personal data, run advertising in the app or use data brokers. Our app does not include analytics or advertising SDKs; this does not mean personal details cannot appear in content you submit.",
+        "Resetrix Pte. Ltd.'s DPO is the privacy contact. If dissatisfied with our response, you may contact the Singapore PDPC at pdpc.gov.sg. Policy changes are published with an effective date and version; changes requiring fresh consent are subject to Section 3.",
       ],
-    },
-    {
-      title: "6. Retention (retention limitation obligation)",
-      paragraphs: [
-        "Phone number, user ID, stories, photos, progress metadata — retained while your account is active; deleted within 30 days of account deletion.",
-        "Voice recordings — held only for the duration of the transcription request on our infrastructure. OpenAI retains its copy for up to 30 days per its API policy.",
-        "Backups — Firebase retains incremental infrastructure backups under Google's standard policy; these are overwritten over time.",
-      ],
-    },
-    {
-      title: "7. Security (protection obligation)",
-      paragraphs: [
-        "We protect your personal data with: TLS 1.2+ encryption for all data in transit; encryption at rest by Firebase for Firestore documents and Cloud Storage objects; per-user access scoping enforced by Firebase Security Rules; restricted access to production secrets (the OpenAI API key is held in Google Cloud Secret Manager).",
-        "No system is perfectly secure. If we discover a data breach affecting your personal data that meets the notification threshold under the PDPA, we will notify the Personal Data Protection Commission and affected users without undue delay, in line with Section 26D of the PDPA.",
-      ],
-    },
-    {
-      title: "8. Your rights",
-      paragraphs: [
-        "Under the Singapore PDPA, you have the right to: request access to the personal data we hold about you and information about how it has been used or disclosed in the year preceding your request; request correction of inaccurate or incomplete personal data; withdraw consent to our collection, use, or disclosure of your personal data.",
-        "To exercise any of these rights, email the DPO. We will respond within 30 days. We may charge a reasonable fee for access requests as permitted by the PDPA.",
-        "If you are in the EU/UK, the GDPR additionally gives you the right to data portability, to object to processing, to erasure, to restrict processing, and to lodge a complaint with your local supervisory authority.",
-        "If you are in California, the CCPA additionally gives you the right to know, to delete, to opt out of the \"sale\" of personal information (we do not sell), and to non-discrimination for exercising these rights.",
-      ],
-    },
-    {
-      title: "9. Children",
-      paragraphs: [
-        "Life Poem is designed for adult users — particularly older adults preserving life memories — and is not directed at children. We do not knowingly collect personal data from children under 13. If you believe a child has provided us with personal data, contact the DPO and we will delete it.",
-      ],
-    },
-    {
-      title: "10. Account deletion",
-      paragraphs: [
-        "You can delete your account directly in the App: open Settings → Account → Delete Account. This permanently removes your stored stories, photos, progress data, and account profile from our systems. If you are unable to use the in-app option, email the DPO and we will action your request within 30 days.",
-      ],
-    },
-    {
-      title: "11. Data Protection Officer and complaints",
-      paragraphs: [
-        "Resetrix Pte. Ltd. has designated a Data Protection Officer for compliance with the PDPA. The DPO is your point of contact for any privacy-related question, request, or complaint.",
-        "If you are not satisfied with our response, you may lodge a complaint with the Singapore Personal Data Protection Commission at pdpc.gov.sg.",
-      ],
-    },
-    {
-      title: "12. Changes to this Policy",
-      paragraphs: [
-        "If we materially change how we collect or use your personal data, we will update this Policy, change the effective date above, and notify you in the App where reasonable. Continued use of the App after the new effective date constitutes acceptance of the updated Policy.",
-      ],
-    },
-    {
-      title: "13. Contact",
-      paragraphs: ["Resetrix Pte. Ltd. Email: vernonweehongkoh.developer@outlook.com"],
     },
   ],
 };
-
 export default doc;

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { contactNotice } from "../../../lib/legal/contact-notice";
 
 import { sendContactEmail } from "./actions";
 import { LocaleSwitcher } from "../../../components/i18n/locale-switcher";
@@ -49,6 +51,10 @@ export default async function ContactPage({ params, searchParams }: Props) {
             <p className="mt-6 rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{dict.contact.errorMessage}</p>
           ) : null}
           <form action={action} className="mt-8 space-y-4">
+            <p className="text-base leading-7 text-[var(--lifepoem-text-muted)]">
+              {contactNotice[locale]}{" "}
+              <Link className="underline" href={`/${locale}/privacy`}>{dict.legal.linkPrivacy}</Link>
+            </p>
             <input name="website" className="hidden" tabIndex={-1} autoComplete="off" />
             <input
               required

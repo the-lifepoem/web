@@ -50,6 +50,9 @@ export function LegalDocumentView({
         <h1 className="font-serif text-3xl font-bold tracking-tight text-[var(--lifepoem-text)] sm:text-4xl">
           {doc.title}
         </h1>
+        {doc.effectiveDate && (
+          <p className="mt-3 text-sm text-[var(--lifepoem-text-muted)]">{doc.effectiveDate}</p>
+        )}
         {introBlocks.map(function renderIntro(para, i) {
           return (
             <p key={i} className="mt-6 text-base leading-relaxed text-[var(--lifepoem-text-muted)]">
