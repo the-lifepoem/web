@@ -42,9 +42,10 @@ export async function sendContactEmail({ locale }: SendContactEmailArgs, formDat
       subject,
       text,
     });
-    redirect(`/${locale}/contact?status=success`);
-  } catch (error) {
-    console.error("Failed to send email:", error);
+  } catch {
+    console.error("Failed to deliver contact email");
     redirect(`/${locale}/contact?status=error`);
   }
+  // Next.js redirect throws; keep successful navigation outside the catch.
+  redirect(`/${locale}/contact?status=success`);
 }

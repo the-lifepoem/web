@@ -7,6 +7,7 @@ export type LegalSection = {
 export type LegalDocument = {
   title: string;
   description: string;
+  effectiveDate?: string;
   intro?: string;
   crossLinkLabel?: string;
   crossLinkPath?: "privacy" | "terms";

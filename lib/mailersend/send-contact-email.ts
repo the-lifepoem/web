@@ -27,6 +27,6 @@ export async function deliverContactEmail(args: DeliverArgs): Promise<void> {
     REQUEST_TIMEOUT_MS,
   );
   if (res.status < 200 || res.status >= 300) {
-    throw new Error(`MailerSend API ${res.status}: ${res.body}`);
+    throw new Error(`MailerSend API returned status ${res.status}`);
   }
 }
