@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LifePoem website
 
-## Getting Started
+The marketing and support site for **LifePoem** (岁月故事), a voice-first memoir
+app for older adults. Next.js 16 App Router, React 19, Tailwind CSS v4,
+TypeScript. Four locales: `en`, `zh`, `ms`, `ta`.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env      # then fill in MAILERSEND_API_TOKEN
+npm run dev               # http://localhost:3000 → redirects to a locale
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visiting `/` negotiates a locale and redirects. Every page lives under a locale
+prefix: `/en`, `/zh/contact`, `/ta/privacy`, and so on.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | What lives there |
+| --- | --- |
+| `app/[locale]/` | The root layout and all five routes. There is no `app/layout.tsx` — the root layout sits under `[locale]` so `lang` is correct in the server-rendered HTML. |
+| `proxy.ts` | Locale negotiation and redirects. Replaces `middleware.ts`, which Next.js 16 deprecated. |
+| `components/site/` | Header, footer, locale menu, store badges. |
+| `components/home/` | The home page's six sections. |
+| `components/contact/` | The support form. |
+| `components/legal/` | The shared shell for privacy, terms and account deletion. |
+| `lib/contact/` | The email transport seam. |
+| `lib/legal/documents/` | Approved legal copy, twelve files. Style it; never edit its wording. |
+| `messages/` | Dictionaries. `en.json` is the source of truth. |
+| `e2e/` | The end-to-end suite — the project's only test seam. |
 
-## Learn More
+## Commands
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev              # development server
+npm run build            # production build
+npm run typecheck        # tsc --noEmit
+npm run lint             # eslint
+npm run check:locales    # zh/ms/ta must match en.json exactly
+npm run test:e2e         # Playwright, with the mail transport stubbed
+npm run test:live-email  # sends a REAL email; run deliberately
+npm run test:mail        # smoke-test the MailerSend token directly
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`AGENTS.md`** — design-token and content rules. Read before changing UI.
+- **`CONTEXT.md`** — the domain glossary. "Life stage", not "chapter".
+- **`system-design.md`** — as-built architecture.
+- **`docs/design-system.md`** — colours with contrast ratios, type scale, spacing, control states.
+- **`docs/responsive-and-handoff.md`** — breakpoint behaviour and component mapping.
+- **`docs/deviations.md`** — every place the build departs from the design prototype, and why.
+- **`docs/specs/website-revamp.md`** — the spec this rebuild was built from.
+- **`DEPLOYMENT.md`** — Vercel, environment variables, and the URLs that store listings depend on.
 
-## Deploy on Vercel
+## Two things still outstanding
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. `public/lifepoem/google-play-badge.svg` is a hand-drawn imitation, not
+   Google's official artwork. Run `scripts/install-play-badge.sh`.
+2. New `zh`, `ms` and `ta` copy is machine-authored and wants a native reader
+   before launch. It uses the mobile app's own terminology for product terms.
