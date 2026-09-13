@@ -30,6 +30,33 @@ export function readOutbox(): RecordedMessage[] {
 export const ROUTES = ["", "/contact", "/privacy", "/terms", "/delete-account"] as const;
 
 /**
+ * The h1 each route must render, so "the page loaded" is not mistaken for "the
+ * page loaded the right content". Legal titles come from the approved documents
+ * themselves rather than being restated here.
+ */
+export function expectedHeading(locale: Locale, route: (typeof ROUTES)[number]): string {
+  const dict = JSON.parse(readFileSync(`messages/${locale}.json`, "utf8")) as {
+    hero: { heading: string };
+    contact: { heading: string };
+  };
+
+  switch (route) {
+    case "":
+      return dict.hero.heading;
+    case "/contact":
+      return dict.contact.heading;
+    default: {
+      // Titles live in lib/legal/documents/<kind>/<locale>.ts as `title`.
+      const kind = route.replace("/", "");
+      const source = readFileSync(`lib/legal/documents/${kind}/${locale}.ts`, "utf8");
+      const match = source.match(/^\s*title:\s*"((?:[^"\\]|\\.)*)"/m);
+      if (!match) throw new Error(`No title found for ${kind}/${locale}`);
+      return match[1].replace(/\\"/g, '"');
+    }
+  }
+}
+
+/**
  * Every dictionary key path, used to prove no page ever renders a raw key.
  * Built from the English file so it covers keys added later too.
  */

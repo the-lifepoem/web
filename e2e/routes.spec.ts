@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-import { ROUTES, dictionaryKeyPaths, locales, localeToHtmlLang } from "./support";
+import { ROUTES, dictionaryKeyPaths, expectedHeading, locales, localeToHtmlLang } from "./support";
 
 const KEY_PATHS = dictionaryKeyPaths();
 
@@ -8,17 +8,28 @@ for (const locale of locales) {
   for (const route of ROUTES) {
     const path = `/${locale}${route}`;
 
-    test(`${path} renders with a heading and the right language`, async ({ page }) => {
+    test(`${path} renders its own heading`, async ({ page }) => {
       const response = await page.goto(path);
       expect(response?.status()).toBe(200);
 
-      // Server-rendered, not patched after hydration: assert before any JS runs
-      // would be ideal, but asserting the attribute proves the layout set it.
-      await expect(page.locator("html")).toHaveAttribute("lang", localeToHtmlLang(locale));
-
       const h1 = page.locator("h1");
       await expect(h1).toHaveCount(1);
-      await expect(h1).not.toBeEmpty();
+      // The heading this route is supposed to show, in this locale — not merely
+      // "some non-empty heading", which any page would pass.
+      await expect(h1).toHaveText(expectedHeading(locale, route));
+    });
+
+    test(`${path} declares its language in the server HTML`, async ({ request }) => {
+      // Fetched as markup, deliberately not read off the hydrated DOM: the
+      // defect being guarded against was lang being patched by client
+      // JavaScript after the page had already been delivered as en.
+      const response = await request.get(path);
+      expect(response.status()).toBe(200);
+      const html = await response.text();
+
+      const match = html.match(/<html[^>]*\slang="([^"]+)"/);
+      expect(match, `no lang attribute in the server HTML for ${path}`).not.toBeNull();
+      expect(match?.[1]).toBe(localeToHtmlLang(locale));
     });
 
     test(`${path} never shows a raw dictionary key`, async ({ page }) => {
