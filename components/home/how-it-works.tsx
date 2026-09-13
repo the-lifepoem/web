@@ -12,7 +12,7 @@ export function HowItWorks({ content }: { content: Dictionary["howItWorks"] }) {
             <li key={step.title} className="flex flex-col gap-4">
               <span
                 aria-hidden="true"
-                className="flex size-14 items-center justify-center rounded-full border border-edge bg-parchment font-display text-[25px] text-brand"
+                className="flex size-14 items-center justify-center rounded-full border border-edge bg-parchment font-display text-wordmark text-brand"
               >
                 {index + 1}
               </span>

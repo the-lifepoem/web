@@ -134,7 +134,7 @@ export function ScreenshotGallery({ gallery, a11y }: ScreenshotGalleryProps) {
             type="button"
             onClick={() => go(index - 1)}
             aria-label={a11y.prevScreenshot}
-            className="inline-flex min-h-12 items-center rounded-control border border-brand px-5 py-3 text-row font-semibold text-brand hover:bg-tint"
+            className="inline-flex min-h-tap-md items-center rounded-control border border-brand px-5 py-3 text-row font-semibold text-brand hover:bg-tint"
           >
             {gallery.previous}
           </button>
@@ -142,7 +142,7 @@ export function ScreenshotGallery({ gallery, a11y }: ScreenshotGalleryProps) {
             type="button"
             onClick={() => go(index + 1)}
             aria-label={a11y.nextScreenshot}
-            className="inline-flex min-h-12 items-center rounded-control bg-brand px-5 py-3 text-row font-semibold text-white hover:bg-brand-hover"
+            className="inline-flex min-h-tap-md items-center rounded-control bg-brand px-5 py-3 text-row font-semibold text-white hover:bg-brand-hover"
           >
             {gallery.next}
           </button>
@@ -164,7 +164,7 @@ export function ScreenshotGallery({ gallery, a11y }: ScreenshotGalleryProps) {
               >
                 <span
                   aria-hidden="true"
-                  className={`block h-3 rounded-[6px] border border-brand transition-all ${
+                  className={`block h-3 rounded-full border border-brand transition-all ${
                     slide === index ? "w-[30px] bg-brand" : "w-3 bg-card"
                   }`}
                 />

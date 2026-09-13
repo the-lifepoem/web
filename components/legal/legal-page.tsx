@@ -6,8 +6,7 @@ import { getDictionary } from "../../lib/i18n/get-dictionary";
 import { getDeleteAccountDocument, getPrivacyDocument, getTermsDocument } from "../../lib/legal/get-legal";
 import type { LegalDocument } from "../../lib/legal/legal-types";
 import { absoluteUrl, languageAlternates, type LocalisedRoute } from "../../lib/site";
-import { SiteFooter } from "../site/site-footer";
-import { SiteHeader } from "../site/site-header";
+import { SiteShell } from "../site/site-shell";
 import { LegalDocumentView } from "./legal-document-view";
 
 /**
@@ -48,17 +47,8 @@ export async function LegalPage({ kind, localeParam }: { kind: LegalKind; locale
   const doc = DOCUMENTS[kind](locale);
 
   return (
-    <>
-      <SiteHeader
-        locale={locale}
-        nav={dict.nav}
-        brand={dict.brand}
-        localeNames={dict.localeNames}
-        chooseLanguage={dict.a11y.chooseLanguage}
-        onHome={false}
-      />
+    <SiteShell locale={locale} dict={dict}>
       <LegalDocumentView doc={doc} locale={locale} labels={dict.legal} />
-      <SiteFooter locale={locale} dict={dict} />
-    </>
+    </SiteShell>
   );
 }

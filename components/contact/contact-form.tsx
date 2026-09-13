@@ -24,7 +24,7 @@ export function ContactForm({ content, resetHref }: { content: Dictionary["conta
       >
         <span
           aria-hidden="true"
-          className="flex size-8 items-center justify-center rounded-full bg-success text-[18px] font-bold text-white"
+          className="flex size-8 items-center justify-center rounded-full bg-success text-row font-bold text-white"
         >
           ✓
         </span>
@@ -32,7 +32,7 @@ export function ContactForm({ content, resetHref }: { content: Dictionary["conta
         <p className="text-body text-success-ink">{content.successBody}</p>
         <a
           href={resetHref}
-          className="inline-flex min-h-12 items-center rounded-control border border-success px-5 text-row font-semibold text-success-ink no-underline"
+          className="inline-flex min-h-tap-md items-center rounded-control border border-success px-5 text-row font-semibold text-success-ink no-underline"
         >
           {content.ctaSendAnother}
         </a>
@@ -113,7 +113,7 @@ export function ContactForm({ content, resetHref }: { content: Dictionary["conta
         <button
           type="submit"
           disabled={pending}
-          className="inline-flex min-h-tap-xl items-center gap-3 rounded-action border-0 bg-brand px-8 py-4.5 text-[20px] font-semibold text-white hover:bg-brand-hover disabled:opacity-55"
+          className="inline-flex min-h-tap-xl items-center gap-3 rounded-action border-0 bg-brand px-8 py-4.5 text-lockup font-semibold text-white hover:bg-brand-hover disabled:opacity-55"
         >
           {pending ? (
             <span
@@ -137,7 +137,7 @@ function Alert({ title, detail }: { title: string; detail?: string }) {
     >
       <span
         aria-hidden="true"
-        className="flex size-6.5 shrink-0 items-center justify-center rounded-full bg-error text-[15px] font-bold text-white"
+        className="flex size-6.5 shrink-0 items-center justify-center rounded-full bg-error text-small font-bold text-white"
       >
         !
       </span>
@@ -151,7 +151,7 @@ function Alert({ title, detail }: { title: string; detail?: string }) {
 
 function FieldError({ children }: { children: string }) {
   return (
-    <p className="text-[16.5px] font-semibold text-error">
+    <p className="text-small font-semibold text-error">
       <span aria-hidden="true">! </span>
       {children}
     </p>

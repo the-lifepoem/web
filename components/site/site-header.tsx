@@ -32,11 +32,11 @@ export function SiteHeader({ locale, nav, brand, localeNames, chooseLanguage, on
     <header className="sticky top-0 z-[60] border-b border-edge bg-parchment/92 backdrop-blur-[8px]">
       <div className="mx-auto flex max-w-shell flex-wrap items-center justify-between gap-x-6 gap-y-4 px-6 py-3.5">
         <Link href={home} className="flex items-baseline gap-2.5 text-ink no-underline">
-          <span className="font-display text-[25px] font-semibold tracking-[-0.01em]">{brand.name}</span>
+          <span className="font-display text-wordmark font-semibold tracking-[-0.01em]">{brand.name}</span>
           <span aria-hidden="true" className="text-edge">
             ·
           </span>
-          <span className="font-display-zh text-[21px] text-muted">{brand.chinese}</span>
+          <span className="font-display-zh text-lockup text-muted">{brand.chinese}</span>
         </Link>
 
         {/* Desktop navigation */}

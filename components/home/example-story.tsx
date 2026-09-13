@@ -50,7 +50,7 @@ export function ExampleStory({ content }: { content: Dictionary["example"] }) {
                 aria-controls={`${baseId}-panel-${key}`}
                 tabIndex={format === key ? 0 : -1}
                 onClick={() => setFormat(key)}
-                className={`inline-flex min-h-tap items-center rounded-control border border-brand px-4.5 py-2.75 text-[17px] font-semibold ${
+                className={`inline-flex min-h-tap items-center rounded-control border border-brand px-4.5 py-2.75 text-control font-semibold ${
                   format === key ? "bg-brand text-white" : "bg-transparent text-brand"
                 }`}
               >
@@ -67,7 +67,7 @@ export function ExampleStory({ content }: { content: Dictionary["example"] }) {
             className="flex flex-col gap-4 rounded-card bg-card p-[clamp(24px,3vw,40px)] shadow-card"
           >
             <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-full border border-edge bg-parchment px-3 py-1 text-[12px] font-bold uppercase tracking-[0.16em] text-brand">
+              <span className="rounded-full border border-edge bg-parchment px-3 py-1 text-label font-bold uppercase text-brand">
                 {content.badge}
               </span>
               <span className="text-small text-muted">{content.stage}</span>

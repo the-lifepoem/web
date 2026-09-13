@@ -25,11 +25,11 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
       <div className="mx-auto grid max-w-section grid-cols-[repeat(auto-fit,minmax(min(240px,100%),1fr))] gap-9">
         <div className="flex flex-col gap-3">
           <p className="flex items-baseline gap-2">
-            <span className="font-display text-[23px] font-semibold text-ink">{dict.brand.name}</span>
+            <span className="font-display text-wordmark-sm font-semibold text-ink">{dict.brand.name}</span>
             <span aria-hidden="true" className="text-edge">
               ·
             </span>
-            <span className="font-display-zh text-[19px] text-muted">{dict.brand.chinese}</span>
+            <span className="font-display-zh text-lockup-sm text-muted">{dict.brand.chinese}</span>
           </p>
           <p className="max-w-[34ch] text-row text-muted">{dict.footer.blurb}</p>
         </div>
