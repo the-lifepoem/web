@@ -40,3 +40,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Support-email outbox written by the recording transport during tests
+.contact-outbox.jsonl
+/test-results/
+/playwright-report/
+/blob-report/
+.playwright/
