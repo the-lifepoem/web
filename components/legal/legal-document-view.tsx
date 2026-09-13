@@ -1,103 +1,102 @@
 import Link from "next/link";
 
 import type { Locale } from "../../lib/i18n/config";
+import type { Dictionary } from "../../lib/i18n/dictionary";
 import type { LegalDocument } from "../../lib/legal/legal-types";
+import { slugifyHeading } from "../../lib/legal/slugify";
 
-type LegalLabels = {
-  home: string;
-  linkPrivacy: string;
-  linkTerms: string;
-};
-
-export function LegalDocumentView({
-  doc,
-  locale,
-  labels,
-}: {
+type LegalDocumentViewProps = {
   doc: LegalDocument;
   locale: Locale;
-  labels: LegalLabels;
-}) {
-  const crossHref = doc.crossLinkPath ? `/${locale}/${doc.crossLinkPath}` : null;
-  const introBlocks = doc.intro?.split("\n\n").filter(Boolean) ?? [];
+  labels: Dictionary["legal"];
+};
+
+export function LegalDocumentView({ doc, locale, labels }: LegalDocumentViewProps) {
+  const sections = doc.sections.map((section, index) => ({
+    ...section,
+    id: slugifyHeading(section.title, index),
+  }));
 
   return (
-    <article className="mx-auto max-w-3xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14">
-      <nav
-        aria-label="Breadcrumb"
-        className="mb-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-[var(--lifepoem-text-muted)]"
-      >
-        <Link className="font-medium text-[var(--lifepoem-primary)] hover:underline" href={`/${locale}`}>
-          {labels.home}
-        </Link>
-        <span aria-hidden className="text-[var(--lifepoem-border)]">
-          /
-        </span>
-        <span className="text-[var(--lifepoem-text)]">{doc.title}</span>
-        {crossHref && doc.crossLinkLabel ? (
-          <>
-            <span aria-hidden className="hidden sm:inline">
-              ·
-            </span>
-            <Link className="font-medium text-[var(--lifepoem-primary)] hover:underline" href={crossHref}>
-              {doc.crossLinkLabel}
-            </Link>
-          </>
-        ) : null}
-      </nav>
+    <main id="main-content" className="px-6 pb-22 pt-14">
+      <div className="mx-auto flex max-w-narrow flex-col gap-9">
+        <div className="flex flex-col gap-4">
+          <nav aria-label={labels.breadcrumb} className="text-small text-muted">
+            <Link href={`/${locale}`}>{labels.home}</Link>
+            <span aria-hidden="true"> / </span>
+            <span>{doc.title}</span>
+            {doc.crossLinkPath && doc.crossLinkLabel ? (
+              <>
+                <span aria-hidden="true"> · </span>
+                <Link href={`/${locale}/${doc.crossLinkPath}`}>{doc.crossLinkLabel}</Link>
+              </>
+            ) : null}
+          </nav>
 
-      <header className="border-b border-[var(--lifepoem-border)] pb-8">
-        <h1 className="font-serif text-3xl font-bold tracking-tight text-[var(--lifepoem-text)] sm:text-4xl">
-          {doc.title}
-        </h1>
-        {doc.effectiveDate && (
-          <p className="mt-3 text-sm text-[var(--lifepoem-text-muted)]">{doc.effectiveDate}</p>
-        )}
-        {introBlocks.map(function renderIntro(para, i) {
-          return (
-            <p key={i} className="mt-6 text-base leading-relaxed text-[var(--lifepoem-text-muted)]">
-              {para}
-            </p>
-          );
-        })}
-      </header>
+          <h1 className="font-display text-page font-semibold text-ink">{doc.title}</h1>
+          {doc.effectiveDate ? <p className="text-small text-muted">{doc.effectiveDate}</p> : null}
+          {doc.intro
+            ? doc.intro.split("\n\n").map((paragraph) => (
+                <p key={paragraph.slice(0, 24)} className="max-w-[68ch] break-words text-body text-muted">
+                  {paragraph}
+                </p>
+              ))
+            : null}
+        </div>
 
-      <div className="mt-10 space-y-10">
-        {doc.sections.map(function renderSection(section, index) {
-          return (
-            <section key={`${section.title}-${index}`}>
-              <h2 className="font-serif text-xl font-semibold text-[var(--lifepoem-text)]">{section.title}</h2>
-              {section.paragraphs?.map(function renderPara(p, i) {
-                return (
-                  <p key={i} className="mt-4 text-base leading-relaxed text-[var(--lifepoem-text-muted)]">
-                    {p}
+        <div className="grid min-w-0 gap-9 lg:grid-cols-[minmax(0,1fr)_240px]">
+          <article className="flex min-w-0 max-w-[68ch] flex-col gap-9 break-words lg:order-1">
+            {sections.map((section) => (
+              <section key={section.id} id={section.id} className="flex flex-col gap-3">
+                <h2 className="font-display text-card font-semibold text-ink">{section.title}</h2>
+                {section.paragraphs?.map((paragraph) => (
+                  <p key={paragraph.slice(0, 24)} className="text-body text-muted">
+                    {paragraph}
                   </p>
-                );
-              })}
-              {section.bullets && section.bullets.length > 0 ? (
-                <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-[var(--lifepoem-text-muted)]">
-                  {section.bullets.map(function renderLi(item, i) {
-                    return <li key={i}>{item}</li>;
-                  })}
-                </ul>
-              ) : null}
-            </section>
-          );
-        })}
+                ))}
+                {section.bullets ? (
+                  <ul className="m-0 flex list-disc flex-col gap-2 pl-6 text-body text-muted">
+                    {section.bullets.map((bullet) => (
+                      <li key={bullet.slice(0, 24)}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            ))}
+
+            {doc.closingNote ? <p className="text-body text-muted">{doc.closingNote}</p> : null}
+
+            <p>
+              <Link href={`/${locale}`} className="inline-flex min-h-tap items-center text-row font-semibold">
+                {labels.backHome}
+              </Link>
+            </p>
+          </article>
+
+          {/*
+           * Contents rail. A <details> at every width, forced open above 900px by
+           * the rule below — so the desktop rail and the mobile disclosure are one
+           * element and one set of links, with no JavaScript and no duplicated nav
+           * landmark.
+           */}
+          <nav aria-label={labels.onThisPage} className="lg:order-2">
+            <details className="legal-contents rounded-panel border border-edge bg-card p-4 lg:sticky lg:top-[120px] lg:border-0 lg:bg-transparent lg:p-0">
+              <summary className="min-h-tap cursor-pointer list-none text-label font-semibold uppercase text-brand lg:cursor-default">
+                {labels.onThisPage}
+              </summary>
+              <ul className="m-0 mt-2 flex list-none flex-col p-0">
+                {sections.map((section) => (
+                  <li key={section.id}>
+                    <a href={`#${section.id}`} className="flex min-h-tap items-center text-small text-ink">
+                      {section.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </nav>
+        </div>
       </div>
-
-      {doc.closingNote ? (
-        <p className="mt-12 text-sm text-[var(--lifepoem-text-muted)]">{doc.closingNote}</p>
-      ) : null}
-
-      <footer className="mt-14 border-t border-[var(--lifepoem-border)] pt-8">
-        <Link
-          className="inline-flex items-center text-sm font-semibold text-[var(--lifepoem-primary)] hover:underline"
-          href={`/${locale}`}
-        >
-          ← {labels.home}
-        </Link>
-      </footer>
-    </article>
+    </main>
   );
 }
