@@ -5,6 +5,7 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 
 import { LOCALE_COOKIE, locales, type Locale } from "../../lib/i18n/config";
+import { interpolate } from "../../lib/i18n/interpolate";
 
 type LocaleMenuProps = {
   locale: Locale;
@@ -121,12 +122,12 @@ export function LocaleMenu({ locale, localeNames, labels, variant = "menu" }: Lo
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
-        className="flex min-h-tap items-center gap-2 rounded-control border border-edge bg-card px-4 py-2.5 text-[16px] font-semibold text-ink"
+        className="flex min-h-tap items-center gap-2 rounded-control border border-edge bg-card px-4 py-2.5 text-small font-semibold text-ink"
       >
-        <span aria-hidden="true" className="text-[15px]">
+        <span aria-hidden="true" className="text-small">
           🌐
         </span>
-        <span>{labels.languageWith.replace("{name}", localeNames[locale])}</span>
+        <span>{interpolate(labels.languageWith, { name: localeNames[locale] })}</span>
         <span aria-hidden="true" className="text-brand">
           ▾
         </span>
@@ -138,7 +139,7 @@ export function LocaleMenu({ locale, localeNames, labels, variant = "menu" }: Lo
           id={menuId}
           role="menu"
           aria-label={labels.chooseLanguage}
-          className="absolute right-0 top-[calc(100%+8px)] z-[70] m-0 flex w-[248px] list-none flex-col gap-0.5 rounded-[16px] border border-edge bg-card p-2 shadow-overlay"
+          className="absolute right-0 top-[calc(100%+8px)] z-[70] m-0 flex w-[248px] list-none flex-col gap-0.5 rounded-action border border-edge bg-card p-2 shadow-overlay"
         >
           {locales.map((option) => (
             <li key={option} role="none">
@@ -146,7 +147,7 @@ export function LocaleMenu({ locale, localeNames, labels, variant = "menu" }: Lo
                 role="menuitem"
                 type="button"
                 onClick={choose(option)}
-                className={`flex min-h-12 w-full cursor-pointer justify-between gap-3 rounded-[10px] border-0 px-3.5 py-3 text-left text-body text-ink ${
+                className={`flex min-h-tap-md w-full cursor-pointer justify-between gap-3 rounded-chip border-0 px-3.5 py-3 text-left text-body text-ink ${
                   option === locale ? "bg-tint" : "bg-transparent"
                 } ${SCRIPT_FONT[option] ?? ""}`}
               >

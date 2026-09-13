@@ -12,6 +12,13 @@ write `bg-parchment`, `text-ink`, `rounded-card`, `shadow-card`, `min-h-tap-xl`,
 not `bg-[#f5efe4]` or an inline style. `docs/design-system.md` has the full table
 with contrast ratios.
 
+This is absolute for colours, shadows, radii, spacing and touch targets — there
+is a token for every value the design uses, and a raw one is always a mistake.
+If the design needs a size the scale does not have, **add a named token for it**
+rather than writing `text-[22px]` at the call site; that is how `--text-wordmark`
+and `--text-control` came to exist. The one sanctioned inline style is the
+gallery's transform, which has to be computed per slide.
+
 Rules that are not negotiable, because the audience is older adults:
 
 - **Body copy never drops below 18px.** `text-small` (16px) is the floor, and only

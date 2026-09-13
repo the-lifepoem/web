@@ -20,7 +20,7 @@ type StoreBadgesProps = {
 
 export function StoreBadges({ labels, tone = "light", className = "" }: StoreBadgesProps) {
   const link =
-    "inline-flex rounded-[10px] transition hover:opacity-90 " +
+    "inline-flex rounded-chip transition hover:opacity-90 " +
     (tone === "dark" ? "focus-visible:outline-on-dark" : "");
 
   return (

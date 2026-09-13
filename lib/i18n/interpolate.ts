@@ -13,3 +13,13 @@ export function interpolate(template: string, vars: Record<string, string | numb
   }
   return out;
 }
+
+/**
+ * Splits a dictionary string around a single {placeholder} so a React element
+ * can be dropped into the gap. interpolate() only produces strings, and some
+ * copy needs a link in the middle of a sentence.
+ */
+export function splitPlaceholder(template: string, name: string): [string, string] {
+  const [before = "", after = ""] = template.split(`{${name}}`);
+  return [before, after];
+}

@@ -15,7 +15,7 @@ export function DownloadSection({
         <h2 className="font-display text-panel font-semibold text-on-dark">{content.heading}</h2>
         <p className="max-w-[46ch] text-lead text-on-dark">{content.lead}</p>
         <StoreBadges labels={store} tone="dark" className="justify-center" />
-        <p className="text-[17px] text-on-dark-accent">{content.languages}</p>
+        <p className="text-row text-on-dark-accent">{content.languages}</p>
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ export function HeroSection({ hero, store }: { hero: Dictionary["hero"]; store: 
 
           <StoreBadges labels={store} />
 
-          <Link href="#how-it-works" className="inline-flex min-h-tap items-center text-[19px] font-semibold text-brand">
+          <Link href="#how-it-works" className="inline-flex min-h-tap items-center text-body font-semibold text-brand">
             {hero.seeHow}
           </Link>
 
@@ -43,7 +43,7 @@ export function HeroSection({ hero, store }: { hero: Dictionary["hero"]; store: 
 
           <p className="absolute bottom-[34px] left-[-18px] flex flex-col gap-0.5 rounded-panel border border-edge bg-card px-4 py-3 shadow-card">
             <span className="text-eyebrow font-semibold uppercase text-brand">{hero.chipEyebrow}</span>
-            <span className="font-display text-[19px] text-ink">{hero.chipValue}</span>
+            <span className="font-display text-lockup-sm text-ink">{hero.chipValue}</span>
           </p>
         </div>
       </div>

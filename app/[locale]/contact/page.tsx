@@ -3,10 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ContactForm } from "../../../components/contact/contact-form";
-import { SiteFooter } from "../../../components/site/site-footer";
-import { SiteHeader } from "../../../components/site/site-header";
+import { SiteShell } from "../../../components/site/site-shell";
 import { isLocale } from "../../../lib/i18n/config";
 import { getDictionary } from "../../../lib/i18n/get-dictionary";
+import { splitPlaceholder } from "../../../lib/i18n/interpolate";
 import { contactNotice } from "../../../lib/legal/contact-notice";
 import { absoluteUrl, languageAlternates } from "../../../lib/site";
 
@@ -28,18 +28,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const dict = await getDictionary(locale);
+  const [deleteBodyBefore, deleteBodyAfter] = splitPlaceholder(dict.contact.asideDeleteBody, "link");
 
   return (
-    <>
-      <SiteHeader
-        locale={locale}
-        nav={dict.nav}
-        brand={dict.brand}
-        localeNames={dict.localeNames}
-        chooseLanguage={dict.a11y.chooseLanguage}
-        onHome={false}
-      />
-
+    <SiteShell locale={locale} dict={dict}>
       <main id="main-content" className="px-6 pb-22 pt-14">
         <div className="mx-auto flex max-w-narrow flex-col gap-9">
           <div className="flex flex-col gap-4">
@@ -64,23 +56,21 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
             <aside className="flex flex-col gap-4">
               <section className="flex flex-col gap-2 rounded-panel border border-edge bg-card p-6">
-                <h2 className="font-display text-[22px] font-semibold text-ink">{dict.contact.asideDirectHeading}</h2>
+                <h2 className="font-display text-subhead font-semibold text-ink">{dict.contact.asideDirectHeading}</h2>
                 <p className="text-row text-muted">{dict.contact.asideDirectBody}</p>
               </section>
               <section className="flex flex-col gap-2 rounded-panel border border-edge bg-card p-6">
-                <h2 className="font-display text-[22px] font-semibold text-ink">{dict.contact.asideDeleteHeading}</h2>
+                <h2 className="font-display text-subhead font-semibold text-ink">{dict.contact.asideDeleteHeading}</h2>
                 <p className="text-row text-muted">
-                  {dict.contact.asideDeleteBody.split("{link}")[0]}
+                  {deleteBodyBefore}
                   <Link href={`/${locale}/delete-account`}>{dict.contact.asideDeleteLink}</Link>
-                  {dict.contact.asideDeleteBody.split("{link}")[1]}
+                  {deleteBodyAfter}
                 </p>
               </section>
             </aside>
           </div>
         </div>
       </main>
-
-      <SiteFooter locale={locale} dict={dict} />
-    </>
+    </SiteShell>
   );
 }

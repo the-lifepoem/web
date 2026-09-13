@@ -20,7 +20,7 @@ export function PaceSection({ content }: { content: Dictionary["pace"] }) {
             <li key={feature.title} className="flex gap-3.5 border-b border-rule px-6 py-5.5 last:border-b-0">
               <span aria-hidden="true" className="mt-2.5 size-3.5 shrink-0 rounded-full bg-brand" />
               <span className="flex flex-col gap-1">
-                <h3 className="text-[20px] font-semibold text-ink">{feature.title}</h3>
+                <h3 className="text-lockup font-semibold text-ink">{feature.title}</h3>
                 <span className="text-row text-muted">{feature.body}</span>
               </span>
             </li>
