@@ -1,36 +1,250 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
-/* Palette from lib/app_theme.dart — AppTheme.bgColor, primaryBrown, textDark */
-:root {
-  --background: #f5efe4;
-  --foreground: #3e2b1a;
-  --lifepoem-bg: #f5efe4;
-  --lifepoem-card: #ffffff;
-  --lifepoem-primary: #8b4513;
-  --lifepoem-primary-hover: #6b3309;
-  --lifepoem-primary-soft: rgba(139, 69, 19, 0.12);
-  --lifepoem-text: #3e2b1a;
-  --lifepoem-text-muted: #5c4a3a;
-  --lifepoem-border: #d4c4b0;
+/*
+ * Design tokens ported from the LifePoem website design prototype.
+ * Colour roles, the type scale, spacing rhythm, radii and elevation all come from
+ * its Design system sheet; see docs/design-system.md for the annotated source.
+ *
+ * Contrast ratios noted below are against the surface each colour is used on and
+ * are the reason the palette is fixed rather than improvised at call sites.
+ */
+@theme {
+  /* Surfaces */
+  --color-parchment: #f5efe4; /* warm page background */
+  --color-card: #ffffff;
+  --color-paper: #fbf7ef; /* quiet inset panels */
+  --color-tint: #f0e4d2; /* selected / active fill */
+  --color-rule: #ede3d2; /* hairline divider, nav hover */
+  --color-edge: #d4c4b0; /* borders — non-text use only */
+
+  /* Brand */
+  --color-brand: #8b4513; /* 7.4:1 on white */
+  --color-brand-hover: #6b3309;
+
+  /* Text */
+  --color-ink: #3e2b1a; /* 11.6:1 */
+  --color-muted: #5c4a3a; /* 6.9:1 */
+  --color-faint: #8b7b6c; /* placeholders only, never body copy */
+
+  /* Dark panel */
+  --color-dark: #3e2b1a;
+  --color-dark-edge: #8a7358;
+  --color-on-dark: #eadfcb;
+  --color-on-dark-accent: #d8be97;
+
+  /* Status — both always paired with an icon and wording, never colour alone */
+  --color-error: #9b2c13; /* 6.6:1 */
+  --color-error-bg: #fbede9;
+  --color-error-edge: #c4553a;
+  --color-error-ink: #7a2410;
+  --color-success: #3e6b2a; /* 5.4:1 */
+  --color-success-bg: #f2f6ef;
+  --color-success-edge: #8fa37c;
+  --color-success-ink: #2f4a22;
+
+  /* Type scale. Body copy never drops below 18px; 16px is the help-text floor. */
+  --text-display: clamp(40px, 5.4vw, 64px);
+  --text-display--line-height: 1.08;
+  --text-display--letter-spacing: -0.02em;
+  --text-section: clamp(31px, 3.4vw, 44px);
+  --text-section--line-height: 1.18;
+  --text-page: clamp(34px, 4.2vw, 50px);
+  --text-page--line-height: 1.14;
+  --text-panel: clamp(34px, 4.4vw, 54px);
+  --text-panel--line-height: 1.12;
+  --text-card: 26px;
+  --text-card--line-height: 1.25;
+  --text-slide: 29px;
+  --text-slide--line-height: 1.2;
+  --text-lead: 21px;
+  --text-lead--line-height: 1.7;
+  --text-body: 19px;
+  --text-body--line-height: 1.75;
+  --text-row: 18px;
+  --text-row--line-height: 1.65;
+  --text-small: 16px;
+  --text-small--line-height: 1.6;
+  --text-eyebrow: 13px;
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: 0.2em;
+  --text-label: 14px;
+  --text-label--line-height: 1.4;
+  --text-label--letter-spacing: 0.16em;
+
+  /* Radii — controls 12–16, cards 18–24, media 20–28 */
+  --radius-control: 12px;
+  --radius-field: 14px;
+  --radius-action: 16px;
+  --radius-panel: 18px;
+  --radius-media: 20px;
+  --radius-card: 24px;
+  --radius-frame: 28px;
+  --radius-phone: 26px;
+
+  /* Elevation — brown-tinted, used sparingly */
+  --shadow-card: 0 14px 36px rgba(62, 43, 26, 0.08);
+  --shadow-form: 0 14px 36px rgba(62, 43, 26, 0.07);
+  --shadow-frame: 0 18px 44px rgba(62, 43, 26, 0.1);
+  --shadow-overlay: 0 18px 44px rgba(62, 43, 26, 0.14);
+
+  /* Touch targets: 44 is the floor, 56 for page actions, 64 for form submit and
+   * the download buttons. Named so a call site cannot quietly go below them. */
+  --spacing-tap: 44px;
+  --spacing-tap-lg: 56px;
+  --spacing-tap-xl: 64px;
+
+  /* Container widths from the prototype */
+  --container-shell: 1240px;
+  --container-section: 1160px;
+  --container-narrow: 1040px;
+  --container-panel: 820px;
 }
 
+/*
+ * Font families arrive as CSS variables from next/font (see app/[locale]/layout.tsx) so they
+ * are self-hosted with no third-party request. `inline` is required: the values
+ * reference variables defined outside this block.
+ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-serif: "Source Serif 4", "Noto Serif SC", "Songti SC", Georgia, serif;
+  --font-display: var(--font-source-serif-4), Georgia, serif;
+  --font-body: var(--font-source-sans-3), system-ui, sans-serif;
+  --font-display-zh: var(--font-noto-serif-sc), "Songti SC", serif;
+  --font-body-zh: var(--font-noto-sans-sc), system-ui, sans-serif;
+  --font-body-ta: var(--font-noto-sans-tamil), system-ui, sans-serif;
 }
 
-body {
-  background: var(--lifepoem-bg);
-  color: var(--lifepoem-text);
-  font-family:
-    "Source Sans 3",
-    "Noto Sans SC",
-    "Noto Sans Tamil",
-    var(--font-geist-sans),
-    system-ui,
-    sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-parchment);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /*
+   * Script-specific metrics. Chinese needs more leading than Latin; Tamil needs
+   * more still for its ascenders and descenders. Keyed on the lang attribute,
+   * which is rendered server-side per locale.
+   */
+  html[lang^="zh"] body {
+    font-family: var(--font-body-zh);
+    line-height: 1.9;
+  }
+
+  html[lang^="ta"] body {
+    font-family: var(--font-body-ta);
+    line-height: 2;
+  }
+
+  /* The wordmark stays in the Latin serif in every locale. */
+  html[lang^="zh"] :is(h1, h2, h3):not(.font-display) {
+    font-family: var(--font-display-zh);
+    line-height: 1.35;
+  }
+
+  html[lang^="ta"] :is(h1, h2, h3):not(.font-display) {
+    font-family: var(--font-body-ta);
+    line-height: 1.6;
+  }
+
+  /*
+   * Tamil and Malay produce long compound words that would otherwise force a
+   * heading wider than its column at 320px. The design's stated behaviour is
+   * that wrapping absorbs the extra length.
+   */
+  :is(h1, h2, h3) {
+    overflow-wrap: break-word;
+  }
+
+  a {
+    color: var(--color-brand);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--color-brand-hover);
+  }
+
+  button {
+    font-family: inherit;
+  }
+
+  /* 3px ring at 3px offset on every interactive element, badge links and
+   * gallery dots included. */
+  *:focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: #e7d8c0;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-faint);
+  }
+
+  /* The sticky header must not cover a heading an in-page link jumps to. */
+  :target {
+    scroll-margin-top: 96px;
+  }
+}
+
+@keyframes lp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/*
+ * The legal contents rail is one <details> element at every width. Above 900px
+ * it is always expanded and loses its marker, so it reads as a sticky rail; below
+ * that it stays a real disclosure. Author styles override the UA rule that hides
+ * the content of a closed <details>.
+ */
+@media (min-width: 900px) {
+  /*
+   * This is the load-bearing rule. Chromium hides a closed <details>'s content
+   * through ::details-content, and overriding `display` on the children only
+   * makes it paint again — it stays out of the accessibility tree, so a screen
+   * reader would find no rail at all. content-visibility restores both.
+   */
+  details.legal-contents::details-content {
+    content-visibility: visible;
+  }
+
+  /* Fallback for engines without ::details-content support. Visual only. */
+  details.legal-contents > *:not(summary) {
+    display: block;
+  }
+
+  details.legal-contents > summary {
+    pointer-events: none;
+  }
+
+  details.legal-contents > summary::marker,
+  details.legal-contents > summary::-webkit-details-marker {
+    display: none;
+    content: "";
+  }
 }
