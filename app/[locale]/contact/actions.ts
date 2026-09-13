@@ -1,51 +1,53 @@
 "use server";
 
-import { redirect } from "next/navigation";
+import { type ContactResult, type ContactValues, validateContact } from "../../../lib/contact/contact-result";
+import { contactRecipient, selectContactTransport } from "../../../lib/contact/select-transport";
 
-import { deliverContactEmail } from "../../../lib/mailersend/send-contact-email";
-import type { Locale } from "../../../lib/i18n/config";
+// Only async functions may be exported from a "use server" module. The result
+// types, the validation rule and the message minimum live in
+// lib/contact/contact-result.ts so the client can import them too.
 
-type SendContactEmailArgs = {
-  locale: Locale;
-};
-
-function isValidEmail(value: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+function readValues(formData: FormData): ContactValues {
+  return {
+    name: String(formData.get("name") ?? "").trim(),
+    email: String(formData.get("email") ?? "").trim(),
+    message: String(formData.get("message") ?? "").trim(),
+  };
 }
 
-export async function sendContactEmail({ locale }: SendContactEmailArgs, formData: FormData) {
-  const name = String(formData.get("name") ?? "").trim();
-  const email = String(formData.get("email") ?? "").trim();
-  const message = String(formData.get("message") ?? "").trim();
-  const website = String(formData.get("website") ?? "").trim();
-
-  if (website) redirect(`/${locale}/contact?status=success`);
-  if (!name || !isValidEmail(email) || message.length < 10) {
-    redirect(`/${locale}/contact?status=invalid`);
+export async function sendContactEmail(
+  _previous: ContactResult,
+  formData: FormData,
+): Promise<ContactResult> {
+  // A filled honeypot reports success without sending, so a bot cannot tell it
+  // was caught. Checked before validation so it costs nothing.
+  if (String(formData.get("website") ?? "").trim()) {
+    return { status: "sent" };
   }
 
-  const apiToken = process.env.MAILERSEND_API_TOKEN;
-  const fromEmail = process.env.MAILERSEND_FROM_EMAIL;
-  const toEmail = process.env.CONTACT_TO_EMAIL ?? "support@lifepoem.one";
+  const values = readValues(formData);
 
-  if (!apiToken || !fromEmail) redirect(`/${locale}/contact?status=error`);
-
-  const subject = `New Contact Message from ${name}`;
-  const text = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+  // Always revalidated here: the client's own checks are a courtesy, not a gate.
+  // This action is reachable by direct POST, not only through the form.
+  const fieldErrors = validateContact(values);
+  if (Object.keys(fieldErrors).length > 0) {
+    return { status: "invalid", fieldErrors, values };
+  }
 
   try {
-    await deliverContactEmail({
-      apiToken,
-      fromEmail,
-      toEmail,
-      replyToEmail: email,
-      subject,
-      text,
+    const transport = selectContactTransport();
+    await transport.deliver({
+      toEmail: contactRecipient(),
+      replyToEmail: values.email,
+      subject: `New Contact Message from ${values.name}`,
+      text: `Name: ${values.name}\nEmail: ${values.email}\n\nMessage:\n${values.message}`,
     });
-  } catch {
-    console.error("Failed to deliver contact email");
-    redirect(`/${locale}/contact?status=error`);
+  } catch (error) {
+    // Never log the message body or the visitor's address; the reason is enough
+    // to diagnose a missing token or an unverified sending domain.
+    console.error("Support email delivery failed:", error instanceof Error ? error.message : error);
+    return { status: "failed", values };
   }
-  // Next.js redirect throws; keep successful navigation outside the catch.
-  redirect(`/${locale}/contact?status=success`);
+
+  return { status: "sent" };
 }
