@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "岁月故事 · LifePoem — 让回忆永存",
-    "description": "岁月故事（LifePoem）是一款温暖、由 AI 引导的应用，帮助长辈用语音或文字保存人生故事，支持中文、英语、马来语和泰米尔语。"
+    "title": "LifePoem · 岁月故事 — 用您自己的话，讲您的人生故事",
+    "description": "说出一段回忆，回答几个温和的问题，就能变成一篇可以珍藏、也可以分享的故事。LifePoem 岁月故事是一款为长辈打造、以说话为主的回忆录应用，支持 English、中文、Bahasa Melayu 和 தமிழ்。",
+    "ogAlt": "LifePoem 岁月故事 — 用您自己的话，讲您的人生故事"
   },
   "localeNames": {
     "en": "English",
@@ -9,103 +10,241 @@
     "ms": "Bahasa Melayu",
     "ta": "தமிழ்"
   },
+  "brand": {
+    "name": "LifePoem",
+    "chinese": "岁月故事"
+  },
   "nav": {
-    "language": "语言"
+    "sections": "目录",
+    "howItWorks": "怎么用",
+    "insideTheApp": "应用里的样子",
+    "support": "支持",
+    "download": "下载应用",
+    "languageWith": "语言：{name}",
+    "switchKeepsPage": "切换语言后，您仍留在这一页。",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "hero": {
+    "eyebrow": "一本慢慢做成的家庭回忆录",
+    "heading": "用您自己的话，讲您的人生故事。",
+    "lead": "说出一段回忆，回答几个温和的问题，就能变成一篇故事，自己收着，也分享给您牵挂的人。",
+    "seeHow": "看看怎么用 ↓",
+    "availableIn": "支持 English · 中文 · Bahasa Melayu · தமிழ்",
+    "imageAlt": "一幅画：一对老夫妻看着夕阳，旁边的书桌上放着照片、信件和老花镜。",
+    "chipEyebrow": "人生阶段",
+    "chipValue": "童年"
+  },
+  "store": {
+    "appStoreAlt": "在 App Store 下载 LifePoem",
+    "playStoreAlt": "在 Google Play 获取 LifePoem"
+  },
+  "howItWorks": {
+    "eyebrow": "怎么用",
+    "heading": "三个步骤，快慢由您",
+    "lead": "这三步都在 LifePoem 手机应用里完成，用手机或平板都可以。",
+    "steps": [
+      {
+        "title": "说一段回忆",
+        "body": "说一说，或者写一写您人生里的某一个时刻。",
+        "aside": "说话的时候按住那个大大的「按住说话」按钮；您习惯打字的话，用键盘也可以。"
+      },
+      {
+        "title": "让故事慢慢展开",
+        "body": "温和的问题会帮您想起那时候的人、那时候的地方、那时候的心情。",
+        "aside": "一次只问一个问题，您用自己的话回答。没有时间限制。"
+      },
+      {
+        "title": "留下来，也传出去。",
+        "body": "把您的回忆写成一篇故事，留给自己，也留给家人。",
+        "aside": "故事保存在您的设备上；登录并重新连上网络后，会同步到您的账户。"
+      }
+    ]
+  },
+  "pace": {
+    "eyebrow": "合您的节奏",
+    "heading": "不用会写文章，也不必赶时间。",
+    "body": "LifePoem 是和长辈一起做出来的，所以那些平常最碍事的东西——小得看不清的字、藏起来的按钮、催着您填的表格——这里都没有。",
+    "offlineLabel": "关于没有网络的时候：",
+    "offlineBody": "您的故事保存在设备上；登录并重新连上网络后，会同步到您的账户。把说的话转成文字、把回忆写成故事，这两步需要网络。",
+    "features": [
+      {
+        "title": "说话，或者打字",
+        "body": "按住说话，把您的声音录下来；也可以用键盘写。两种都一样好用。"
+      },
+      {
+        "title": "字大，按钮清楚",
+        "body": "按钮做得大，阅读的字号也能调，您看着舒服就好。"
+      },
+      {
+        "title": "问答都能朗读",
+        "body": "问题和写好的故事，都可以听，不一定要读。"
+      },
+      {
+        "title": "四种熟悉的语言",
+        "body": "English · 中文 · Bahasa Melayu · தமிழ் —— 应用里和这个网站都有。"
+      },
+      {
+        "title": "温和地问，不催不赶",
+        "body": "问题一次来一个。想停就停，想接着说随时回来。"
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "应用里的样子",
+    "heading": "下载之前，先看一眼",
+    "note": "应用里的六个画面。用按钮或方向键可以一张一张看。",
+    "previous": "← 上一张",
+    "next": "下一张 →",
+    "slides": [
+      {
+        "title": "从容地开始",
+        "body": "一句安静的问候，一个大大的按钮——不急，也不乱——然后就可以聊起来了。",
+        "alt": "截图一：LifePoem 的欢迎画面，有应用图标和「开始聊天」按钮"
+      },
+      {
+        "title": "人生阶段",
+        "body": "七个人生阶段可以选：童年、求学、工作、恋爱、家庭、人生感悟、心愿寄语。点一个，就可以开始了。",
+        "alt": "截图二：七个人生阶段的列表，「童年」已标记为完成"
+      },
+      {
+        "title": "会听您说话的聊天",
+        "body": "说话或者打字都行；应用一次只问一个温和的问题，回忆就自然而然浮上来了。",
+        "alt": "截图三：对话画面里的一个温和追问，下方是「按住说话」按钮"
+      },
+      {
+        "title": "把回忆写成文字",
+        "body": "聊过的话会变成一篇写好的故事，可以是散文风、日记风或书信风。在屏幕上读，或者让它朗读给您听。",
+        "alt": "截图四：应用里写好的一篇故事，下方有「朗读」和「分享」按钮"
+      },
+      {
+        "title": "值得寄出去的卡片",
+        "body": "每一篇故事都能做成一张卡片，用家人本来就在用的应用寄出去，比如 WhatsApp 或微信。",
+        "alt": "截图五：一张准备分享给家人的故事卡片"
+      },
+      {
+        "title": "语言和隐私，都在一处",
+        "body": "在「语言」里从四种语言中挑一种，在「隐私与支持」里翻看各项条款，也可以随时到「数据共享」里把 AI 处理关掉。",
+        "alt": "截图六：设置画面，显示语言选项和数据共享开关"
+      }
+    ],
+    "counter": "第 {current} 张，共 {total} 张"
+  },
+  "example": {
+    "eyebrow": "值得分享的故事",
+    "heading": "只有您还记得的那些事",
+    "bodyOne": "清晨六点的厨房。第一份薪水。外婆说过、到今天还管用的一句话。这些细节，家人往后总会问起；也正是这些，最容易一直没说出口。",
+    "bodyTwo": "写好的故事可以有三种样子，让它读起来，就像那段回忆本来的感觉。",
+    "formats": {
+      "prose": {
+        "term": "散文风",
+        "definition": "读起来像回忆录里的一小章。"
+      },
+      "diary": {
+        "term": "日记风",
+        "definition": "写上日子，贴着当下，是您自己的口气。"
+      },
+      "letter": {
+        "term": "书信风",
+        "definition": "写给某一个人看的。"
+      }
+    },
+    "tabsLabel": "故事风格",
+    "badge": "示例故事",
+    "stage": "人生阶段：童年",
+    "footnote": "由一段简短的口述回忆写成。这段文字是为本网站写的示例，不是哪位用户的真实故事。",
+    "samples": {
+      "prose": {
+        "title": "清晨六点的厨房",
+        "paragraphs": [
+          "母亲总是家里醒得最早的那一个。等我下楼，水壶已经烧开过两回，饭在锅上，水槽上方那扇窗子早被蒸汽蒙得发软。她从不说早安。她只是把一只碗推过桌子，推到我面前，手里的活儿一刻也没停。",
+          "很多年以后我才明白，她从来不说出口的话，都是这样说的。一只碗推过桌面，还烫得端不住。我也给自己的孩子做过同样的早饭，在另一个厨房，在另一个国家；每一次把碗放下，我都听见老屋里那只水壶的声音。"
+        ]
+      },
+      "diary": {
+        "date": "三月十四日，星期二",
+        "title": "窗上的水汽",
+        "paragraphs": [
+          "又是不到六点就醒了。这个钟点，只有厨房是暖的，我便坐着，两手捧住杯子，由着窗子一点点蒙上水汽。窗外，邻居的自行车已经不在了。",
+          "今天想起母亲，想起她一次也没有对我说过早安。直到今年我才想明白，这句话她其实一直在说：用那锅饭，用那只碗，用那扇一直为我留着、没有锁上的门。"
+        ]
+      },
+      "letter": {
+        "salutation": "亲爱的小梅：",
+        "paragraphs": [
+          "你有一次问我，我母亲是个什么样的人，我想我并没有好好回答你。她不是个话多的人。她每天都比屋里所有人醒得早，一辈子都这样；等我下楼的时候，厨房的窗子总是已经蒙上了一层水汽。",
+          "她会把一碗饭推过桌子，推到我面前，一句话也不说。我想让你知道，那就是疼爱，而且我那时候就懂得。我给你做那顿早饭的时候，做的也是同一件事。"
+        ],
+        "signoff": "—— 你的爷爷"
+      }
+    }
+  },
+  "download": {
+    "eyebrow": "获取应用",
+    "heading": "从一段回忆开始。",
+    "lead": "下载 LifePoem，等您什么时候准备好了，再说第一段也不迟。不用赶，也不用事先准备什么。",
+    "languages": "English · 中文 · Bahasa Melayu · தமிழ்"
+  },
+  "footer": {
+    "blurb": "用您自己的话，讲人生故事。一个安静的地方，收着家人往后最想留住的回忆。",
+    "informationHeading": "相关信息",
+    "languageHeading": "语言",
+    "supportLine": "支持：support@lifepoem.one",
+    "copyright": "© {year} Resetrix Pte. Ltd.",
+    "legalNav": "条款与支持"
   },
   "legal": {
     "home": "首页",
     "linkPrivacy": "隐私政策",
     "linkTerms": "服务条款",
-    "linkContact": "联系我们"
+    "linkContact": "联系我们",
+    "linkDeleteAccount": "账户与数据删除",
+    "onThisPage": "本页内容",
+    "backHome": "← 首页",
+    "breadcrumb": "导航路径"
   },
   "contact": {
     "metaTitle": "联系我们 · LifePoem",
-    "metaDescription": "联系 LifePoem 团队，获取支持、反馈或合作咨询。",
-    "heading": "联系我们",
-    "body": "欢迎随时联系。请填写并提交留言，我们会尽快回复您。",
-    "namePlaceholder": "您的姓名",
-    "emailPlaceholder": "您的邮箱",
-    "messagePlaceholder": "请告诉我们您需要什么帮助",
-    "ctaSend": "发送消息",
-    "successMessage": "感谢您的来信，我们已收到您的消息。",
-    "errorMessage": "请检查填写内容后再试一次。",
-    "emailLine": "消息将发送至 support@lifepoem.one"
-  },
-  "hero": {
-    "chineseTitle": "岁月故事",
-    "name": "LifePoem",
-    "tagline": "让回忆永存。",
-    "intro": "为长辈设计的温暖 AI 陪聊：说出一段回忆、回答轻柔的追问，看它变成一篇优美的成文故事——支持中文与英文。",
-    "ctaApp": "看看应用",
-    "ctaAbout": "为何选择 LifePoem",
-    "imageAlt": "LifePoem — 你的声音，你的故事。专为长辈打造的语音回忆录，支持 English、中文、Bahasa Melayu 与 தமிழ்。",
-    "appStoreAlt": "在 App Store 下载 Life Poem",
-    "playStoreAlt": "在 Google Play 下载 Life Poem"
-  },
-  "valueProps": {
-    "heading": "为真实对话而造",
-    "sub": "大按钮、清晰字体、没有计时压力——让讲述的人始终被温柔对待。",
-    "items": [
-      {
-        "title": "AI 引导叙说",
-        "body": "按照人生阶段轻轻追问，让每一段记忆都能慢慢长成完整篇章，节奏从不催促。"
-      },
-      {
-        "title": "可说可写",
-        "body": "长按录音并转写，或直接用键盘输入。故事可随时用中文或英文书写。"
-      },
-      {
-        "title": "保存与分享",
-        "body": "故事文字流式呈现、字体易读，还可导出成精美图片卡片，发到微信、WhatsApp 等家人常用的渠道。"
-      }
-    ]
-  },
-  "screenshots": {
-    "heading": "应用一瞥",
-    "sub": "用左右箭头或下方圆点浏览 LifePoem 的六张界面截图。",
-    "slides": [
-      {
-        "title": "温柔开场",
-        "body": "舒缓的欢迎与打字动效——不拥挤、不催促，让对话从安心开始。",
-        "alt": "LifePoem 应用 — 欢迎或首页"
-      },
-      {
-        "title": "人生阶段",
-        "body": "童年、家庭、工作……一路走来；进度集中呈现在一处简洁的中心。",
-        "alt": "LifePoem 应用 — 人生阶段"
-      },
-      {
-        "title": "会倾听的对话",
-        "body": "可说可写；应用每次只问一个温暖的问题，让回忆自然浮现。",
-        "alt": "LifePoem 应用 — 对话界面"
-      },
-      {
-        "title": "你的节奏",
-        "body": "大号控件、清晰字型与双语界面——中文或英文随时切换。",
-        "alt": "LifePoem 应用 — 故事或设置"
-      },
-      {
-        "title": "故事成篇",
-        "body": "章节如打字机般流泻，版式为舒适阅读而调校。",
-        "alt": "LifePoem 应用 — 故事阅读"
-      },
-      {
-        "title": "把爱传下去",
-        "body": "导出精致卡片，分享到微信、WhatsApp 等家人所在的地方。",
-        "alt": "LifePoem 应用 — 分享或导出"
-      }
-    ]
-  },
-  "footer": {
-    "brandLine": "岁月故事 · LifePoem",
-    "tagline": "让回忆永存。",
-    "ctaScreenshots": "返回截图",
-    "copyright": "© 2026 Resetrix Pte. Ltd."
+    "metaDescription": "使用 LifePoem 遇到问题、不知道怎么开始，或者想为家里的长辈问一问，都可以找我们。",
+    "breadcrumbCurrent": "联系我们",
+    "heading": "我们很乐意帮忙",
+    "lead": "告诉我们您需要什么——关于应用的疑问、刚上手时遇到的麻烦，或者想为家里人问一问。每一封信都有人看。",
+    "nameLabel": "您的称呼",
+    "nameHelp": "您希望我们怎么称呼您都可以。",
+    "namePlaceholder": "陈亚金",
+    "nameError": "请填写您的称呼。",
+    "emailLabel": "电子邮箱",
+    "emailHelp": "方便我们回复您。",
+    "emailPlaceholder": "name@example.com",
+    "emailError": "请填写像 name@example.com 这样的邮箱地址。",
+    "messageLabel": "您想说的话",
+    "messageHelp": "至少 10 个字符。说说发生了什么；方便的话，也告诉我们您用的是哪一款手机。",
+    "messageError": "请至少写 10 个字符。",
+    "characterCount": "{count} 个字符",
+    "honeypotLabel": "网站",
+    "ctaSend": "发送留言",
+    "ctaSending": "正在发送…",
+    "privacyLine": "您的称呼、邮箱和留言只用来回复您。本网站不保存任何内容。",
+    "invalidMessage": "出了点问题。请检查填写的内容，再试一次。",
+    "failureMessage": "我们这会儿没能把您的留言交给邮件服务商。",
+    "failureFallback": "您也可以写信到 support@lifepoem.one，我们会从那里接着跟进。",
+    "successHeading": "留言已送出",
+    "successBody": "您的留言已由邮件服务商收下，正在送往客服邮箱。如果一直没有收到回音，请直接写信到 support@lifepoem.one。",
+    "ctaSendAnother": "再写一封",
+    "asideDirectHeading": "直接写信给我们",
+    "asideDirectBody": "如果这个表格用着不顺手，请用您自己的邮件应用写信到 support@lifepoem.one。",
+    "asideDeleteHeading": "想删除账户？",
+    "asideDeleteBody": "步骤都写在{link}这一页上。",
+    "asideDeleteLink": "账户与数据删除"
   },
   "a11y": {
+    "galleryRegion": "应用截图",
     "prevScreenshot": "上一张截图",
     "nextScreenshot": "下一张截图",
-    "screenshotSlides": "截图幻灯片",
-    "slideNumber": "第 {current} 张，共 {total} 张"
+    "screenshotSlides": "截图轮播",
+    "showScreen": "显示第 {current} 个画面，共 {total} 个",
+    "galleryPosition": "第 {current} 个画面，共 {total} 个",
+    "chooseLanguage": "选择语言",
+    "skipToContent": "跳到正文"
   }
 }
