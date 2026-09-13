@@ -27,14 +27,18 @@ The prototype's handoff notes state its captions were provisional because the
 screenshot files were not supplied with the brief, and require them to be
 checked against the real images. They were. All six images were examined.
 
-| Slide | Real screen | Caption source |
-| --- | --- | --- |
-| 1 | Welcome screen | Previously shipped caption — accurate |
-| 2 | Life-stage list | Previously shipped title, prototype body corrected for vocabulary |
-| 3 | Conversation with hold-to-talk | Previously shipped caption — accurate |
-| 4 | Finished story, prose | Prototype caption — accurate |
-| 5 | Story card with share targets | Prototype caption — accurate |
-| 6 | Settings | Rewritten; see the table above |
+| Slide | Real screen | Title | Body |
+| --- | --- | --- | --- |
+| 1 | Welcome screen | Previously shipped | Rewritten — the old body promised a "typing animation"; the screen shows a single large button |
+| 2 | Life-stage list | Previously shipped | Prototype body, corrected for vocabulary |
+| 3 | Conversation with hold-to-talk | Previously shipped | Previously shipped, verbatim |
+| 4 | Finished story, prose | Prototype | Prototype |
+| 5 | Story card with share targets | Prototype | Prototype |
+| 6 | Settings | Rewritten | Rewritten — see the table above |
+
+**All six `alt` strings were rewritten**, in every locale. The previous ones were
+vague ("LifePoem app — welcome or home") where alt text has to say what the
+screen actually shows; they now name the screen and its controls.
 
 The prototype's slide order assumed no welcome-screen slide and treated the
 single conversation screenshot as two separate screens, so its slides 1–3 could
@@ -59,6 +63,19 @@ The original moved to `design-assets/hero-source.png` — kept as the master, bu
 out of `public/` so it is no longer deployed. `design-assets/README.md` records
 the crop values for regenerating both derived assets.
 
+## The support form's result type differs from the spec
+
+The spec inlined the result union as `{ ok: true } | { fieldErrors } |
+{ deliveryFailed: true }`. What ships is a `status`-discriminated union —
+`idle | sent | invalid | failed` — carrying error *codes* rather than prose, plus
+the submitted values.
+
+Three reasons it grew: `useActionState` needs an initial state, so `idle` has to
+exist; echoing `values` back is what makes "typed values survive a rejected
+submission" work; and returning codes instead of sentences keeps the translated
+error text in the dictionary where the rest of the copy lives, rather than in the
+server action. Behaviourally it is a superset of what the spec asked for.
+
 ## Filled in because the prototype left it undefined
 
 - **Mobile navigation.** The prototype's desktop markup has no mobile nav; only a
@@ -70,6 +87,11 @@ the crop values for regenerating both derived assets.
 - **Language-menu keyboard behaviour.** The prototype models the open and closed
   states but no dismissal. Added: Escape closes and returns focus to the
   trigger, a pointer-down outside dismisses, and Up/Down move between options.
+- **A skip link.** Not in the prototype at all. The first focusable element on
+  every page now jumps to the content, so a keyboard or switch user does not tab
+  through the wordmark, three nav links, the language menu and the download
+  button to reach the page. Hard to justify omitting on a site built for older
+  adults.
 - **Gallery swipe.** The prototype says "swipe also works" but does not
   implement it. Added with a deliberate threshold — more than 48px of horizontal
   travel within 300ms, and ignored when the gesture reads as vertical scrolling —
@@ -121,6 +143,29 @@ The Mobile, locale-adaptation, Design system and Handoff tabs became
 - **The contact status query parameter is gone.** Outcomes are returned values
   now, so the route no longer opts out of static rendering and a refresh no
   longer re-displays a stale success message.
+
+## Beyond what the spec asked for
+
+Two small additions, recorded because they were not requested:
+
+- **Security headers** in `vercel.json` — HSTS, `X-Frame-Options: DENY`,
+  `X-Content-Type-Options: nosniff` and a referrer policy. The spec asked only
+  for Vercel configuration; writing that file without them seemed worse than
+  the alternative. No Content-Security-Policy is set.
+- **A second assertion boundary in CI.** The spec commits to one test seam, the
+  browser over HTTP, and the end-to-end suite honours that. But
+  `scripts/check-locale-parity.mjs` asserts on the dictionary JSON directly and
+  runs as its own CI step. It is a static consistency check on data — array
+  lengths and placeholder survival, which no amount of browsing can see — rather
+  than a test of behaviour, so it is a deliberate exception rather than a drift
+  back to two seams.
+
+## A vocabulary exception
+
+`example.formats.prose.definition` reads "reads like a short chapter from a
+memoir". `CONTEXT.md` bans "chapter" — but for the app's *life stages*, which
+this is not: here it means a chapter of a book. Left as written, and noted so a
+future reader does not "fix" it into nonsense.
 
 ## Not done
 
