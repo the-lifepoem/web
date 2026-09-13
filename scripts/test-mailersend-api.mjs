@@ -1,9 +1,15 @@
 /**
- * Send a test email via MailerSend HTTP API (no SMTP / no smtp.mailersend.net DNS).
- * Dashboard → Settings → API tokens → create token with Email permission.
+ * Smoke-test the MailerSend HTTP API directly: proves the token works and the
+ * sending domain is verified. It does NOT exercise the support form.
+ *
+ * Dashboard → Settings → API tokens → create a token with Email permission.
  *
  * Run:
- *   CONTACT_TO_EMAIL=you@gmail.com npm run test:mail:api
+ *   npm run test:mail
+ *   CONTACT_TO_EMAIL=you@example.com npm run test:mail
+ *
+ * For the full end-to-end proof — a real browser filling the real form, which
+ * really sends — use `npm run test:live-email` instead.
  */
 import dns from "node:dns";
 
