@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "岁月故事 · LifePoem — ingatan anda, kekal selamanya",
-    "description": "LifePoem ialah aplikasi mesra yang dipandu AI untuk membantu warga emas merakam kisah hidup melalui suara atau teks—dalam Cina, Inggeris, Melayu, atau Tamil."
+    "title": "LifePoem · 岁月故事 — kisah hidup anda, dalam kata-kata anda sendiri",
+    "description": "Ceritakan satu kenangan, jawab beberapa soalan yang lembut, dan jadikannya sebuah cerita untuk disimpan dan dikongsi. LifePoem ialah aplikasi memoir mengutamakan suara untuk warga emas, dalam English, 中文, Bahasa Melayu dan தமிழ்.",
+    "ogAlt": "LifePoem — kisah hidup anda, dalam kata-kata anda sendiri"
   },
   "localeNames": {
     "en": "English",
@@ -9,103 +10,241 @@
     "ms": "Bahasa Melayu",
     "ta": "தமிழ்"
   },
+  "brand": {
+    "name": "LifePoem",
+    "chinese": "岁月故事"
+  },
   "nav": {
-    "language": "Bahasa"
-  },
-  "legal": {
-    "home": "Laman utama",
-    "linkPrivacy": "Dasar Privasi",
-    "linkTerms": "Syarat Perkhidmatan",
-    "linkContact": "Hubungi Kami"
-  },
-  "contact": {
-    "metaTitle": "Hubungi Kami · LifePoem",
-    "metaDescription": "Hubungi pasukan LifePoem untuk sokongan, maklum balas, atau pertanyaan kerjasama.",
-    "heading": "Hubungi Kami",
-    "body": "Kami ingin mendengar daripada anda. Hantar mesej anda dan pasukan kami akan membalas secepat mungkin.",
-    "namePlaceholder": "Nama anda",
-    "emailPlaceholder": "Emel anda",
-    "messagePlaceholder": "Bagaimana kami boleh membantu?",
-    "ctaSend": "Hantar mesej",
-    "successMessage": "Terima kasih. Kami telah menerima mesej anda.",
-    "errorMessage": "Sila semak maklumat anda dan cuba lagi.",
-    "emailLine": "Mesej dihantar ke support@lifepoem.one"
+    "sections": "Bahagian",
+    "howItWorks": "Caranya",
+    "insideTheApp": "Dalam aplikasi",
+    "support": "Sokongan",
+    "download": "Muat turun apl",
+    "languageWith": "Bahasa: {name}",
+    "switchKeepsPage": "Tukar bahasa, anda tetap di halaman ini.",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu"
   },
   "hero": {
-    "chineseTitle": "岁月故事",
-    "name": "LifePoem",
-    "tagline": "Ingatan anda, kekal selamanya.",
-    "intro": "Sembang hangat dipandu AI untuk pencerita warga emas: ucapkan memori, jawab soalan lembut, dan lihat ia menjadi cerita indah—dalam Cina atau Inggeris.",
-    "ctaApp": "Lihat aplikasi",
-    "ctaAbout": "Mengapa LifePoem",
-    "imageAlt": "LifePoem — Suara Anda, Warisan Anda. Memoir bersuara untuk warga emas, dibuat dalam English, 中文, Bahasa Melayu, dan தமிழ்.",
-    "appStoreAlt": "Muat turun Life Poem di App Store",
-    "playStoreAlt": "Dapatkan Life Poem di Google Play"
+    "eyebrow": "Memoir keluarga, disusun dengan lembut",
+    "heading": "Kisah hidup anda, dalam kata-kata anda sendiri.",
+    "lead": "Ceritakan satu kenangan, jawab beberapa soalan yang lembut, dan jadikannya sebuah cerita untuk disimpan dan dikongsi dengan orang yang anda sayang.",
+    "seeHow": "Lihat caranya ↓",
+    "availableIn": "Tersedia dalam English · 中文 · Bahasa Melayu · தமிழ்",
+    "imageAlt": "Lukisan sepasang warga emas memandang matahari terbenam, di sisi sebuah meja berisi gambar, surat dan cermin mata membaca.",
+    "chipEyebrow": "Peringkat kehidupan",
+    "chipValue": "Kanak-kanak"
   },
-  "valueProps": {
-    "heading": "Dibina untuk perbualan sebenar",
-    "sub": "Sasaran sentuh besar, jenis huruf jelas, dan tiada tekanan masa—fokus kekal pada orang yang bercerita.",
-    "items": [
+  "store": {
+    "appStoreAlt": "Muat turun LifePoem di App Store",
+    "playStoreAlt": "Dapatkan LifePoem di Google Play"
+  },
+  "howItWorks": {
+    "eyebrow": "Cara ia berfungsi",
+    "heading": "Tiga langkah, mengikut rentak anda",
+    "lead": "Semua langkah ini berlaku di dalam aplikasi mudah alih LifePoem, pada telefon atau tablet anda.",
+    "steps": [
       {
-        "title": "Penceritaan dipandu AI",
-        "body": "Soalan susulan lembut merentas fasa hidup supaya setiap memori menjadi bab penuh—pada rentak yang tidak terburu-buru."
+        "title": "Ceritakan satu kenangan",
+        "body": "Bercakap atau taip tentang satu detik dalam hidup anda.",
+        "aside": "Tekan dan tahan butang rakam yang besar itu semasa anda bercakap, atau guna papan kekunci jika anda lebih selesa begitu."
       },
       {
-        "title": "Cakap atau taip",
-        "body": "Tahan untuk rakam dengan transkripsi, atau gunakan papan kekunci. Cerita boleh ditulis dalam Cina atau Inggeris bila-bila masa."
+        "title": "Biarkan cerita terbentang",
+        "body": "Soalan yang lembut membantu anda mengingati orangnya, tempatnya dan perasaannya.",
+        "aside": "Satu soalan pada satu masa, dan anda menjawab dengan kata-kata anda sendiri. Tiada masa yang dikira."
       },
       {
-        "title": "Simpan dan kongsi",
-        "body": "Teks cerita strim, font mudah dibaca, dan eksport ke kad bergambar untuk keluarga di WhatsApp, WeChat, dan lain-lain."
+        "title": "Simpan. Kongsikan.",
+        "body": "Jadikan kenangan anda sebuah cerita bertulis untuk diri anda dan keluarga anda.",
+        "aside": "Cerita disimpan dalam peranti anda, dan disegerakkan ke akaun anda sebaik sahaja anda log masuk dan bersambung semula."
       }
     ]
   },
-  "screenshots": {
-    "heading": "Dalaman aplikasi",
-    "sub": "Gunakan anak panah atau titik di bawah untuk melayari enam skrin LifePoem.",
-    "slides": [
+  "pace": {
+    "eyebrow": "Dibuat mengikut rentak anda",
+    "heading": "Tidak perlu pandai menulis. Tiada apa-apa yang perlu dikejar.",
+    "body": "LifePoem dibina bersama warga emas, jadi perkara yang selalunya menjadi penghalang — teks kecil, butang tersembunyi, borang yang mengejar anda — tidak ada di sini.",
+    "offlineLabel": "Tentang penggunaan luar talian:",
+    "offlineBody": "cerita anda disimpan dalam peranti anda, dan disegerakkan ke akaun anda sebaik sahaja anda log masuk dan bersambung semula. Penukaran suara kepada teks dan penulisan cerita memerlukan sambungan internet.",
+    "features": [
       {
-        "title": "Permulaan lembut",
-        "body": "Alu-aluan tenang dan animaasi menaip—tak sesak, tak tergesa—sebelum perbualan bermula.",
-        "alt": "Apl LifePoem — aluan atau laman utama"
+        "title": "Bercakap atau taip",
+        "body": "Tekan untuk bercakap dan rakam suara anda, atau taip dengan papan kekunci. Kedua-duanya berfungsi dengan cara yang sama."
       },
       {
-        "title": "Peringkat hidup",
-        "body": "Kanak-kanak, keluarga, kerja, dan seterusnya; kemajuan dipaparkan di satu hab ringkas.",
-        "alt": "Apl LifePoem — peringkat hidup"
+        "title": "Teks besar dan kawalan yang jelas",
+        "body": "Butang besar dan saiz bacaan yang boleh dilaraskan, supaya anda boleh tetapkan apa yang selesa."
+      },
+      {
+        "title": "Balasan yang boleh dibaca kuat",
+        "body": "Dengar soalan dan cerita siap anda dengan Baca Kuat, tanpa perlu membacanya sendiri."
+      },
+      {
+        "title": "Empat bahasa yang biasa",
+        "body": "English, 中文, Bahasa Melayu dan தமிழ் — di dalam aplikasi dan di laman web ini."
+      },
+      {
+        "title": "Soalan lembut, tanpa tekanan",
+        "body": "Soalan datang satu demi satu. Berhenti dan kembali bila-bila masa anda mahu."
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Dalam aplikasi",
+    "heading": "Lihat dahulu sebelum muat turun",
+    "note": "Enam skrin daripada aplikasi. Gunakan butang atau kekunci anak panah untuk meninjaunya.",
+    "previous": "← Sebelumnya",
+    "next": "Seterusnya →",
+    "slides": [
+      {
+        "title": "Permulaan yang tenang",
+        "body": "Sapaan yang tenang dan satu butang besar—tidak tergesa-gesa, tidak berselerak—sebelum perbualan bermula.",
+        "alt": "Tangkapan skrin 1: skrin selamat datang LifePoem, dengan logo aplikasi dan butang Mula Sembang"
+      },
+      {
+        "title": "Peringkat kehidupan",
+        "body": "Tujuh peringkat kehidupan untuk dipilih: kanak-kanak, persekolahan, kerjaya, percintaan, keluarga, renungan dan harapan. Ketik satu untuk bermula.",
+        "alt": "Tangkapan skrin 2: senarai tujuh peringkat kehidupan, dengan Kanak-kanak ditandakan selesai"
       },
       {
         "title": "Sembang yang mendengar",
-        "body": "Cakap atau taip; aplikasi bertanya satu soalan hangat pada satu masa supaya memori muncul secara semula jadi.",
-        "alt": "Apl LifePoem — pengalaman sembang"
+        "body": "Bercakap atau taip; aplikasi bertanya satu soalan mesra pada satu masa supaya kenangan timbul dengan sendirinya.",
+        "alt": "Tangkapan skrin 3: soalan susulan yang lembut dalam paparan perbualan, di atas butang tekan untuk bercakap"
       },
       {
-        "title": "Rentak anda",
-        "body": "Kawalan besar, huruf jelas, dan sokongan dwibahasa—Cina atau Inggeris bila-bila masa.",
-        "alt": "Apl LifePoem — cerita atau tetapan"
+        "title": "Kenangan anda, ditulis",
+        "body": "Perbualan itu menjadi cerita bertulis dalam bentuk prosa, diari atau surat. Baca di skrin atau dengarkannya dengan Baca Kuat.",
+        "alt": "Tangkapan skrin 4: cerita bertulis yang siap dipaparkan dalam aplikasi, dengan butang Baca Kuat dan Kongsi"
       },
       {
-        "title": "Cerita mengambil bentuk",
-        "body": "Perhatikan bab distrim seperti mesin taip, diperhalusi untuk bacaan selesa.",
-        "alt": "Apl LifePoem — paparan cerita"
+        "title": "Kad yang layak dihantar",
+        "body": "Setiap cerita boleh dijadikan kad bergaya yang anda hantar melalui aplikasi yang sudah digunakan keluarga anda, seperti WhatsApp atau WeChat.",
+        "alt": "Tangkapan skrin 5: sekeping kad cerita yang disediakan untuk dikongsi dengan keluarga"
       },
       {
-        "title": "Kongsi legasi",
-        "body": "Eksport kad kemas ke WhatsApp, WeChat, dan saluran keluarga lain.",
-        "alt": "Apl LifePoem — kongsi atau eksport"
+        "title": "Bahasa dan privasi, di satu tempat",
+        "body": "Pilih daripada empat bahasa, buka dasar-dasarnya, dan matikan pemprosesan AI bila-bila masa anda mahu.",
+        "alt": "Tangkapan skrin 6: skrin Tetapan memaparkan pilihan Bahasa dan kawalan Perkongsian data"
       }
-    ]
+    ],
+    "counter": "{current} daripada {total}"
+  },
+  "example": {
+    "eyebrow": "Cerita yang layak dikongsi",
+    "heading": "Perkara yang hanya anda ingat",
+    "bodyOne": "Sebuah dapur pada pukul enam pagi. Gaji yang pertama. Nasihat seorang nenek yang masih terpakai sehingga hari ini. Inilah butiran yang ditanya oleh keluarga kemudian hari, dan inilah juga yang paling mudah dibiarkan tidak terucap.",
+    "bodyTwo": "Cerita yang siap boleh mengambil tiga bentuk, supaya bunyinya seperti rasa kenangan itu sendiri.",
+    "formats": {
+      "prose": {
+        "term": "Prosa",
+        "definition": "dibaca seperti satu bab pendek daripada sebuah memoir."
+      },
+      "diary": {
+        "term": "Diari",
+        "definition": "bertarikh dan dekat dengan detiknya, dalam suara anda sendiri."
+      },
+      "letter": {
+        "term": "Surat",
+        "definition": "ditulis untuk seseorang yang tertentu."
+      }
+    },
+    "tabsLabel": "Bentuk cerita",
+    "badge": "Contoh sahaja",
+    "stage": "Peringkat kehidupan: Kanak-kanak",
+    "footnote": "Ditulis daripada satu kenangan pendek yang diceritakan. Teks contoh yang dikarang untuk reka bentuk ini, bukan cerita seorang pelanggan.",
+    "samples": {
+      "prose": {
+        "title": "Dapur pada Pukul Enam Pagi",
+        "paragraphs": [
+          "Ibu saya sentiasa sudah bangun sebelum kami yang lain. Ketika saya menuruni tangga, cerek sudah dua kali mendidih, nasi sudah ditanak, dan tingkap di atas sinki sudah lembut dengan wap. Dia tidak pernah mengucapkan selamat pagi. Dia hanya menolak semangkuk melintasi meja ke arah saya, lalu meneruskan apa sahaja yang sedang dibuat oleh tangannya.",
+          "Bertahun-tahun kemudian barulah saya faham bahawa itulah caranya dia mengatakan perkara yang tidak pernah diucapkannya. Semangkuk ditolak melintasi meja, masih terlalu panas untuk dipegang. Saya pernah menyediakan sarapan yang sama untuk anak-anak saya sendiri, di dapur yang lain, di negara yang lain, dan setiap kali saya meletakkan mangkuk itu, saya terdengar bunyi cerek di rumah yang pertama itu."
+        ]
+      },
+      "diary": {
+        "date": "Selasa, 14 Mac",
+        "title": "Wap di Tingkap",
+        "paragraphs": [
+          "Bangun sebelum pukul enam lagi. Dapur sahaja bilik yang hangat pada waktu begini, jadi saya duduk memeluk cawan dengan kedua-dua belah tangan dan membiarkan tingkap berkabus. Di luar, basikal jiran sudah pun tiada.",
+          "Hari ini saya terkenangkan ibu, dan bagaimana dia tidak pernah sekali pun mengucapkan selamat pagi kepada saya. Tidak pernah terlintas di fikiran saya sehingga tahun ini bahawa dia sebenarnya mengucapkannya sepanjang masa — dengan nasi itu, dengan mangkuk itu, dengan pintu yang dibiarkan tidak berkunci untuk saya."
+        ]
+      },
+      "letter": {
+        "salutation": "Mei sayang,",
+        "paragraphs": [
+          "Kamu pernah bertanya kepada atuk bagaimana orangnya ibu atuk, dan rasanya atuk tidak menjawabnya dengan sebaiknya. Dia bukan seorang yang banyak bercakap. Dia sudah bangun sebelum sesiapa pun di rumah itu, setiap hari sepanjang hidupnya, dan tingkap dapur sentiasa sudah berwap apabila atuk turun ke bawah.",
+          "Dia akan menolak semangkuk nasi melintasi meja kepada atuk tanpa berkata apa-apa. Atuk mahu kamu tahu bahawa itulah kasih sayang, dan atuk mengenalinya, walaupun pada waktu itu. Apabila atuk menyediakan sarapan itu untuk kamu, itulah juga yang sedang atuk lakukan."
+        ],
+        "signoff": "— Atuk kamu"
+      }
+    }
+  },
+  "download": {
+    "eyebrow": "Dapatkan aplikasi",
+    "heading": "Mulakan dengan satu kenangan.",
+    "lead": "Muat turun LifePoem dan ceritakan yang pertama bila-bila masa anda sedia. Tidak perlu tergesa-gesa, dan tiada apa-apa yang perlu disediakan.",
+    "languages": "English · 中文 · Bahasa Melayu · தமிழ்"
   },
   "footer": {
-    "brandLine": "岁月故事 · LifePoem",
-    "tagline": "Ingatan anda, kekal selamanya.",
-    "ctaScreenshots": "Kembali ke tangkap skrin",
-    "copyright": "© 2026 Resetrix Pte. Ltd."
+    "blurb": "Kisah hidup, dalam kata-kata anda sendiri. Sebuah tempat yang tenang untuk kenangan yang ingin disimpan oleh keluarga anda.",
+    "informationHeading": "Maklumat",
+    "languageHeading": "Bahasa",
+    "supportLine": "Sokongan: support@lifepoem.one",
+    "copyright": "© {year} Resetrix Pte. Ltd.",
+    "legalNav": "Undang-undang dan sokongan"
+  },
+  "legal": {
+    "home": "Laman Utama",
+    "linkPrivacy": "Dasar Privasi",
+    "linkTerms": "Syarat Perkhidmatan",
+    "linkContact": "Hubungi Kami",
+    "linkDeleteAccount": "Pemadaman Akaun & Data",
+    "onThisPage": "Dalam halaman ini",
+    "backHome": "← Laman Utama",
+    "breadcrumb": "Jejak halaman"
+  },
+  "contact": {
+    "metaTitle": "Hubungi Kami · LifePoem",
+    "metaDescription": "Hubungi pasukan LifePoem untuk bantuan dengan aplikasi, cara untuk bermula, atau sokongan bagi seorang ahli keluarga.",
+    "breadcrumbCurrent": "Hubungi",
+    "heading": "Kami sedia membantu",
+    "lead": "Beritahu kami apa yang anda perlukan — soalan tentang aplikasi, kesukaran untuk bermula, atau bantuan untuk ahli keluarga. Setiap mesej dibaca oleh seorang manusia.",
+    "nameLabel": "Nama anda",
+    "nameHelp": "Apa sahaja panggilan yang anda suka.",
+    "namePlaceholder": "Tan Ah Kim",
+    "nameError": "Sila masukkan nama anda.",
+    "emailLabel": "Alamat e-mel",
+    "emailHelp": "Supaya kami boleh membalas kepada anda.",
+    "emailPlaceholder": "nama@contoh.com",
+    "emailError": "Sila masukkan alamat e-mel seperti nama@contoh.com.",
+    "messageLabel": "Mesej anda",
+    "messageHelp": "Sekurang-kurangnya 10 aksara. Beritahu kami apa yang berlaku dan telefon yang anda guna, jika itu membantu.",
+    "messageError": "Sila tulis sekurang-kurangnya 10 aksara.",
+    "characterCount": "{count} aksara",
+    "honeypotLabel": "Laman web",
+    "ctaSend": "Hantar",
+    "ctaSending": "Menghantar…",
+    "privacyLine": "Kami menggunakan nama, e-mel dan mesej anda hanya untuk membalas anda. Tiada apa-apa disimpan di laman web ini.",
+    "invalidMessage": "Ada sesuatu yang tidak kena. Sila semak butiran anda dan cuba lagi.",
+    "failureMessage": "Kami tidak dapat menyampaikan mesej anda kepada penyedia e-mel kami buat masa ini.",
+    "failureFallback": "Anda juga boleh menghantar e-mel kepada kami di support@lifepoem.one dan kami akan uruskan dari situ.",
+    "successHeading": "Mesej dihantar",
+    "successBody": "Mesej anda telah diterima oleh penyedia e-mel kami dan sedang dalam perjalanan ke peti masuk sokongan. Jika anda tidak menerima balasan, e-mel terus kepada support@lifepoem.one.",
+    "ctaSendAnother": "Hantar mesej lagi",
+    "asideDirectHeading": "Tulis terus kepada kami",
+    "asideDirectBody": "Jika borang ini menyusahkan anda, e-mel ke support@lifepoem.one daripada aplikasi mel anda sendiri.",
+    "asideDeleteHeading": "Mahu memadam akaun?",
+    "asideDeleteBody": "Langkah-langkahnya ditulis di halaman {link}.",
+    "asideDeleteLink": "Pemadaman Akaun & Data"
   },
   "a11y": {
-    "prevScreenshot": "Tangkap skrin sebelumnya",
-    "nextScreenshot": "Tangkap skrin seterusnya",
-    "screenshotSlides": "Slaid tangkap skrin",
-    "slideNumber": "Slaid {current} daripada {total}"
+    "galleryRegion": "Tangkapan skrin aplikasi",
+    "prevScreenshot": "Tangkapan skrin sebelumnya",
+    "nextScreenshot": "Tangkapan skrin seterusnya",
+    "screenshotSlides": "Slaid tangkapan skrin",
+    "showScreen": "Tunjukkan skrin {current} daripada {total}",
+    "galleryPosition": "Skrin {current} daripada {total}",
+    "chooseLanguage": "Pilih bahasa",
+    "skipToContent": "Langkau ke kandungan"
   }
 }

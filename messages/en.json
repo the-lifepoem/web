@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "岁月故事 · LifePoem — your memories, preserved forever",
-    "description": "LifePoem is a warm, AI-guided app that helps elderly users preserve life stories through voice or text—in Chinese, English, Malay, or Tamil."
+    "title": "LifePoem · 岁月故事 — your life stories, in your own words",
+    "description": "Speak a memory, answer a few gentle questions, and turn it into a story to keep and share. LifePoem is a voice-first memoir app for older adults, in English, 中文, Bahasa Melayu and தமிழ்.",
+    "ogAlt": "LifePoem — your life stories, in your own words"
   },
   "localeNames": {
     "en": "English",
@@ -9,103 +10,241 @@
     "ms": "Bahasa Melayu",
     "ta": "தமிழ்"
   },
+  "brand": {
+    "name": "LifePoem",
+    "chinese": "岁月故事"
+  },
   "nav": {
-    "language": "Language"
+    "sections": "Sections",
+    "howItWorks": "How it works",
+    "insideTheApp": "Inside the app",
+    "support": "Support",
+    "download": "Download the app",
+    "languageWith": "Language: {name}",
+    "switchKeepsPage": "Switching keeps you on this page.",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "A family memoir, gently made",
+    "heading": "Your life stories, in your own words.",
+    "lead": "Speak a memory, answer a few gentle questions, and turn it into a story to keep and share with the people you love.",
+    "seeHow": "See how it works ↓",
+    "availableIn": "Available in English · 中文 · Bahasa Melayu · தமிழ்",
+    "imageAlt": "A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby.",
+    "chipEyebrow": "Life stage",
+    "chipValue": "Childhood"
+  },
+  "store": {
+    "appStoreAlt": "Download LifePoem on the App Store",
+    "playStoreAlt": "Get LifePoem on Google Play"
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "heading": "Three steps, at your own pace",
+    "lead": "These steps all happen in the LifePoem mobile app, on your phone or tablet.",
+    "steps": [
+      {
+        "title": "Tell a memory",
+        "body": "Speak or type about a moment from your life.",
+        "aside": "Hold the large record button while you talk, or use the keyboard if you prefer."
+      },
+      {
+        "title": "Let the story unfold",
+        "body": "Gentle questions help you recall the people, places, and feelings.",
+        "aside": "One question at a time, and you answer in your own words. Nothing is timed."
+      },
+      {
+        "title": "Keep it. Share it.",
+        "body": "Turn your memories into a written story for yourself and your family.",
+        "aside": "Stories are saved on your device, and sync to your account once you sign in and reconnect."
+      }
+    ]
+  },
+  "pace": {
+    "eyebrow": "Made for your pace",
+    "heading": "No writing skill required. Nothing to rush.",
+    "body": "LifePoem was built with older adults, so the things that usually get in the way — small text, hidden buttons, forms that hurry you — are not part of it.",
+    "offlineLabel": "About working offline:",
+    "offlineBody": "your stories are saved on your device, and sync to your account once you sign in and reconnect. Voice transcription and story writing need an internet connection.",
+    "features": [
+      {
+        "title": "Speak or type",
+        "body": "Hold to record your voice, or write with the keyboard. Both work the same way."
+      },
+      {
+        "title": "Large text and clear controls",
+        "body": "Big buttons and adjustable reading sizes, so you can set what is comfortable."
+      },
+      {
+        "title": "Read-aloud replies",
+        "body": "Listen to the questions and your finished story instead of reading them."
+      },
+      {
+        "title": "Four familiar languages",
+        "body": "English, 中文, Bahasa Melayu and தமிழ் — in the app and on this website."
+      },
+      {
+        "title": "Gentle prompts, without pressure",
+        "body": "Questions arrive one at a time. Stop and come back whenever you want."
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Inside the app",
+    "heading": "See it before you download",
+    "note": "Six screens from the app. Use the buttons or your arrow keys to move through them.",
+    "previous": "← Previous",
+    "next": "Next →",
+    "slides": [
+      {
+        "title": "A gentle start",
+        "body": "A calm welcome and a single large button—no rush, no clutter—before the conversation begins.",
+        "alt": "Screenshot 1: the LifePoem welcome screen, with the app logo and a Start Chat button"
+      },
+      {
+        "title": "Life stages",
+        "body": "Seven life stages to choose from: childhood, school, career, romance, family, reflections and wishes. Tap one to begin.",
+        "alt": "Screenshot 2: the list of seven life stages, with Childhood marked complete"
+      },
+      {
+        "title": "Chat that listens",
+        "body": "Speak or type; the app asks one warm question at a time so memories surface naturally.",
+        "alt": "Screenshot 3: a gentle follow-up question in the conversation view, above a hold-to-talk button"
+      },
+      {
+        "title": "Your memory, written out",
+        "body": "The conversation becomes a written story in prose, diary or letter form. Read it on screen or have it read aloud.",
+        "alt": "Screenshot 4: a finished written story shown in the app, with Read Aloud and Share buttons"
+      },
+      {
+        "title": "A card worth sending",
+        "body": "Each story can become a styled card you send through the apps your family already uses, such as WhatsApp or WeChat.",
+        "alt": "Screenshot 5: a story card prepared for sharing with family"
+      },
+      {
+        "title": "Language and privacy, in one place",
+        "body": "Choose from four languages, open the policies, and turn AI processing off whenever you want.",
+        "alt": "Screenshot 6: the settings screen showing language choices and data-sharing controls"
+      }
+    ],
+    "counter": "{current} of {total}"
+  },
+  "example": {
+    "eyebrow": "A story worth sharing",
+    "heading": "The things only you remember",
+    "bodyOne": "A kitchen at six in the morning. The first pay packet. Advice from a grandmother that still holds. These are the details families ask about later, and the ones easiest to leave unsaid.",
+    "bodyTwo": "A finished story can take three shapes, so it sounds the way the memory feels.",
+    "formats": {
+      "prose": {
+        "term": "Prose",
+        "definition": "reads like a short chapter from a memoir."
+      },
+      "diary": {
+        "term": "Diary",
+        "definition": "dated and close to the moment, in your own voice."
+      },
+      "letter": {
+        "term": "Letter",
+        "definition": "written to someone in particular."
+      }
+    },
+    "tabsLabel": "Story format",
+    "badge": "Illustrative example",
+    "stage": "Life stage: Childhood",
+    "footnote": "Written from a short spoken memory. Example text created for this design, not a customer story.",
+    "samples": {
+      "prose": {
+        "title": "The Kitchen at Six in the Morning",
+        "paragraphs": [
+          "My mother was always awake before the rest of us. By the time I came down the stairs the kettle had already boiled twice, the rice was on, and the window above the sink had gone soft with steam. She never said good morning. She would push a bowl across the table towards me and carry on with whatever her hands were doing.",
+          "Years later I understood that this was how she said the things she never said out loud. A bowl pushed across a table, still too hot to hold. I have made that same breakfast for my own children, in a different kitchen, in a different country, and every time I set the bowl down I hear the kettle in that first house."
+        ]
+      },
+      "diary": {
+        "date": "Tuesday, 14 March",
+        "title": "Steam on the window",
+        "paragraphs": [
+          "Up before six again. The kitchen is the only room that is warm at this hour, so I sit with my hands around the cup and let the window fog over. Outside, the neighbour's bicycle is already gone.",
+          "I thought about my mother today, and how she never once wished me a good morning. It did not occur to me until this year that she was saying it the whole time, with the rice, with the bowl, with the door left unlocked for me."
+        ]
+      },
+      "letter": {
+        "salutation": "Dear Mei,",
+        "paragraphs": [
+          "You asked me once what my mother was like and I do not think I answered you properly. She was not a woman who said very much. She was awake before anyone else in the house, every day of her life, and the kitchen window was always steamed over by the time I came downstairs.",
+          "She would push a bowl of rice across the table to me and say nothing at all. I want you to know that this was affection, and that I recognised it, even then. When I make that breakfast for you, that is what I am doing too."
+        ],
+        "signoff": "— Your grandfather"
+      }
+    }
+  },
+  "download": {
+    "eyebrow": "Get the app",
+    "heading": "Begin with one memory.",
+    "lead": "Download LifePoem and tell the first one whenever you are ready. There is no hurry, and nothing to prepare.",
+    "languages": "English · 中文 · Bahasa Melayu · தமிழ்"
+  },
+  "footer": {
+    "blurb": "Life stories, in your own words. A quiet place for the memories your family will want to keep.",
+    "informationHeading": "Information",
+    "languageHeading": "Language",
+    "supportLine": "Support: support@lifepoem.one",
+    "copyright": "© {year} Resetrix Pte. Ltd.",
+    "legalNav": "Legal and support"
   },
   "legal": {
     "home": "Home",
     "linkPrivacy": "Privacy Policy",
     "linkTerms": "Terms of Service",
-    "linkContact": "Contact Us"
+    "linkContact": "Contact Us",
+    "linkDeleteAccount": "Account & Data Deletion",
+    "onThisPage": "On this page",
+    "backHome": "← Home",
+    "breadcrumb": "Breadcrumb"
   },
   "contact": {
     "metaTitle": "Contact Us · LifePoem",
-    "metaDescription": "Reach out to the LifePoem team for support or partnership inquiries.",
-    "heading": "Contact Us",
-    "body": "We would love to hear from you. Send us a message and our team will reply as soon as possible.",
-    "namePlaceholder": "Your name",
-    "emailPlaceholder": "Your email",
-    "messagePlaceholder": "How can we help you?",
+    "metaDescription": "Reach the LifePoem team for help with the app, getting started, or support for a family member.",
+    "breadcrumbCurrent": "Contact",
+    "heading": "We are glad to help",
+    "lead": "Tell us what you need — a question about the app, trouble getting started, or help for a family member. A person reads every message.",
+    "nameLabel": "Your name",
+    "nameHelp": "However you like to be addressed.",
+    "namePlaceholder": "Tan Ah Kim",
+    "nameError": "Please enter your name.",
+    "emailLabel": "Email address",
+    "emailHelp": "So we can reply to you.",
+    "emailPlaceholder": "name@example.com",
+    "emailError": "Please enter an email address like name@example.com.",
+    "messageLabel": "Your message",
+    "messageHelp": "At least 10 characters. Tell us what is happening and which phone you use, if that helps.",
+    "messageError": "Please write at least 10 characters.",
+    "characterCount": "{count} characters",
+    "honeypotLabel": "Website",
     "ctaSend": "Send message",
-    "successMessage": "Thanks for reaching out. We received your message.",
-    "errorMessage": "Please check your details and try again.",
-    "emailLine": "Messages are delivered to support@lifepoem.one"
-  },
-  "hero": {
-    "chineseTitle": "岁月故事",
-    "name": "LifePoem",
-    "tagline": "Your memories, preserved forever.",
-    "intro": "A warm, AI-guided chat for elderly storytellers: speak a memory, answer gentle questions, and watch it become a beautiful written story—in Chinese or English.",
-    "ctaApp": "See the app",
-    "ctaAbout": "Why LifePoem",
-    "imageAlt": "LifePoem — Your Voice, Your Legacy. A voice-first memoir for older adults, made in English, 中文, Bahasa Melayu, and தமிழ்.",
-    "appStoreAlt": "Download Life Poem on the App Store",
-    "playStoreAlt": "Get Life Poem on Google Play"
-  },
-  "valueProps": {
-    "heading": "Made for real conversations",
-    "sub": "Large touch targets, clear type, and no time pressure—so the focus stays on the person telling the story.",
-    "items": [
-      {
-        "title": "AI-guided storytelling",
-        "body": "Gentle follow-up questions across life stages so each memory becomes a full chapter—at a pace that never feels rushed."
-      },
-      {
-        "title": "Speak or type",
-        "body": "Hold to record with transcription, or use the keyboard. Stories can be written in Chinese or English anytime."
-      },
-      {
-        "title": "Save and share",
-        "body": "Streamed story text, readable fonts, and export to image cards for family on WhatsApp, WeChat, and more."
-      }
-    ]
-  },
-  "screenshots": {
-    "heading": "Inside the app",
-    "sub": "Use the arrows or dots to browse six screens from LifePoem.",
-    "slides": [
-      {
-        "title": "A gentle start",
-        "body": "A calm welcome and typing animation—no rush, no clutter—before the conversation begins.",
-        "alt": "LifePoem app — welcome or home"
-      },
-      {
-        "title": "Life stages",
-        "body": "Move through childhood, family, work, and more. Progress lives in one simple hub.",
-        "alt": "LifePoem app — life stages"
-      },
-      {
-        "title": "Chat that listens",
-        "body": "Speak or type; the app asks one warm question at a time so memories surface naturally.",
-        "alt": "LifePoem app — chat experience"
-      },
-      {
-        "title": "Your rhythm",
-        "body": "Large controls, readable type, and bilingual support—Chinese or English whenever you want.",
-        "alt": "LifePoem app — story or settings"
-      },
-      {
-        "title": "Stories take shape",
-        "body": "Watch chapters stream in with a typewriter feel, tuned for comfortable reading.",
-        "alt": "LifePoem app — story view"
-      },
-      {
-        "title": "Share the legacy",
-        "body": "Export a polished card to WhatsApp, WeChat, and other channels the family already uses.",
-        "alt": "LifePoem app — share or export"
-      }
-    ]
-  },
-  "footer": {
-    "brandLine": "岁月故事 · LifePoem",
-    "tagline": "Your memories, preserved forever.",
-    "ctaScreenshots": "Back to screenshots",
-    "copyright": "© 2026 Resetrix Pte. Ltd."
+    "ctaSending": "Sending…",
+    "privacyLine": "We use your name, email and message only to answer you. Nothing is stored on this website.",
+    "invalidMessage": "Something went wrong. Please check your details and try again.",
+    "failureMessage": "We could not pass your message to our email provider just now.",
+    "failureFallback": "You can also email us at support@lifepoem.one and we will pick it up from there.",
+    "successHeading": "Message sent",
+    "successBody": "Your message has been accepted by our email provider and is on its way to the support mailbox. If you do not hear back, write to support@lifepoem.one directly.",
+    "ctaSendAnother": "Send another message",
+    "asideDirectHeading": "Write to us directly",
+    "asideDirectBody": "If the form gives you trouble, email support@lifepoem.one from your own mail app.",
+    "asideDeleteHeading": "Deleting an account?",
+    "asideDeleteBody": "The steps are written out on the {link} page.",
+    "asideDeleteLink": "Account & Data Deletion"
   },
   "a11y": {
+    "galleryRegion": "App screenshots",
     "prevScreenshot": "Previous screenshot",
     "nextScreenshot": "Next screenshot",
     "screenshotSlides": "Screenshot slides",
-    "slideNumber": "Slide {current} of {total}"
+    "showScreen": "Show screen {current} of {total}",
+    "galleryPosition": "Screen {current} of {total}",
+    "chooseLanguage": "Choose a language",
+    "skipToContent": "Skip to content"
   }
 }
