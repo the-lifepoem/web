@@ -4,10 +4,12 @@ export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en";
 
-/** BCP 47 / HTML `lang` values */
+/** Remembers an explicit language choice so a later prefix-less visit honours it. */
+export const LOCALE_COOKIE = "NEXT_LOCALE";
+
+/** BCP 47 tag for the html lang attribute. */
 export function localeToHtmlLang(locale: Locale): string {
-  if (locale === "zh") return "zh-CN";
-  return locale;
+  return locale === "zh" ? "zh-CN" : locale;
 }
 
 export function isLocale(value: string): value is Locale {
