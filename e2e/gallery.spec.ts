@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 import { dictionaryFor } from "./gallery-label";
 import { locales } from "./support";
 
-const SLIDE_COUNT = 6;
+const SLIDE_COUNT = 10;
 
 test.describe("screenshot gallery", () => {
   test.beforeEach(async ({ page }) => {
@@ -12,6 +12,12 @@ test.describe("screenshot gallery", () => {
 
   test("starts on the first screen and reports its position", async ({ page }) => {
     await expect(page.getByText(`Screen 1 of ${SLIDE_COUNT}`)).toBeVisible();
+  });
+
+  test("the section says how many screens there are", async ({ page }) => {
+    // Regression: the count is interpolated from the image list, and reading
+    // that list across the client-component boundary once yielded 0.
+    await expect(page.getByText(`${SLIDE_COUNT} screens from the app.`)).toBeVisible();
   });
 
   test("the next and previous buttons move through every screen and wrap", async ({ page }) => {

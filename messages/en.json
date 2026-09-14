@@ -93,39 +93,59 @@
   "gallery": {
     "eyebrow": "Inside the app",
     "heading": "See it before you download",
-    "note": "Six screens from the app. Use the buttons or your arrow keys to move through them.",
+    "note": "{count} screens from the app. Use the buttons or your arrow keys to move through them.",
     "previous": "← Previous",
     "next": "Next →",
     "slides": [
       {
         "title": "A gentle start",
-        "body": "A calm welcome and a single large button—no rush, no clutter—before the conversation begins.",
-        "alt": "Screenshot 1: the LifePoem welcome screen, with the app logo and a Start Chat button"
+        "body": "A calm welcome and one large button. Nothing to read first, nothing to set up.",
+        "alt": "Screenshot 1: the LifePoem welcome screen, with the app's illustrated logo and a single button to start talking"
       },
       {
-        "title": "Life stages",
-        "body": "Seven life stages to choose from: childhood, school, career, romance, family, reflections and wishes. Tap one to begin.",
-        "alt": "Screenshot 2: the list of seven life stages, with Childhood marked complete"
+        "title": "Sign in with your phone",
+        "body": "Enter your number and a code arrives by text. Signing in is what brings stories you have already told back onto a new phone.",
+        "alt": "Screenshot 2: the sign-in screen with a country code, a phone number field and a link to the privacy policy"
       },
       {
-        "title": "Chat that listens",
-        "body": "Speak or type; the app asks one warm question at a time so memories surface naturally.",
-        "alt": "Screenshot 3: a gentle follow-up question in the conversation view, above a hold-to-talk button"
+        "title": "One code, then you are in",
+        "body": "Type the six digits from the message. If it does not arrive, you can ask for another.",
+        "alt": "Screenshot 3: the sign-in screen waiting for a six-digit code, with a resend option counting down"
+      },
+      {
+        "title": "Choose where to start",
+        "body": "Seven life stages in all — childhood, school, career, romance, family, reflections and wishes. Finished ones are marked, and you can reread them whenever you like.",
+        "alt": "Screenshot 4: the list of life stages, with Childhood marked complete and a button to read its story"
+      },
+      {
+        "title": "Hold the button and talk",
+        "body": "One gentle question at a time. Hold the large button while you speak, or switch to the keyboard whenever you prefer.",
+        "alt": "Screenshot 5: a question in the conversation view, above a large hold-to-talk microphone button"
       },
       {
         "title": "Your memory, written out",
-        "body": "The conversation becomes a written story in prose, diary or letter form. Read it on screen or have it read aloud.",
-        "alt": "Screenshot 4: a finished written story shown in the app, with Read Aloud and Share buttons"
+        "body": "Your words become a story you can read, have read aloud, add photographs to, and change until it sounds like you.",
+        "alt": "Screenshot 6: a finished story in prose, with buttons to add a photo, play it aloud and share it"
       },
       {
         "title": "A card worth sending",
-        "body": "Each story can become a styled card you send through the apps your family already uses, such as WhatsApp or WeChat.",
-        "alt": "Screenshot 5: a story card prepared for sharing with family"
+        "body": "Each story becomes a card for WhatsApp, WeChat, Facebook or Instagram — or saved straight to your photos.",
+        "alt": "Screenshot 7: a finished story laid out as a card, above sharing options"
       },
       {
-        "title": "Language and privacy, in one place",
-        "body": "Choose from four languages, open the policies, and turn AI processing off whenever you want.",
-        "alt": "Screenshot 6: the settings screen showing language choices and data-sharing controls"
+        "title": "Printed, if you want it",
+        "body": "Pick the stories, choose a card size and how many, and have them printed and posted to you.",
+        "alt": "Screenshot 8: the first step of the print order, choosing cards, a size and a quantity"
+      },
+      {
+        "title": "Your account, in your hands",
+        "body": "See how you signed in, withdraw AI sharing at any time, sign out, or delete your account and everything in it.",
+        "alt": "Screenshot 9: the account screen, with data-sharing controls, sign out and delete account"
+      },
+      {
+        "title": "Language and privacy",
+        "body": "Four languages to choose from, the policies a tap away, and a clear view of whether AI processing is on.",
+        "alt": "Screenshot 10: the settings screen, showing four language choices and the data-sharing status"
       }
     ],
     "counter": "{current} of {total}"
