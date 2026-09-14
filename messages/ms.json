@@ -93,39 +93,59 @@
   "gallery": {
     "eyebrow": "Dalam aplikasi",
     "heading": "Lihat dahulu sebelum muat turun",
-    "note": "Enam skrin daripada aplikasi. Gunakan butang atau kekunci anak panah untuk meninjaunya.",
+    "note": "{count} skrin daripada aplikasi. Gunakan butang atau kekunci anak panah untuk meninjaunya.",
     "previous": "← Sebelumnya",
     "next": "Seterusnya →",
     "slides": [
       {
         "title": "Permulaan yang tenang",
-        "body": "Sapaan yang tenang dan satu butang besar—tidak tergesa-gesa, tidak berselerak—sebelum perbualan bermula.",
-        "alt": "Tangkapan skrin 1: skrin selamat datang LifePoem, dengan logo aplikasi dan butang Mula Sembang"
+        "body": "Sapaan yang tenang dan satu butang besar. Tiada apa-apa yang perlu dibaca dahulu, tiada apa-apa yang perlu disiapkan.",
+        "alt": "Tangkapan skrin 1: skrin selamat datang LifePoem, dengan logo aplikasi berilustrasi dan satu butang Mula Sembang"
       },
       {
-        "title": "Peringkat kehidupan",
-        "body": "Tujuh peringkat kehidupan untuk dipilih: kanak-kanak, persekolahan, kerjaya, percintaan, keluarga, renungan dan harapan. Ketik satu untuk bermula.",
-        "alt": "Tangkapan skrin 2: senarai tujuh peringkat kehidupan, dengan Kanak-kanak ditandakan selesai"
+        "title": "Log masuk dengan telefon",
+        "body": "Masukkan nombor anda dan kod pengesahan akan tiba melalui SMS. Log masuk inilah yang membawa semula cerita yang sudah anda ceritakan ke telefon baharu.",
+        "alt": "Tangkapan skrin 2: skrin Sahkan Telefon, dengan kod negara, ruangan Nombor Telefon, pautan Dasar Privasi dan butang Hantar Kod"
       },
       {
-        "title": "Sembang yang mendengar",
-        "body": "Bercakap atau taip; aplikasi bertanya satu soalan mesra pada satu masa supaya kenangan timbul dengan sendirinya.",
-        "alt": "Tangkapan skrin 3: soalan susulan yang lembut dalam paparan perbualan, di atas butang tekan untuk bercakap"
+        "title": "Satu kod sahaja",
+        "body": "Taip enam digit daripada mesej itu, kemudian Sahkan. Jika kod tidak tiba, anda boleh minta satu lagi.",
+        "alt": "Tangkapan skrin 3: skrin log masuk menunggu kod 6 digit, dengan pilihan hantar semula kod yang sedang mengira detik"
+      },
+      {
+        "title": "Pilih tempat bermula",
+        "body": "Tujuh peringkat kehidupan semuanya: Kanak-kanak, Persekolahan, Kerjaya, Percintaan, Keluarga, Renungan dan Harapan. Yang sudah selesai ditandakan, dan boleh dibaca semula bila-bila masa.",
+        "alt": "Tangkapan skrin 4: senarai peringkat kehidupan dengan bar kemajuan, Kanak-kanak ditandakan Selesai dan butang Lihat Cerita"
+      },
+      {
+        "title": "Tekan untuk bercakap",
+        "body": "Satu soalan lembut pada satu masa. Tekan dan tahan butang besar itu semasa anda bercakap, atau tukar ke papan kekunci bila-bila masa anda mahu.",
+        "alt": "Tangkapan skrin 5: satu soalan dalam paparan perbualan peringkat Persekolahan, di atas butang mikrofon besar Tekan untuk bercakap"
       },
       {
         "title": "Kenangan anda, ditulis",
-        "body": "Perbualan itu menjadi cerita bertulis dalam bentuk prosa, diari atau surat. Baca di skrin atau dengarkannya dengan Baca Kuat.",
-        "alt": "Tangkapan skrin 4: cerita bertulis yang siap dipaparkan dalam aplikasi, dengan butang Baca Kuat dan Kongsi"
+        "body": "Kata-kata anda menjadi cerita yang boleh anda baca, dengar dengan Baca Kuat, tambah gambar, dan ubah sampai bunyinya seperti anda sendiri.",
+        "alt": "Tangkapan skrin 6: cerita siap dalam bentuk Prosa, dengan butang Tambah Foto, Main Auto, Baca Kuat dan Kongsi"
       },
       {
         "title": "Kad yang layak dihantar",
-        "body": "Setiap cerita boleh dijadikan kad bergaya yang anda hantar melalui aplikasi yang sudah digunakan keluarga anda, seperti WhatsApp atau WeChat.",
-        "alt": "Tangkapan skrin 5: sekeping kad cerita yang disediakan untuk dikongsi dengan keluarga"
+        "body": "Setiap cerita menjadi sekeping kad untuk WhatsApp, WeChat, Facebook atau Instagram, atau disimpan terus ke galeri foto anda.",
+        "alt": "Tangkapan skrin 7: cerita siap disusun sebagai kad, di atas pilihan berkongsi dan butang Simpan ke Galeri"
       },
       {
-        "title": "Bahasa dan privasi, di satu tempat",
-        "body": "Pilih daripada empat bahasa, buka dasar-dasarnya, dan matikan pemprosesan AI bila-bila masa anda mahu.",
-        "alt": "Tangkapan skrin 6: skrin Tetapan memaparkan pilihan Bahasa dan kawalan Perkongsian data"
+        "title": "Cetak, jika anda mahu",
+        "body": "Pilih kad cerita, pilih saiz dan kuantiti. Harga setiap saiz ditunjukkan dahulu, kemudian cetakan dihantar kepada anda.",
+        "alt": "Tangkapan skrin 8: langkah pertama Pesanan Cetakan, memilih kad cerita, tiga saiz kad dengan harganya dan kuantiti"
+      },
+      {
+        "title": "Akaun di tangan anda",
+        "body": "Lihat cara anda log masuk, tarik balik kebenaran AI pada bila-bila masa, log keluar, atau padam akaun anda dan segala isinya.",
+        "alt": "Tangkapan skrin 9: skrin Akaun Saya, dengan status Pemprosesan AI, Tarik balik kebenaran AI, Log keluar dan Padam akaun"
+      },
+      {
+        "title": "Bahasa dan privasi",
+        "body": "Empat bahasa untuk dipilih, dasar privasi dan sokongan sejauh satu ketikan, dan status Pemprosesan AI dinyatakan dengan jelas.",
+        "alt": "Tangkapan skrin 10: skrin Tetapan, memaparkan empat pilihan bahasa, pautan privasi dan sokongan, serta status Pemprosesan AI"
       }
     ],
     "counter": "{current} daripada {total}"

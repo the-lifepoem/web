@@ -5,19 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import type { Dictionary } from "../../lib/i18n/dictionary";
 import { interpolate } from "../../lib/i18n/interpolate";
-
-/**
- * Image order. The caption array in every locale file is index-aligned with
- * this list; changing one without the others mislabels a screen.
- */
-export const SCREENSHOT_PATHS = [
-  "/lifepoem/screenshots/1.jpg",
-  "/lifepoem/screenshots/2.jpg",
-  "/lifepoem/screenshots/3.jpg",
-  "/lifepoem/screenshots/4.jpg",
-  "/lifepoem/screenshots/5.jpg",
-  "/lifepoem/screenshots/6.jpg",
-] as const;
+import { SCREENSHOT_PATHS, SCREENSHOT_RATIO } from "../../lib/screenshots";
 
 /** Deliberate travel, so an unsteady hand does not change slides by accident. */
 const SWIPE_MIN_DISTANCE = 48;
@@ -87,8 +75,9 @@ export function ScreenshotGallery({ gallery, a11y }: ScreenshotGalleryProps) {
         className="overflow-hidden"
       >
         <div
-          className="flex w-[600%]"
+          className="flex"
           style={{
+            width: `${count * 100}%`,
             transform: `translateX(-${index * (100 / count)}%)`,
             transition: animate ? "transform .45s cubic-bezier(.4,0,.2,1)" : "none",
           }}
@@ -100,9 +89,13 @@ export function ScreenshotGallery({ gallery, a11y }: ScreenshotGalleryProps) {
               <div
                 key={path}
                 aria-hidden={!current}
-                className="grid w-[16.6667%] shrink-0 grid-cols-[repeat(auto-fit,minmax(min(260px,100%),1fr))] items-center gap-8"
+                style={{ width: `${100 / count}%` }}
+                className="grid shrink-0 grid-cols-[repeat(auto-fit,minmax(min(260px,100%),1fr))] items-center gap-8"
               >
-                <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[300px] overflow-hidden rounded-phone border border-edge">
+                <div
+                  style={{ aspectRatio: SCREENSHOT_RATIO }}
+                  className="relative mx-auto w-full max-w-[300px] overflow-hidden rounded-phone border border-edge"
+                >
                   <Image
                     src={path}
                     alt={caption.alt}
@@ -152,7 +145,12 @@ export function ScreenshotGallery({ gallery, a11y }: ScreenshotGalleryProps) {
           {interpolate(a11y.galleryPosition, { current: index + 1, total: count })}
         </p>
 
-        <ul className="m-0 flex list-none gap-0 p-0" aria-label={a11y.screenshotSlides}>
+        {/* Wraps rather than shrinks: ten 44px hit areas exceed a 390px viewport
+            in one row, and 44px is the touch-target floor. */}
+        <ul
+          className="m-0 flex list-none flex-wrap justify-center gap-0 p-0"
+          aria-label={a11y.screenshotSlides}
+        >
           {SCREENSHOT_PATHS.map((path, slide) => (
             <li key={path}>
               <button

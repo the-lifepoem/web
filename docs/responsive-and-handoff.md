@@ -116,22 +116,19 @@ invented app screen. Status below is from listing
 
 | Asset | Status | Size |
 | --- | --- | --- |
-| `public/lifepoem/hero.png` | present, but **not referenced by any code** | 1,822,440 bytes |
+| `design-assets/hero-source.png` | the master, moved out of `public/` so it is not deployed | 1,822,440 bytes |
 | `public/lifepoem/hero-portrait.webp` | present and used — this is what the hero renders | 93,338 bytes |
-| `public/lifepoem/screenshots/1.jpg` | present | 296,548 bytes |
-| `public/lifepoem/screenshots/2.jpg` | present | 181,478 bytes |
-| `public/lifepoem/screenshots/3.jpg` | present | 113,160 bytes |
-| `public/lifepoem/screenshots/4.jpg` | present | 280,998 bytes |
-| `public/lifepoem/screenshots/5.jpg` | present | 251,878 bytes |
-| `public/lifepoem/screenshots/6.jpg` | present | 166,026 bytes |
 | `public/lifepoem/app-store-badge.svg` | present — official Apple artwork | 10,804 bytes |
 | `public/lifepoem/google-play-badge.svg` | present — **hand-drawn imitation, not Google's artwork** | 744 bytes |
 | `public/lifepoem/og-image.webp` | present and used in `app/[locale]/layout.tsx` metadata | 142,468 bytes |
+| `public/lifepoem/screenshots/1–10.webp` | ten Chinese-language app captures, 828x1800 | 424 KB total |
+| `design-assets/screenshot-8-redacted.png` | master for `8.webp`, phone number blurred | 1206x2622 |
 
 ### Hero image
 
-The prototype asked for `hero.png` shown at 4:5 in the framed presentation.
-`hero.png` is still on disk at 1.8 MB but nothing imports it.
+The prototype asked for the brand artwork shown at 4:5 in the framed
+presentation. The 1.8 MB original now lives at `design-assets/hero-source.png`,
+outside the deployed directory.
 `components/home/hero-section.tsx` renders `/lifepoem/hero-portrait.webp` at
 `width={820} height={1025}` — a 4:5 crop. Its comment records the reason for the
 crop: it "deliberately takes the left of the original, which carries no baked-in
@@ -140,11 +137,22 @@ translatable HTML." Treat `hero.png` as the source original, not a live asset.
 
 ### Screenshots
 
-All six 9:19.5 phone captures are in place and listed in `SCREENSHOT_PATHS` in
-`components/home/screenshot-gallery.tsx`. The prototype's warning still stands:
-slide titles, captions and order were provisional and must be checked against
-the real images, and the caption index has to stay aligned with
-`SCREENSHOT_PATHS`.
+Ten phone captures are in place at their native 1206:2622 ratio, listed in
+`SCREENSHOT_PATHS` in `components/home/screenshot-gallery.tsx`. Two things about
+that list are load-bearing:
+
+- **It is ordered as a walkthrough, not by filename.** The captures arrived with
+  the finished story ahead of the conversation that produces it.
+- **It is index-aligned with `gallery.slides` in all four locale files.**
+  `npm run check:locales` fails if the array lengths drift apart, and the
+  end-to-end suite asserts ten captioned, alt-texted slides per locale.
+
+The gallery's track and slide widths are computed from the list's length rather
+than written as literals, so adding or removing a capture needs no layout edit.
+The visible screen count in `gallery.note` is interpolated from the same length.
+
+These captures are **Chinese-language**, and the same images are served on every
+locale. See `docs/deviations.md`.
 
 ### Store badges
 

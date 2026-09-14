@@ -95,7 +95,7 @@ lib/
   mailersend/post-json-https.ts Node https POST with timeout
   site.ts                       Origin, localised route list, absolute URLs, hreflang map
 messages/                       en.json (source of truth), zh.json, ms.json, ta.json
-public/lifepoem/                Hero crop, OG image, six screenshots, two store badges
+public/lifepoem/                Hero crop, OG image, ten screenshots, two store badges
 design-assets/                  Unserved source artwork (hero-source.png) plus its regeneration notes
 scripts/
   check-locale-parity.mjs       Key paths, array lengths and {placeholder} parity
@@ -243,7 +243,7 @@ The CJK and Tamil families set `preload: false` deliberately: preload defaults t
 
 ### Screenshot gallery
 
-Image order is `SCREENSHOT_PATHS` in `components/home/screenshot-gallery.tsx`, six local JPEGs under `public/lifepoem/screenshots/`. It is **index-aligned** with the `gallery.slides` array in every locale file, which supplies each slide's `title`, `body` and `alt`; the parity script's array-length check exists to catch drift between them.
+Image order is `SCREENSHOT_PATHS` in `components/home/screenshot-gallery.tsx`, ten local WebP files under `public/lifepoem/screenshots/`, sequenced as a walkthrough rather than by filename. It is **index-aligned** with the `gallery.slides` array in every locale file, which supplies each slide's `title`, `body` and `alt`; the parity script's array-length check exists to catch drift between them.
 
 The selected slide is local React state. Previous/next wrap around, indicator buttons jump directly, `ArrowLeft`/`ArrowRight`/`Home`/`End` work on the focusable region, and a swipe is honoured only when horizontal travel exceeds 48px within 300ms and exceeds the vertical component. Off-screen slides carry `aria-hidden`, position is announced through an `aria-live="polite"` line, the first image sets `preload`, and the indicator buttons are `size-tap` (44px) with a smaller visual pill inside.
 
@@ -436,7 +436,7 @@ A Playwright suite is configured and is **the project's only test seam: the site
 | `e2e/routes.spec.ts` | All 20 locale × route combinations return 200, expose exactly one non-empty `h1`, and carry the right `html lang`; no page renders a raw dictionary key (every key path is enumerated from `en.json`); `/de` is a 404 |
 | `e2e/contact.spec.ts` | Per-field errors and `aria-invalid`; only the failing field flagged; typed values surviving a rejection; a valid send producing exactly one recorded payload with the right recipient, reply-to, subject and body; the pending/disabled submit state; the delivery-failure state being distinct from validation and naming the support address; a filled honeypot reporting success and recording nothing; the character counter; label/help wiring; the 64px submit floor. Runs `serial` because the outbox is one shared file |
 | `e2e/navigation.spec.ts` | Language switch preserving path, query and fragment; the `NEXT_LOCALE` cookie being written and then honoured on a prefix-less visit; Escape closing the menu and restoring focus; `/support`, `/{locale}/support` and `/delete-account` resolving; the footer deletion link in every locale; anchor targets clearing the sticky header; the mobile disclosure panel, its 44px+ rows, and no horizontal scroll at 390px |
-| `e2e/gallery.spec.ts` | Button, dot, arrow/Home/End and swipe navigation with wrap-around; the live position announcement; off-screen slides hidden from assistive technology; six captioned, alt-texted slides in every locale; a vertical drag not changing slides |
+| `e2e/gallery.spec.ts` | Button, dot, arrow/Home/End and swipe navigation with wrap-around; the live position announcement; off-screen slides hidden from assistive technology; ten captioned, alt-texted slides in every locale; a vertical drag not changing slides |
 | `e2e/seo.spec.ts` | The sitemap listing all 20 URLs and containing alternates; robots allowing crawling and naming the sitemap; one canonical plus every hreflang and `x-default` per locale; OpenGraph title/description/image/type and `twitter:card`; the legal contents rail linking only to fragments that resolve to real sections |
 | `e2e/store-links.spec.ts` | Both store URLs appearing exactly twice per locale (hero and download panel) with `target="_blank"`, `rel` containing `noreferrer`, a non-empty `aria-label`, and both badge images actually decoding |
 
@@ -508,7 +508,7 @@ DNS is not configured here. The canonical origin is `https://lifepoem.one`; the 
 | `public/lifepoem/hero-portrait.webp` | The live hero: a **4:5 WebP crop**, 820×1025, **93,338 bytes**, down from the 1.74 MB PNG it replaced as the largest-contentful-paint element. The crop takes only the left region of the original artwork — the couple on the bench — which carries no baked-in text, so the framed slot is locale-neutral and the headline beside it is real translatable HTML |
 | `public/lifepoem/og-image.webp` | Generated 1200×630 share image, 142,468 bytes. A **centre** crop of the same master, which deliberately keeps the painted wordmark and tagline, because a social card wants them |
 | `design-assets/hero-source.png` | The 1488×719, **1,822,440-byte** master banner, with the headline, tagline and language list painted into the image. Moved out of `public/` so it is no longer served, and referenced by no code. `design-assets/README.md` records the exact crop boxes for regenerating both derived assets |
-| `public/lifepoem/screenshots/1–6.jpg` | Six real app screens, 113–297 KB each, index-aligned with the caption arrays |
+| `public/lifepoem/screenshots/1–10.webp` | Ten real app screens, 828x1800, 19–71 KB each (424 KB total), index-aligned with the caption arrays. Chinese-language captures. `8.webp` is regenerated from a redacted master with the signed-in phone number blurred. |
 | `public/lifepoem/app-store-badge.svg` | Official Apple artwork, rendered unmodified at 186×63 (119:40) |
 | `public/lifepoem/google-play-badge.svg` | **Still a hand-drawn imitation, not Google's official asset.** 744 bytes built from Arial `<text>` elements, so it renders differently across platforms and breaches Google Play's brand guidelines. The slot is built to the correct 135×40 proportions; `scripts/install-play-badge.sh` walks a human through obtaining the real file and refuses anything containing `<text>` |
 

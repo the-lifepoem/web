@@ -13,7 +13,7 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 
 ## Chinese (Simplified) (`zh`)
 
-152 strings: 141 interface copy, 11 sample-story prose.
+164 strings: 153 interface copy, 11 sample-story prose.
 
 ### Sample story prose — read for tone
 
@@ -51,7 +51,7 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `hero.lead` | Speak a memory, answer a few gentle questions, and turn it into a story to keep and share with the people you love. | 说出一段回忆，回答几个温和的问题，就能变成一篇故事，自己收着，也分享给您牵挂的人。 |
 | `hero.seeHow` | See how it works ↓ | 看看怎么用 ↓ |
 | `hero.availableIn` | Available in English · 中文 · Bahasa Melayu · தமிழ் | 支持 English · 中文 · Bahasa Melayu · தமிழ் |
-| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | 一幅画：一对老夫妻看着夕阳，旁边的书桌上放着照片、信件和老花镜。 |
+| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | 一幅水彩画：一对老夫妻坐在长椅上，看着夕阳落在湖上，旁边放着一捆扎好的信件和几张旧照片。 |
 | `hero.chipEyebrow` | Life stage | 人生阶段 |
 | `hero.chipValue` | Childhood | 童年 |
 | `store.appStoreAlt` | Download LifePoem on the App Store | 在 App Store 下载 LifePoem |
@@ -85,27 +85,39 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `pace.features[4].body` | Questions arrive one at a time. Stop and come back whenever you want. | 问题一次来一个。想停就停，想接着说随时回来。 |
 | `gallery.eyebrow` | Inside the app | 应用里的样子 |
 | `gallery.heading` | See it before you download | 下载之前，先看一眼 |
-| `gallery.note` | Six screens from the app. Use the buttons or your arrow keys to move through them. | 应用里的六个画面。用按钮或方向键可以一张一张看。 |
+| `gallery.note` | {count} screens from the app. Use the buttons or your arrow keys to move through them. | 应用里的 {count} 个画面。用按钮或方向键可以一张一张看。 |
 | `gallery.previous` | ← Previous | ← 上一张 |
 | `gallery.next` | Next → | 下一张 → |
 | `gallery.slides[0].title` | A gentle start | 从容地开始 |
-| `gallery.slides[0].body` | A calm welcome and a single large button—no rush, no clutter—before the conversation begins. | 一句安静的问候，一个大大的按钮——不急，也不乱——然后就可以聊起来了。 |
-| `gallery.slides[0].alt` | Screenshot 1: the LifePoem welcome screen, with the app logo and a Start Chat button | 截图一：LifePoem 的欢迎画面，有应用图标和「开始聊天」按钮 |
-| `gallery.slides[1].title` | Life stages | 人生阶段 |
-| `gallery.slides[1].body` | Seven life stages to choose from: childhood, school, career, romance, family, reflections and wishes. Tap one to begin. | 七个人生阶段可以选：童年、求学、工作、恋爱、家庭、人生感悟、心愿寄语。点一个，就可以开始了。 |
-| `gallery.slides[1].alt` | Screenshot 2: the list of seven life stages, with Childhood marked complete | 截图二：七个人生阶段的列表，「童年」已标记为完成 |
-| `gallery.slides[2].title` | Chat that listens | 会听您说话的聊天 |
-| `gallery.slides[2].body` | Speak or type; the app asks one warm question at a time so memories surface naturally. | 说话或者打字都行；应用一次只问一个温和的问题，回忆就自然而然浮上来了。 |
-| `gallery.slides[2].alt` | Screenshot 3: a gentle follow-up question in the conversation view, above a hold-to-talk button | 截图三：对话画面里的一个温和追问，下方是「按住说话」按钮 |
-| `gallery.slides[3].title` | Your memory, written out | 把回忆写成文字 |
-| `gallery.slides[3].body` | The conversation becomes a written story in prose, diary or letter form. Read it on screen or have it read aloud. | 聊过的话会变成一篇写好的故事，可以是散文风、日记风或书信风。在屏幕上读，或者让它朗读给您听。 |
-| `gallery.slides[3].alt` | Screenshot 4: a finished written story shown in the app, with Read Aloud and Share buttons | 截图四：应用里写好的一篇故事，下方有「朗读」和「分享」按钮 |
-| `gallery.slides[4].title` | A card worth sending | 值得寄出去的卡片 |
-| `gallery.slides[4].body` | Each story can become a styled card you send through the apps your family already uses, such as WhatsApp or WeChat. | 每一篇故事都能做成一张卡片，用家人本来就在用的应用寄出去，比如 WhatsApp 或微信。 |
-| `gallery.slides[4].alt` | Screenshot 5: a story card prepared for sharing with family | 截图五：一张准备分享给家人的故事卡片 |
-| `gallery.slides[5].title` | Language and privacy, in one place | 语言和隐私，都在一处 |
-| `gallery.slides[5].body` | Choose from four languages, open the policies, and turn AI processing off whenever you want. | 在「语言」里从四种语言中挑一种，在「隐私与支持」里翻看各项条款，也可以随时到「数据共享」里把 AI 处理关掉。 |
-| `gallery.slides[5].alt` | Screenshot 6: the settings screen showing language choices and data-sharing controls | 截图六：设置画面，显示语言选项和数据共享开关 |
+| `gallery.slides[0].body` | A calm welcome and one large button. Nothing to read first, nothing to set up. | 一句安静的问候，一个大大的按钮。不用先读说明，也不用先设置什么。 |
+| `gallery.slides[0].alt` | Screenshot 1: the LifePoem welcome screen, with the app's illustrated logo and a single button to start talking | 截图一：LifePoem 的欢迎画面，有手绘的应用图标、一行慢慢打出来的副标题，和一个「开始聊天」按钮 |
+| `gallery.slides[1].title` | Sign in with your phone | 用手机号登录 |
+| `gallery.slides[1].body` | Enter your number and a code arrives by text. Signing in is what brings stories you have already told back onto a new phone. | 填上手机号码，验证码会发到您手机上。登录之后，以前讲过的故事换了新手机也还能找回来。 |
+| `gallery.slides[1].alt` | Screenshot 2: the sign-in screen with a country code, a phone number field and a link to the privacy policy | 截图二：「验证手机」画面，有国家代码 +65、「手机号码」输入框、「隐私政策」链接和「发送验证码」按钮 |
+| `gallery.slides[2].title` | One code, then you are in | 填一次验证码，就进去了 |
+| `gallery.slides[2].body` | Type the six digits from the message. If it does not arrive, you can ask for another. | 把短信里的六位数字填进去。要是一直没收到，可以请它再发一次。 |
+| `gallery.slides[2].alt` | Screenshot 3: the sign-in screen waiting for a six-digit code, with a resend option counting down | 截图三：登录画面上写着「请输入收到的 6 位验证码」，下面是一格 000000 的输入框、「验证」按钮，以及正在倒数的「重新发送验证码」 |
+| `gallery.slides[3].title` | Choose where to start | 从哪一段开始，都可以 |
+| `gallery.slides[3].body` | Seven life stages in all — childhood, school, career, romance, family, reflections and wishes. Finished ones are marked, and you can reread them whenever you like. | 人生阶段一共七个：童年、求学、工作、恋爱、家庭、人生感悟、心愿寄语。讲完的会标上「已完成」，想再读一遍，随时都可以。 |
+| `gallery.slides[3].alt` | Screenshot 4: the list of life stages, with Childhood marked complete and a button to read its story | 截图四：「您的岁月故事」画面，写着「选择一个人生阶段，开始讲述」，上方是进度条；「童年」标着「已完成」，旁边有「阅读故事」，往下是求学、工作、恋爱、家庭、人生感悟 |
+| `gallery.slides[4].title` | Hold the button and talk | 按住按钮，说就好 |
+| `gallery.slides[4].body` | One gentle question at a time. Hold the large button while you speak, or switch to the keyboard whenever you prefer. | 一次只问一个温和的问题。说话的时候按住那个大按钮；您习惯打字的话，换成键盘也一样。 |
+| `gallery.slides[4].alt` | Screenshot 5: a question in the conversation view, above a large hold-to-talk microphone button | 截图五：「求学」阶段的对话画面，AI 的头像旁是它问的一个问题，下方有「按住说话」的提示和一个大大的话筒按钮，两边是键盘和清除聊天记录的按钮 |
+| `gallery.slides[5].title` | Your memory, written out | 把回忆写成文字 |
+| `gallery.slides[5].body` | Your words become a story you can read, have read aloud, add photographs to, and change until it sounds like you. | 您说过的话会变成一篇写好的故事，可以在屏幕上读，也可以让它朗读给您听，还能添加照片、把句子改到像您自己说的话。 |
+| `gallery.slides[5].alt` | Screenshot 6: a finished story in prose, with buttons to add a photo, play it aloud and share it | 截图六：写好的一篇故事，标题是「您的故事 · 散文风」，上面写着 STAGE 1 · 童年，有「添加照片（0/2）」、可以直接修改的正文，以及「自动播放」「朗读」和「分享」 |
+| `gallery.slides[6].title` | A card worth sending | 值得寄出去的卡片 |
+| `gallery.slides[6].body` | Each story becomes a card for WhatsApp, WeChat, Facebook or Instagram — or saved straight to your photos. | 每一篇故事都能做成一张卡片，发到 WhatsApp、微信、Facebook 或 Instagram，也可以直接保存到相册。 |
+| `gallery.slides[6].alt` | Screenshot 7: a finished story laid out as a card, above sharing options | 截图七：深色背景上放着一张米色的故事卡片，卡片上是写好的故事；下方是 WhatsApp、Facebook、Instagram、微信，还有「保存到相册」和「打印故事卡片」 |
+| `gallery.slides[7].title` | Printed, if you want it | 也可以印出来 |
+| `gallery.slides[7].body` | Pick the stories, choose a card size and how many, and have them printed and posted to you. | 挑好要打印的故事卡片，选一个尺寸和数量，我们印好寄给您。每种尺寸旁边都写着新币价格。 |
+| `gallery.slides[7].alt` | Screenshot 8: the first step of the print order, choosing cards, a size and a quantity | 截图八：「打印订单」的第 1 步，共 4 步，写着「选择要打印的故事卡片」，三种打印尺寸各标着新币价格，下面是「数量」的加减和「下一步」 |
+| `gallery.slides[8].title` | Your account, in your hands | 账户在您自己手里 |
+| `gallery.slides[8].body` | See how you signed in, withdraw AI sharing at any time, sign out, or delete your account and everything in it. | 看得见自己是怎么登录的，可以随时「撤回 AI 授权」，也可以退出登录，或者把账户和里面的一切都删掉。 |
+| `gallery.slides[8].alt` | Screenshot 9: the account screen, with data-sharing controls, sign out and delete account | 截图九：「我的账户」画面，「已登录为」这一行的内容做了模糊处理，下面有「隐私政策」「服务条款」「联系我们」，「AI 处理（OpenAI）」显示「已启用」，再往下是「撤回 AI 授权」「退出登录」和「删除账户」 |
+| `gallery.slides[9].title` | Language and privacy | 语言和隐私，都在一处 |
+| `gallery.slides[9].body` | Four languages to choose from, the policies a tap away, and a clear view of whether AI processing is on. | 四种语言里挑一种，各项条款就在旁边。这一页也写明了 AI 处理现在是启用还是停用。 |
+| `gallery.slides[9].alt` | Screenshot 10: the settings screen, showing four language choices and the data-sharing status | 截图十：「设置」画面，「语言」下面列着中文、English、Bahasa Melayu、தமிழ்，接着是「隐私与支持」，「AI 处理（OpenAI）」显示「已停用」，最下面是「版本 1.2.0 (1)」 |
 | `gallery.counter` | {current} of {total} | 第 {current} 张，共 {total} 张 |
 | `example.eyebrow` | A story worth sharing | 值得分享的故事 |
 | `example.heading` | The things only you remember | 只有您还记得的那些事 |
@@ -179,7 +191,7 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 
 ## Bahasa Melayu (`ms`)
 
-151 strings: 140 interface copy, 11 sample-story prose.
+163 strings: 152 interface copy, 11 sample-story prose.
 
 ### Sample story prose — read for tone
 
@@ -217,7 +229,7 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `hero.lead` | Speak a memory, answer a few gentle questions, and turn it into a story to keep and share with the people you love. | Ceritakan satu kenangan, jawab beberapa soalan yang lembut, dan jadikannya sebuah cerita untuk disimpan dan dikongsi dengan orang yang anda sayang. |
 | `hero.seeHow` | See how it works ↓ | Lihat caranya ↓ |
 | `hero.availableIn` | Available in English · 中文 · Bahasa Melayu · தமிழ் | Tersedia dalam English · 中文 · Bahasa Melayu · தமிழ் |
-| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | Lukisan sepasang warga emas memandang matahari terbenam, di sisi sebuah meja berisi gambar, surat dan cermin mata membaca. |
+| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | Lukisan cat air sepasang warga emas duduk di atas bangku, memandang matahari terbenam di atas tasik, dengan seikat surat yang diikat dan beberapa gambar lama di sebelah mereka. |
 | `hero.chipEyebrow` | Life stage | Peringkat kehidupan |
 | `hero.chipValue` | Childhood | Kanak-kanak |
 | `store.appStoreAlt` | Download LifePoem on the App Store | Muat turun LifePoem di App Store |
@@ -251,27 +263,39 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `pace.features[4].body` | Questions arrive one at a time. Stop and come back whenever you want. | Soalan datang satu demi satu. Berhenti dan kembali bila-bila masa anda mahu. |
 | `gallery.eyebrow` | Inside the app | Dalam aplikasi |
 | `gallery.heading` | See it before you download | Lihat dahulu sebelum muat turun |
-| `gallery.note` | Six screens from the app. Use the buttons or your arrow keys to move through them. | Enam skrin daripada aplikasi. Gunakan butang atau kekunci anak panah untuk meninjaunya. |
+| `gallery.note` | {count} screens from the app. Use the buttons or your arrow keys to move through them. | {count} skrin daripada aplikasi. Gunakan butang atau kekunci anak panah untuk meninjaunya. |
 | `gallery.previous` | ← Previous | ← Sebelumnya |
 | `gallery.next` | Next → | Seterusnya → |
 | `gallery.slides[0].title` | A gentle start | Permulaan yang tenang |
-| `gallery.slides[0].body` | A calm welcome and a single large button—no rush, no clutter—before the conversation begins. | Sapaan yang tenang dan satu butang besar—tidak tergesa-gesa, tidak berselerak—sebelum perbualan bermula. |
-| `gallery.slides[0].alt` | Screenshot 1: the LifePoem welcome screen, with the app logo and a Start Chat button | Tangkapan skrin 1: skrin selamat datang LifePoem, dengan logo aplikasi dan butang Mula Sembang |
-| `gallery.slides[1].title` | Life stages | Peringkat kehidupan |
-| `gallery.slides[1].body` | Seven life stages to choose from: childhood, school, career, romance, family, reflections and wishes. Tap one to begin. | Tujuh peringkat kehidupan untuk dipilih: kanak-kanak, persekolahan, kerjaya, percintaan, keluarga, renungan dan harapan. Ketik satu untuk bermula. |
-| `gallery.slides[1].alt` | Screenshot 2: the list of seven life stages, with Childhood marked complete | Tangkapan skrin 2: senarai tujuh peringkat kehidupan, dengan Kanak-kanak ditandakan selesai |
-| `gallery.slides[2].title` | Chat that listens | Sembang yang mendengar |
-| `gallery.slides[2].body` | Speak or type; the app asks one warm question at a time so memories surface naturally. | Bercakap atau taip; aplikasi bertanya satu soalan mesra pada satu masa supaya kenangan timbul dengan sendirinya. |
-| `gallery.slides[2].alt` | Screenshot 3: a gentle follow-up question in the conversation view, above a hold-to-talk button | Tangkapan skrin 3: soalan susulan yang lembut dalam paparan perbualan, di atas butang tekan untuk bercakap |
-| `gallery.slides[3].title` | Your memory, written out | Kenangan anda, ditulis |
-| `gallery.slides[3].body` | The conversation becomes a written story in prose, diary or letter form. Read it on screen or have it read aloud. | Perbualan itu menjadi cerita bertulis dalam bentuk prosa, diari atau surat. Baca di skrin atau dengarkannya dengan Baca Kuat. |
-| `gallery.slides[3].alt` | Screenshot 4: a finished written story shown in the app, with Read Aloud and Share buttons | Tangkapan skrin 4: cerita bertulis yang siap dipaparkan dalam aplikasi, dengan butang Baca Kuat dan Kongsi |
-| `gallery.slides[4].title` | A card worth sending | Kad yang layak dihantar |
-| `gallery.slides[4].body` | Each story can become a styled card you send through the apps your family already uses, such as WhatsApp or WeChat. | Setiap cerita boleh dijadikan kad bergaya yang anda hantar melalui aplikasi yang sudah digunakan keluarga anda, seperti WhatsApp atau WeChat. |
-| `gallery.slides[4].alt` | Screenshot 5: a story card prepared for sharing with family | Tangkapan skrin 5: sekeping kad cerita yang disediakan untuk dikongsi dengan keluarga |
-| `gallery.slides[5].title` | Language and privacy, in one place | Bahasa dan privasi, di satu tempat |
-| `gallery.slides[5].body` | Choose from four languages, open the policies, and turn AI processing off whenever you want. | Pilih daripada empat bahasa, buka dasar-dasarnya, dan matikan pemprosesan AI bila-bila masa anda mahu. |
-| `gallery.slides[5].alt` | Screenshot 6: the settings screen showing language choices and data-sharing controls | Tangkapan skrin 6: skrin Tetapan memaparkan pilihan Bahasa dan kawalan Perkongsian data |
+| `gallery.slides[0].body` | A calm welcome and one large button. Nothing to read first, nothing to set up. | Sapaan yang tenang dan satu butang besar. Tiada apa-apa yang perlu dibaca dahulu, tiada apa-apa yang perlu disiapkan. |
+| `gallery.slides[0].alt` | Screenshot 1: the LifePoem welcome screen, with the app's illustrated logo and a single button to start talking | Tangkapan skrin 1: skrin selamat datang LifePoem, dengan logo aplikasi berilustrasi dan satu butang Mula Sembang |
+| `gallery.slides[1].title` | Sign in with your phone | Log masuk dengan telefon |
+| `gallery.slides[1].body` | Enter your number and a code arrives by text. Signing in is what brings stories you have already told back onto a new phone. | Masukkan nombor anda dan kod pengesahan akan tiba melalui SMS. Log masuk inilah yang membawa semula cerita yang sudah anda ceritakan ke telefon baharu. |
+| `gallery.slides[1].alt` | Screenshot 2: the sign-in screen with a country code, a phone number field and a link to the privacy policy | Tangkapan skrin 2: skrin Sahkan Telefon, dengan kod negara, ruangan Nombor Telefon, pautan Dasar Privasi dan butang Hantar Kod |
+| `gallery.slides[2].title` | One code, then you are in | Satu kod sahaja |
+| `gallery.slides[2].body` | Type the six digits from the message. If it does not arrive, you can ask for another. | Taip enam digit daripada mesej itu, kemudian Sahkan. Jika kod tidak tiba, anda boleh minta satu lagi. |
+| `gallery.slides[2].alt` | Screenshot 3: the sign-in screen waiting for a six-digit code, with a resend option counting down | Tangkapan skrin 3: skrin log masuk menunggu kod 6 digit, dengan pilihan hantar semula kod yang sedang mengira detik |
+| `gallery.slides[3].title` | Choose where to start | Pilih tempat bermula |
+| `gallery.slides[3].body` | Seven life stages in all — childhood, school, career, romance, family, reflections and wishes. Finished ones are marked, and you can reread them whenever you like. | Tujuh peringkat kehidupan semuanya: Kanak-kanak, Persekolahan, Kerjaya, Percintaan, Keluarga, Renungan dan Harapan. Yang sudah selesai ditandakan, dan boleh dibaca semula bila-bila masa. |
+| `gallery.slides[3].alt` | Screenshot 4: the list of life stages, with Childhood marked complete and a button to read its story | Tangkapan skrin 4: senarai peringkat kehidupan dengan bar kemajuan, Kanak-kanak ditandakan Selesai dan butang Lihat Cerita |
+| `gallery.slides[4].title` | Hold the button and talk | Tekan untuk bercakap |
+| `gallery.slides[4].body` | One gentle question at a time. Hold the large button while you speak, or switch to the keyboard whenever you prefer. | Satu soalan lembut pada satu masa. Tekan dan tahan butang besar itu semasa anda bercakap, atau tukar ke papan kekunci bila-bila masa anda mahu. |
+| `gallery.slides[4].alt` | Screenshot 5: a question in the conversation view, above a large hold-to-talk microphone button | Tangkapan skrin 5: satu soalan dalam paparan perbualan peringkat Persekolahan, di atas butang mikrofon besar Tekan untuk bercakap |
+| `gallery.slides[5].title` | Your memory, written out | Kenangan anda, ditulis |
+| `gallery.slides[5].body` | Your words become a story you can read, have read aloud, add photographs to, and change until it sounds like you. | Kata-kata anda menjadi cerita yang boleh anda baca, dengar dengan Baca Kuat, tambah gambar, dan ubah sampai bunyinya seperti anda sendiri. |
+| `gallery.slides[5].alt` | Screenshot 6: a finished story in prose, with buttons to add a photo, play it aloud and share it | Tangkapan skrin 6: cerita siap dalam bentuk Prosa, dengan butang Tambah Foto, Main Auto, Baca Kuat dan Kongsi |
+| `gallery.slides[6].title` | A card worth sending | Kad yang layak dihantar |
+| `gallery.slides[6].body` | Each story becomes a card for WhatsApp, WeChat, Facebook or Instagram — or saved straight to your photos. | Setiap cerita menjadi sekeping kad untuk WhatsApp, WeChat, Facebook atau Instagram, atau disimpan terus ke galeri foto anda. |
+| `gallery.slides[6].alt` | Screenshot 7: a finished story laid out as a card, above sharing options | Tangkapan skrin 7: cerita siap disusun sebagai kad, di atas pilihan berkongsi dan butang Simpan ke Galeri |
+| `gallery.slides[7].title` | Printed, if you want it | Cetak, jika anda mahu |
+| `gallery.slides[7].body` | Pick the stories, choose a card size and how many, and have them printed and posted to you. | Pilih kad cerita, pilih saiz dan kuantiti. Harga setiap saiz ditunjukkan dahulu, kemudian cetakan dihantar kepada anda. |
+| `gallery.slides[7].alt` | Screenshot 8: the first step of the print order, choosing cards, a size and a quantity | Tangkapan skrin 8: langkah pertama Pesanan Cetakan, memilih kad cerita, tiga saiz kad dengan harganya dan kuantiti |
+| `gallery.slides[8].title` | Your account, in your hands | Akaun di tangan anda |
+| `gallery.slides[8].body` | See how you signed in, withdraw AI sharing at any time, sign out, or delete your account and everything in it. | Lihat cara anda log masuk, tarik balik kebenaran AI pada bila-bila masa, log keluar, atau padam akaun anda dan segala isinya. |
+| `gallery.slides[8].alt` | Screenshot 9: the account screen, with data-sharing controls, sign out and delete account | Tangkapan skrin 9: skrin Akaun Saya, dengan status Pemprosesan AI, Tarik balik kebenaran AI, Log keluar dan Padam akaun |
+| `gallery.slides[9].title` | Language and privacy | Bahasa dan privasi |
+| `gallery.slides[9].body` | Four languages to choose from, the policies a tap away, and a clear view of whether AI processing is on. | Empat bahasa untuk dipilih, dasar privasi dan sokongan sejauh satu ketikan, dan status Pemprosesan AI dinyatakan dengan jelas. |
+| `gallery.slides[9].alt` | Screenshot 10: the settings screen, showing four language choices and the data-sharing status | Tangkapan skrin 10: skrin Tetapan, memaparkan empat pilihan bahasa, pautan privasi dan sokongan, serta status Pemprosesan AI |
 | `gallery.counter` | {current} of {total} | {current} daripada {total} |
 | `example.eyebrow` | A story worth sharing | Cerita yang layak dikongsi |
 | `example.heading` | The things only you remember | Perkara yang hanya anda ingat |
@@ -344,7 +368,7 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 
 ## Tamil (`ta`)
 
-151 strings: 140 interface copy, 11 sample-story prose.
+163 strings: 152 interface copy, 11 sample-story prose.
 
 ### Sample story prose — read for tone
 
@@ -382,7 +406,7 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `hero.lead` | Speak a memory, answer a few gentle questions, and turn it into a story to keep and share with the people you love. | ஒரு நினைவைச் சொல்லுங்கள், சில மென்மையான கேள்விகளுக்குப் பதில் சொல்லுங்கள் — அது நீங்கள் நேசிப்பவர்களுடன் பகிர்ந்து பாதுகாக்கும் ஒரு கதையாக மாறும். |
 | `hero.seeHow` | See how it works ↓ | எப்படி வேலை செய்கிறது என்று பாருங்கள் ↓ |
 | `hero.availableIn` | Available in English · 中文 · Bahasa Melayu · தமிழ் | English · 中文 · Bahasa Melayu · தமிழ் ஆகிய மொழிகளில் கிடைக்கிறது |
-| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | புகைப்படங்கள், கடிதங்கள், படிக்கும் கண்ணாடி வைத்திருக்கும் ஒரு மேசைக்கு அருகில், மாலைச் சூரியன் மறைவதைப் பார்த்திருக்கும் ஒரு முதிய தம்பதியரின் ஓவியக் காட்சி. |
+| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | கயிற்றால் கட்டிய கடிதங்களும் சில பழைய புகைப்படங்களும் அருகில் இருக்க, ஒரு பெஞ்சில் அமர்ந்து ஏரியின் மேல் சூரியன் மறைவதைப் பார்த்திருக்கும் ஒரு முதிய தம்பதியரின் நீர்வண்ண ஓவியக் காட்சி. |
 | `hero.chipEyebrow` | Life stage | வாழ்க்கைப் பகுதி |
 | `hero.chipValue` | Childhood | குழந்தை |
 | `store.appStoreAlt` | Download LifePoem on the App Store | App Store இல் LifePoem ஐப் பதிவிறக்குங்கள் |
@@ -416,27 +440,39 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `pace.features[4].body` | Questions arrive one at a time. Stop and come back whenever you want. | கேள்விகள் ஒவ்வொன்றாக வரும். எப்போது வேண்டுமானாலும் நிறுத்திவிட்டு, பிறகு திரும்பி வரலாம். |
 | `gallery.eyebrow` | Inside the app | செயலிக்குள் |
 | `gallery.heading` | See it before you download | பதிவிறக்கும் முன்பே பார்த்துக்கொள்ளுங்கள் |
-| `gallery.note` | Six screens from the app. Use the buttons or your arrow keys to move through them. | செயலியிலிருந்து ஆறு திரைகள். பொத்தான்களையோ அம்புக்குறி விசைகளையோ பயன்படுத்தி ஒவ்வொன்றாகப் பாருங்கள். |
+| `gallery.note` | {count} screens from the app. Use the buttons or your arrow keys to move through them. | செயலியிலிருந்து {count} திரைகள். பொத்தான்களையோ அம்புக்குறி விசைகளையோ பயன்படுத்தி ஒவ்வொன்றாகப் பாருங்கள். |
 | `gallery.previous` | ← Previous | ← முந்தையது |
 | `gallery.next` | Next → | அடுத்தது → |
 | `gallery.slides[0].title` | A gentle start | மென்மையான தொடக்கம் |
-| `gallery.slides[0].body` | A calm welcome and a single large button—no rush, no clutter—before the conversation begins. | உரையாடல் தொடங்கும் முன், ஓர் அமைதியான வரவேற்பும் ஒரே ஒரு பெரிய பொத்தானும் — அவசரமும் இல்லை, நெரிசலும் இல்லை. |
-| `gallery.slides[0].alt` | Screenshot 1: the LifePoem welcome screen, with the app logo and a Start Chat button | திரைக்காட்சி 1: செயலியின் சின்னமும் உரையாடலைத் தொடங்கும் பொத்தானும் கொண்ட LifePoem வரவேற்புத் திரை |
-| `gallery.slides[1].title` | Life stages | வாழ்க்கைப் பகுதிகள் |
-| `gallery.slides[1].body` | Seven life stages to choose from: childhood, school, career, romance, family, reflections and wishes. Tap one to begin. | தேர்ந்தெடுக்க ஏழு வாழ்க்கைப் பகுதிகள்: குழந்தை, பள்ளி, தொழில், காதல், குடும்பம், சிந்தனைகள், விருப்பங்கள். ஒன்றைத் தொட்டுத் தொடங்குங்கள். |
-| `gallery.slides[1].alt` | Screenshot 2: the list of seven life stages, with Childhood marked complete | திரைக்காட்சி 2: ஏழு வாழ்க்கைப் பகுதிகளின் பட்டியல்; “குழந்தை” முடிந்ததாகக் குறிக்கப்பட்டுள்ளது |
-| `gallery.slides[2].title` | Chat that listens | கேட்டுக்கொள்ளும் உரையாடல் |
-| `gallery.slides[2].body` | Speak or type; the app asks one warm question at a time so memories surface naturally. | பேசுங்கள் அல்லது எழுதுங்கள்; செயலி ஒரு நேரத்தில் ஓர் அன்பான கேள்வியைக் கேட்கும், நினைவுகள் தாமாகவே மேலெழும். |
-| `gallery.slides[2].alt` | Screenshot 3: a gentle follow-up question in the conversation view, above a hold-to-talk button | திரைக்காட்சி 3: உரையாடல் திரையில் ஒரு மென்மையான தொடர் கேள்வி; அதற்குக் கீழே “பேச அமுக்கவும்” பொத்தான் |
-| `gallery.slides[3].title` | Your memory, written out | உங்கள் நினைவு, எழுத்தில் |
-| `gallery.slides[3].body` | The conversation becomes a written story in prose, diary or letter form. Read it on screen or have it read aloud. | உரையாடல், உரைநடை அல்லது நாட்குறிப்பு அல்லது கடிதம் வடிவில் ஓர் எழுத்துக் கதையாக மாறும். திரையில் படியுங்கள், அல்லது “சத்தமாக படி” மூலம் கேளுங்கள். |
-| `gallery.slides[3].alt` | Screenshot 4: a finished written story shown in the app, with Read Aloud and Share buttons | திரைக்காட்சி 4: செயலியில் காட்டப்படும் முடிந்த கதை; அதனுடன் “சத்தமாக படி”, “பகிர்” பொத்தான்கள் |
-| `gallery.slides[4].title` | A card worth sending | அனுப்பத் தகுந்த ஓர் அட்டை |
-| `gallery.slides[4].body` | Each story can become a styled card you send through the apps your family already uses, such as WhatsApp or WeChat. | ஒவ்வொரு கதையையும் அழகான ஓர் அட்டையாக மாற்றி, உங்கள் குடும்பம் ஏற்கெனவே பயன்படுத்தும் WhatsApp, WeChat போன்ற செயலிகள் வழியாக அனுப்பலாம். |
-| `gallery.slides[4].alt` | Screenshot 5: a story card prepared for sharing with family | திரைக்காட்சி 5: குடும்பத்துடன் பகிரத் தயாராக உள்ள ஒரு கதை அட்டை |
-| `gallery.slides[5].title` | Language and privacy, in one place | மொழியும் தனியுரிமையும், ஒரே இடத்தில் |
-| `gallery.slides[5].body` | Choose from four languages, open the policies, and turn AI processing off whenever you want. | அமைப்புகளில் நான்கு மொழிகளில் ஒன்றைத் தேர்ந்தெடுங்கள், தனியுரிமைக் கொள்கையைத் திறந்து படியுங்கள், “தரவு பகிர்வு” பகுதியில் AI செயலாக்கத்தை எப்போது வேண்டுமானாலும் நிறுத்துங்கள். |
-| `gallery.slides[5].alt` | Screenshot 6: the settings screen showing language choices and data-sharing controls | திரைக்காட்சி 6: மொழித் தேர்வுகளையும் தரவு பகிர்வுக் கட்டுப்பாடுகளையும் காட்டும் அமைப்புகள் திரை |
+| `gallery.slides[0].body` | A calm welcome and one large button. Nothing to read first, nothing to set up. | ஓர் அமைதியான வரவேற்பும் ஒரே ஒரு பெரிய பொத்தானும். முதலில் படிக்க ஒன்றுமில்லை, அமைக்க ஒன்றுமில்லை. |
+| `gallery.slides[0].alt` | Screenshot 1: the LifePoem welcome screen, with the app's illustrated logo and a single button to start talking | திரைக்காட்சி 1: செயலியின் வரைபடச் சின்னமும் உரையாடலைத் தொடங்கும் ஒரே ஒரு பொத்தானும் கொண்ட LifePoem வரவேற்புத் திரை |
+| `gallery.slides[1].title` | Sign in with your phone | தொலைப்பேசியில் உள்நுழைவு |
+| `gallery.slides[1].body` | Enter your number and a code arrives by text. Signing in is what brings stories you have already told back onto a new phone. | உங்கள் எண்ணை உள்ளிடுங்கள்; குறுஞ்செய்தியில் ஒரு குறியீடு வரும். நீங்கள் ஏற்கெனவே சொன்ன கதைகளைப் புதிய தொலைப்பேசியில் திரும்பக் கொண்டுவருவது இந்த உள்நுழைவுதான். |
+| `gallery.slides[1].alt` | Screenshot 2: the sign-in screen with a country code, a phone number field and a link to the privacy policy | திரைக்காட்சி 2: நாட்டுக் குறியீடு +65, தொலைப்பேசி எண் புலம், தனியுரிமைக் கொள்கை இணைப்பு, “குறியீடு அனுப்பு” பொத்தான் கொண்ட உள்நுழைவுத் திரை |
+| `gallery.slides[2].title` | One code, then you are in | 6 இலக்க குறியீடு |
+| `gallery.slides[2].body` | Type the six digits from the message. If it does not arrive, you can ask for another. | செய்தியில் வந்த ஆறு இலக்கங்களை உள்ளிடுங்கள். வரவில்லை என்றால், மீண்டும் ஒன்று கேட்கலாம். |
+| `gallery.slides[2].alt` | Screenshot 3: the sign-in screen waiting for a six-digit code, with a resend option counting down | திரைக்காட்சி 3: “பெற்ற 6 இலக்க குறியீடை உள்ளிடுங்கள்” எனக் கேட்கும் திரை; 000000 என்ற புலம், “சரிபார்” பொத்தான், 60 விநாடி எண்ணிக்கையுடன் மீண்டும் அனுப்பும் விருப்பம் |
+| `gallery.slides[3].title` | Choose where to start | வாழ்க்கைப் பகுதிகள் |
+| `gallery.slides[3].body` | Seven life stages in all — childhood, school, career, romance, family, reflections and wishes. Finished ones are marked, and you can reread them whenever you like. | மொத்தம் ஏழு வாழ்க்கைப் பகுதிகள் — குழந்தை, பள்ளி, தொழில், காதல், குடும்பம், சிந்தனைகள், விருப்பங்கள். முடிந்தவை குறிக்கப்படும்; எப்போது வேண்டுமானாலும் திரும்பப் படிக்கலாம். |
+| `gallery.slides[3].alt` | Screenshot 4: the list of life stages, with Childhood marked complete and a button to read its story | திரைக்காட்சி 4: “உங்கள் வாழ்க்கைக் கவிதை” திரை; முன்னேற்றப் பட்டி, “குழந்தை” முடிந்ததாகக் குறிக்கப்பட்டு அதன் கதையைப் படிக்கும் பொத்தான், அதற்குக் கீழே பள்ளி, தொழில், காதல், குடும்பம், சிந்தனைகள் பகுதிகள் |
+| `gallery.slides[4].title` | Hold the button and talk | பேச அமுக்கவும் |
+| `gallery.slides[4].body` | One gentle question at a time. Hold the large button while you speak, or switch to the keyboard whenever you prefer. | ஒரு நேரத்தில் ஓர் அன்பான கேள்வி. பேசும்போது பெரிய பொத்தானை அமுக்கிப் பிடியுங்கள், விரும்பினால் எப்போதும் விசைப்பலகைக்கு மாறலாம். |
+| `gallery.slides[4].alt` | Screenshot 5: a question in the conversation view, above a large hold-to-talk microphone button | திரைக்காட்சி 5: பள்ளிப் பகுதியின் உரையாடல்; வரைபட உதவியாளர் ஒரு கேள்வி கேட்கிறது, கீழே “பேச அமுக்கவும்” என்ற குறிப்புடன் பெரிய மைக்ரோபோன் பொத்தான், அதனுடன் விசைப்பலகை மற்றும் வரலாற்றை அழிக்கும் பொத்தான்கள் |
+| `gallery.slides[5].title` | Your memory, written out | உங்கள் நினைவு, எழுத்தில் |
+| `gallery.slides[5].body` | Your words become a story you can read, have read aloud, add photographs to, and change until it sounds like you. | உங்கள் சொற்கள், படிக்கக்கூடிய ஒரு கதையாக மாறும். “சத்தமாக படி” மூலம் கேளுங்கள், படங்கள் சேருங்கள், உங்கள் குரல் போலவே ஒலிக்கும் வரை திருத்துங்கள். |
+| `gallery.slides[5].alt` | Screenshot 6: a finished story in prose, with buttons to add a photo, play it aloud and share it | திரைக்காட்சி 6: “உங்கள் கதை · உரைநடை”, பகுதி 1 · குழந்தை; “படம் சேர் (0/2)”, திருத்தக்கூடிய கதை உரை, “தானியங்கி இயக்கு”, “சத்தமாக படி”, “பகிர்” பொத்தான்கள் |
+| `gallery.slides[6].title` | A card worth sending | அனுப்பத் தகுந்த அட்டை |
+| `gallery.slides[6].body` | Each story becomes a card for WhatsApp, WeChat, Facebook or Instagram — or saved straight to your photos. | ஒவ்வொரு கதையும் ஓர் அட்டையாக மாறும் — WhatsApp, WeChat, Facebook அல்லது Instagram வழியாக அனுப்பலாம், அல்லது நேராக உங்கள் படங்களில் சேமிக்கலாம். |
+| `gallery.slides[6].alt` | Screenshot 7: a finished story laid out as a card, above sharing options | திரைக்காட்சி 7: இருண்ட பின்னணியில் கதையைத் தாங்கிய கிரீம் நிற அட்டை; கீழே WhatsApp, Facebook, Instagram, WeChat பகிர்வு விருப்பங்கள், “கைலரியில் சேமி”, “கதை அட்டையை அச்சிடு” |
+| `gallery.slides[7].title` | Printed, if you want it | அச்சிட்ட கதை அட்டைகள் |
+| `gallery.slides[7].body` | Pick the stories, choose a card size and how many, and have them printed and posted to you. | கதை அட்டைகளைத் தேர்ந்தெடுங்கள், அட்டை அளவையும் எண்ணிக்கையையும் தேர்வு செய்யுங்கள். விலைகள் சிங்கப்பூர் டாலரில் காட்டப்படும்; அச்சிட்டு உங்களுக்கு அனுப்பப்படும். |
+| `gallery.slides[7].alt` | Screenshot 8: the first step of the print order, choosing cards, a size and a quantity | திரைக்காட்சி 8: “அச்சு ஆர்டர்” முதல் படி (1/4) — அச்சிட வேண்டிய கதை அட்டைகளைத் தேர்ந்தெடுக்கும் பட்டியல், சிங்கப்பூர் டாலர் விலைகளுடன் மூன்று அட்டை அளவுகள், எண்ணிக்கை மாற்றி, “அடுத்து” பொத்தான் |
+| `gallery.slides[8].title` | Your account, in your hands | கணக்கு உங்கள் கையில் |
+| `gallery.slides[8].body` | See how you signed in, withdraw AI sharing at any time, sign out, or delete your account and everything in it. | எப்படி உள்நுழைந்தீர்கள் என்பதைப் பாருங்கள். AI பகிர்வை எப்போது வேண்டுமானாலும் திரும்பப் பெறலாம், வெளியேறலாம், அல்லது கணக்கையும் அதிலுள்ள அனைத்தையும் நீக்கலாம். |
+| `gallery.slides[8].alt` | Screenshot 9: the account screen, with data-sharing controls, sign out and delete account | திரைக்காட்சி 9: “என் கணக்கு” திரை; “உள்நுழைந்தவர்” வரிசையில் விவரம் மறைக்கப்பட்டுள்ளது, தனியுரிமைக் கொள்கை, சேவை நிபந்தனைகள், எங்களைத் தொடர்புகொள்க இணைப்புகள், “AI செயலாக்கம் (OpenAI) இயக்கப்பட்டது”, “AI பகிர்வை திரும்பப்பெறு”, “வெளியேறு”, “கணக்கை நீக்கு” |
+| `gallery.slides[9].title` | Language and privacy | மொழியும் தனியுரிமையும் |
+| `gallery.slides[9].body` | Four languages to choose from, the policies a tap away, and a clear view of whether AI processing is on. | நான்கு மொழிகளில் ஒன்றைத் தேர்ந்தெடுங்கள், கொள்கைகளை ஒரு தொடலில் திறந்து படியுங்கள். AI செயலாக்கம் இயக்கத்தில் உள்ளதா என்பதையும் இந்தத் திரை தெளிவாகக் காட்டுகிறது. |
+| `gallery.slides[9].alt` | Screenshot 10: the settings screen, showing four language choices and the data-sharing status | திரைக்காட்சி 10: “அமைப்புகள்” திரை; 中文, English, Bahasa Melayu, தமிழ் என்ற மொழிப் பட்டியல், தனியுரிமை மற்றும் ஆதரவு இணைப்புகள், “AI செயலாக்கம் (OpenAI) முடக்கப்பட்டது” என்ற நிலை, பதிப்பு 1.2.0 (1) |
 | `gallery.counter` | {current} of {total} | {total} இல் {current} |
 | `example.eyebrow` | A story worth sharing | பகிரத் தகுந்த ஒரு கதை |
 | `example.heading` | The things only you remember | உங்களுக்கு மட்டுமே நினைவிருக்கும் சங்கதிகள் |

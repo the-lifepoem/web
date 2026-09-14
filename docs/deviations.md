@@ -13,55 +13,69 @@ The design's voice and rhythm are preserved; only untrue words moved.
 | --- | --- | --- | --- |
 | `howItWorks.steps[1].aside` | "One question at a time. Answer what you like, **skip what you don't**." | "One question at a time, and you answer in your own words. Nothing is timed." | There is no skip-question control anywhere in the app's conversation. The only "Skip" string in the app dismisses a text-input dialog on the story screen. |
 | `howItWorks.steps[2].aside`, `pace.offlineBody` | "Stories stay on your device and **sync when you are back online**." | "…sync to your account once you **sign in** and reconnect." | Cloud sync only runs for a signed-in account. Guest sessions fall back to local-only storage and never sync. |
-| `gallery.slides[5]` | "Set it up the way you like — **reading size, read-aloud and language** all sit in one place." | "Language and privacy, in one place — choose from four languages, open the policies, and turn AI processing off whenever you want." | The app's Settings screen contains language, privacy links and AI-sharing controls only. Reading size is an A/A+/A++ chip inside the conversation and story views, and there is no read-aloud setting at all. Screenshot 6 visibly shows the real screen, so the prototype's caption contradicted the picture beside it. |
-| `gallery.slides[1].body` | "Seven **chapters**… childhood, school, career, **love**, family, reflections and wishes" | "Seven **life stages**… childhood, school, career, **romance**, family, reflections and wishes" | The app's own term is "life stage" and the fourth stage is named Romance. Recorded in `CONTEXT.md` so it cannot drift back. |
+| `gallery.slides` — settings screen | "Set it up the way you like — **reading size, read-aloud and language** all sit in one place." | "Language and privacy, in one place — choose from four languages, open the policies, and turn AI processing off whenever you want." | The app's Settings screen contains language, privacy links and AI-sharing controls only. Reading size is an A/A+/A++ chip inside the conversation and story views, and there is no read-aloud setting at all. Screenshot 6 visibly shows the real screen, so the prototype's caption contradicted the picture beside it. |
+| `gallery.slides` — life stages | "Seven **chapters**… childhood, school, career, **love**, family, reflections and wishes" | "Seven **life stages**… childhood, school, career, **romance**, family, reflections and wishes" | The app's own term is "life stage" and the fourth stage is named Romance. Recorded in `CONTEXT.md` so it cannot drift back. |
 
 The same vocabulary correction applies to `hero.chipEyebrow` ("Chapter" →
 "Life stage") and `example.stage` ("Chapter: Childhood" → "Life stage:
 Childhood"). Each locale uses the app's own translated term for these, taken
 from the app's string table rather than translated afresh.
 
-## Screenshot captions are a verified merge
+## Screenshot captions
 
 The prototype's handoff notes state its captions were provisional because the
-screenshot files were not supplied with the brief, and require them to be
-checked against the real images. They were. All six images were examined.
+screenshot files were not supplied with the brief, and require them to be checked
+against the real images. They were, twice.
 
-| Slide | Real screen | Title | Body |
-| --- | --- | --- | --- |
-| 1 | Welcome screen | Previously shipped | Rewritten — the old body promised a "typing animation"; the screen shows a single large button |
-| 2 | Life-stage list | Previously shipped | Prototype body, corrected for vocabulary |
-| 3 | Conversation with hold-to-talk | Previously shipped | Previously shipped, verbatim |
-| 4 | Finished story, prose | Prototype | Prototype |
-| 5 | Story card with share targets | Prototype | Prototype |
-| 6 | Settings | Rewritten | Rewritten — see the table above |
+**First set (six English captures).** All six were examined and the captions
+merged from two sources — the previously shipped set was accurate for the
+welcome screen, the life-stage list and the conversation; the prototype's was
+accurate for the finished story and the share card; the settings caption was
+rewritten because the prototype promised reading-size and read-aloud controls
+that screen does not contain.
 
-**All six `alt` strings were rewritten**, in every locale. The previous ones were
-vague ("LifePoem app — welcome or home") where alt text has to say what the
-screen actually shows; they now name the screen and its controls.
+**Second set (ten Chinese captures, current).** The six were replaced by ten
+new screens. Every caption and every `alt` string was rewritten from scratch
+against the new images, in all four locales, and the gallery now covers six
+capabilities the site previously said nothing about: phone sign-in, account
+management, print-on-demand ordering, photo attachment to a story, progress
+across the life stages, and editing a finished story.
 
-The prototype's slide order assumed no welcome-screen slide and treated the
-single conversation screenshot as two separate screens, so its slides 1–3 could
-not ship against the real files.
+| Slide | File | Screen |
+| --- | --- | --- |
+| 1 | `1.webp` | Welcome |
+| 2 | `2.webp` | Sign in — phone number |
+| 3 | `3.webp` | Sign in — verification code |
+| 4 | `4.webp` | Life stage list |
+| 5 | `7.webp` | Conversation |
+| 6 | `5.webp` | Finished story |
+| 7 | `6.webp` | Story card |
+| 8 | `9.webp` | Print order |
+| 9 | `8.webp` | Account |
+| 10 | `10.webp` | Settings |
 
-## Hero image
+**The order is not the filename order.** The captures arrived with the finished
+story and the share card ahead of the conversation that produces them, which
+reads backwards to somebody deciding whether to download. `SCREENSHOT_PATHS`
+sequences them as a walkthrough instead.
 
-The prototype specifies a 4:5 portrait visual in a framed card, and states as a
-rule that no text sits inside an image. The available artwork is a 1488×719
-landscape banner with the headline, tagline and language list painted into it.
+**One image was edited before publishing.** The account screen rendered a
+signed-in phone number, `+65 8123 4567`. It is the app's own placeholder, but it
+is a validly-formed Singapore mobile number in a live allocated range, so
+publishing it on a marketing page could send calls to a stranger and reads as
+leaked user data. The number is blurred; the redacted master is
+`design-assets/screenshot-8-redacted.png`.
 
-**Resolved better than the agreed compromise.** The plan was a centre crop,
-accepting that the baked-in text would be cut mid-sentence and would read English
-on every locale. On inspection the left third of the artwork — an elderly couple
-on a bench watching the sunset — carries no text at all. The crop takes that
-region instead, so the framed 4:5 slot is filled with a locale-neutral image and
-the headline above it is real translatable HTML, exactly as the prototype
-intended.
+**Two captions are deliberately weaker than the screen might suggest**, because
+the screens do not support the stronger claim:
 
-Side effect: 1.74 MB PNG → 93 KiB WebP, as the largest-contentful-paint element.
-The original moved to `design-assets/hero-source.png` — kept as the master, but
-out of `public/` so it is no longer deployed. `design-assets/README.md` records
-the crop values for regenerating both derived assets.
+- The life-stage list shows six of the seven stages; the seventh is below the
+  fold. The caption says seven exist without implying all seven are visible.
+- The settings screen shows AI processing as disabled and, in that state, offers
+  no control to change it — the revoke row only renders when consent is granted.
+  So "withdraw AI sharing at any time" sits on the account slide, which does
+  show that control, and the settings caption claims only a clear view of the
+  status.
 
 ## The support form's result type differs from the spec
 
