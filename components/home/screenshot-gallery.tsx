@@ -1,15 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
 
 import type { Dictionary } from "../../lib/i18n/dictionary";
 import { interpolate } from "../../lib/i18n/interpolate";
 import { SCREENSHOT_PATHS, SCREENSHOT_RATIO } from "../../lib/screenshots";
-
-/** Deliberate travel, so an unsteady hand does not change slides by accident. */
-const SWIPE_MIN_DISTANCE = 48;
-const SWIPE_MAX_DURATION = 300;
+import { useCarousel } from "./use-carousel";
 
 type ScreenshotGalleryProps = {
   gallery: Dictionary["gallery"];
@@ -18,60 +14,14 @@ type ScreenshotGalleryProps = {
 
 export function ScreenshotGallery({ gallery, a11y }: ScreenshotGalleryProps) {
   const count = SCREENSHOT_PATHS.length;
-  const [index, setIndex] = useState(0);
-  const [animate, setAnimate] = useState(true);
-  const touch = useRef<{ x: number; y: number; at: number } | null>(null);
-
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const apply = () => setAnimate(!query.matches);
-    apply();
-    query.addEventListener("change", apply);
-    return () => query.removeEventListener("change", apply);
-  }, []);
-
-  const go = useCallback((next: number) => setIndex(((next % count) + count) % count), [count]);
-
-  const onKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === "ArrowLeft") go(index - 1);
-    else if (event.key === "ArrowRight") go(index + 1);
-    else if (event.key === "Home") go(0);
-    else if (event.key === "End") go(count - 1);
-    else return;
-    event.preventDefault();
-  };
-
-  const onTouchStart = (event: React.TouchEvent) => {
-    const point = event.touches[0];
-    touch.current = { x: point.clientX, y: point.clientY, at: Date.now() };
-  };
-
-  const onTouchEnd = (event: React.TouchEvent) => {
-    const start = touch.current;
-    touch.current = null;
-    if (!start) return;
-
-    const point = event.changedTouches[0];
-    const dx = point.clientX - start.x;
-    const dy = point.clientY - start.y;
-
-    // Ignore anything that reads as vertical scrolling rather than a swipe.
-    if (Math.abs(dx) < SWIPE_MIN_DISTANCE) return;
-    if (Math.abs(dx) <= Math.abs(dy)) return;
-    if (Date.now() - start.at > SWIPE_MAX_DURATION) return;
-
-    go(dx < 0 ? index + 1 : index - 1);
-  };
+  const { index, go, animate, controls } = useCarousel(count);
 
   return (
     <div className="rounded-frame border border-edge bg-parchment p-[clamp(18px,3vw,34px)]">
       <div
         role="region"
         aria-label={a11y.galleryRegion}
-        tabIndex={0}
-        onKeyDown={onKeyDown}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
+        {...controls}
         className="overflow-hidden"
       >
         <div

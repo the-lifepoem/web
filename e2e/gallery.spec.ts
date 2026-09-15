@@ -69,7 +69,11 @@ test.describe("screenshot gallery", () => {
   });
 
   test("the position is announced politely", async ({ page }) => {
-    await expect(page.locator('[aria-live="polite"]')).toContainText(`Screen 1 of ${SLIDE_COUNT}`);
+    // Scoped to this section: the hero carousel has a live region of its own,
+    // which announces the life stage on show.
+    await expect(page.locator('#inside-the-app [aria-live="polite"]')).toContainText(
+      `Screen 1 of ${SLIDE_COUNT}`,
+    );
   });
 });
 

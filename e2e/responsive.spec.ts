@@ -37,11 +37,14 @@ test.describe("touch target floors", () => {
   test("the download buttons and gallery controls clear their minimums", async ({ page }) => {
     await page.goto("/en");
 
-    // 44px is the floor everywhere; the gallery dots are the tightest case.
-    for (const dot of await page.getByRole("button", { name: /^Show screen/ }).all()) {
-      const box = await dot.boundingBox();
-      expect(box?.height ?? 0).toBeGreaterThanOrEqual(44);
-      expect(box?.width ?? 0).toBeGreaterThanOrEqual(44);
+    // 44px is the floor everywhere; the dots are the tightest case, in the hero
+    // carousel as well as the gallery.
+    for (const pattern of [/^Show screen/, /^Show the/]) {
+      for (const dot of await page.getByRole("button", { name: pattern }).all()) {
+        const box = await dot.boundingBox();
+        expect(box?.height ?? 0).toBeGreaterThanOrEqual(44);
+        expect(box?.width ?? 0).toBeGreaterThanOrEqual(44);
+      }
     }
 
     for (const name of ["Previous screenshot", "Next screenshot"]) {
