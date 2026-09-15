@@ -31,9 +31,31 @@
     "lead": "Ceritakan satu kenangan, jawab beberapa soalan yang lembut, dan jadikannya sebuah cerita untuk disimpan dan dikongsi dengan orang yang anda sayang.",
     "seeHow": "Lihat caranya ↓",
     "availableIn": "Tersedia dalam English · 中文 · Bahasa Melayu · தமிழ்",
-    "imageAlt": "Lukisan cat air sepasang warga emas duduk di atas bangku, memandang matahari terbenam di atas tasik, dengan seikat surat yang diikat dan beberapa gambar lama di sebelah mereka.",
-    "chipEyebrow": "Peringkat kehidupan",
-    "chipValue": "Kanak-kanak"
+    "chipEyebrow": "Peringkat kehidupan"
+  },
+  "stages": {
+    "eyebrow": "Tujuh peringkat kehidupan",
+    "heading": "Satu kehidupan, dalam tujuh peringkat",
+    "lead": "LifePoem bertanya mengikut urutan — satu peringkat, satu perbualan, satu cerita. Tiada masa yang dikira, dan anda boleh berhenti selepas mana-mana satu.",
+    "imageAlt": "Ilustrasi sebatang denai berliku yang melalui tujuh adegan kecil: sebuah perahu kertas, sebuah buku yang terbuka, sebuah beg kerja, dua cawan teh yang diletakkan bersebelahan, sebuah rumah di sisi pokok, sebuah tanglung yang menyala, dan sebuah kapal terbang kertas yang naik ke langit.",
+    "artAlts": [
+      "Lukisan cat air seorang kanak-kanak mencangkung di tepi anak sungai ketika matahari terbenam, dilihat dari belakang, sedang melepaskan sebuah perahu kertas ke atas air, dengan sebuah rumah kayu berpanggung antara pokok-pokok kelapa di kejauhan.",
+      "Lukisan cat air sebuah buku latihan yang terbuka dan sebuah beg kulit di atas meja sekolah kayu di sisi tingkap berbidai, dengan sebalang pensel dan sebuah papan hitam di belakangnya, dalam cahaya pagi.",
+      "Lukisan cat air sebuah beg kerja kulit yang lusuh dan sebuah basikal bersandar pada dinding rumah kedai pada awal pagi, dengan sebuah jalan yang sunyi dan bumbung-bumbung berjubin di kejauhan.",
+      "Lukisan cat air dua cawan teh yang diletakkan bersebelahan di atas meja bulat kecil antara dua buah kerusi rotan di beranda, dengan bunga-bunga yang sedang berkembang berdekatan dan matahari terbenam di sebalik pepohonan.",
+      "Lukisan cat air sebuah rumah kayu di bawah sebatang pokok rendang pada lewat petang, dengan pakaian tersidai, sepasang kasut kecil di tangga, dan sebuah keluarga duduk bersama di beranda.",
+      "Lukisan cat air sebuah pelita yang menyala dan beberapa gambar lama terbentang di atas meja kecil pada waktu senja, dengan sebuah kerusi rotan kosong di sebelahnya dan matahari turun di atas air.",
+      "Lukisan cat air seorang kanak-kanak berdiri di pinggir air pada waktu pagi, dilihat dari belakang, memerhatikan sebuah kapal terbang kertas naik ke langit yang luas di atas laut."
+    ],
+    "items": [
+      "Kanak-kanak",
+      "Persekolahan",
+      "Kerjaya",
+      "Percintaan",
+      "Keluarga",
+      "Renungan",
+      "Harapan"
+    ]
   },
   "store": {
     "appStoreAlt": "Muat turun LifePoem di App Store",
@@ -264,6 +286,8 @@
     "screenshotSlides": "Slaid tangkapan skrin",
     "showScreen": "Tunjukkan skrin {current} daripada {total}",
     "galleryPosition": "Skrin {current} daripada {total}",
+    "stageRegion": "Lukisan peringkat kehidupan",
+    "showStage": "Tunjukkan peringkat kehidupan {stage}",
     "chooseLanguage": "Pilih bahasa",
     "skipToContent": "Langkau ke kandungan"
   }

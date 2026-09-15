@@ -31,9 +31,31 @@
     "lead": "Speak a memory, answer a few gentle questions, and turn it into a story to keep and share with the people you love.",
     "seeHow": "See how it works ↓",
     "availableIn": "Available in English · 中文 · Bahasa Melayu · தமிழ்",
-    "imageAlt": "A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby.",
-    "chipEyebrow": "Life stage",
-    "chipValue": "Childhood"
+    "chipEyebrow": "Life stage"
+  },
+  "stages": {
+    "eyebrow": "The seven life stages",
+    "heading": "A life, in seven stages",
+    "lead": "LifePoem asks about them in order — one stage, one conversation, one story. Nothing is timed, and you can stop after any of them.",
+    "imageAlt": "An illustration of a path winding through seven small scenes: a paper boat, an open book, a work bag, two cups of tea set down together, a house beside a tree, a lit lantern, and a paper plane rising into the sky.",
+    "artAlts": [
+      "A watercolour painting of a small child crouched at the edge of a stream at sunset, seen from behind, setting a folded paper boat onto the water, with a wooden house on stilts among the palms beyond.",
+      "A watercolour painting of an open exercise book and a leather satchel on a wooden school desk beside a shuttered window, with a jar of pencils and a blackboard behind, in morning light.",
+      "A watercolour painting of a worn leather work bag and a bicycle leaning against a shophouse wall at first light, with a quiet street of tiled roofs beyond.",
+      "A watercolour painting of two cups of tea set down together on a small round table between two rattan chairs on a veranda, with flowers in bloom nearby and the sun setting behind the trees.",
+      "A watercolour painting of a timber house under a broad tree in the late afternoon, with washing on a line, small shoes left at the steps, and a family sitting together on the veranda.",
+      "A watercolour painting of a lit lantern and a scatter of old photographs on a small table at dusk, with an empty rattan chair beside them and the sun going down over the water.",
+      "A watercolour painting of a child standing at the water's edge in the morning, seen from behind, watching a paper plane climb into a wide sky above the sea."
+    ],
+    "items": [
+      "Childhood",
+      "School",
+      "Career",
+      "Romance",
+      "Family",
+      "Reflections",
+      "Wishes"
+    ]
   },
   "store": {
     "appStoreAlt": "Download LifePoem on the App Store",
@@ -264,6 +286,8 @@
     "screenshotSlides": "Screenshot slides",
     "showScreen": "Show screen {current} of {total}",
     "galleryPosition": "Screen {current} of {total}",
+    "stageRegion": "Life stage paintings",
+    "showStage": "Show the {stage} life stage",
     "chooseLanguage": "Choose a language",
     "skipToContent": "Skip to content"
   }

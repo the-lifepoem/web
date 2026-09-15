@@ -25,6 +25,7 @@
 | SectionHeading | Eyebrow + h2 + optional lead; used by five sections | `components/site/section-heading.tsx` |
 | HowItWorksStep | Numbered medallion, title, copy, quiet aside line | no separate file — inline `<li>` inside `components/home/how-it-works.tsx` |
 | FeatureList | A single bordered list, not five cards — keeps the "made for your pace" section calm | no separate file — merged into `components/home/pace-section.tsx` |
+| StageCarousel | The hero artwork: seven life-stage paintings, swipe and arrow/Home/End keys, one named indicator per stage, an aria-live chip naming the stage on show, no autoplay, transition gated on reduced motion | `components/home/stage-carousel.tsx`, inside `components/home/hero-section.tsx` |
 | ScreenshotGallery | Local slide state, wrap-around prev/next, indicator buttons, arrow/Home/End keys, aria-live counter, no autoplay, transition gated on reduced motion | `components/home/screenshot-gallery.tsx`, wrapped by `components/home/gallery-section.tsx` |
 | ExampleStoryCard | Prose / diary / letter tabs, permanently labelled "Illustrative example" | `components/home/example-story.tsx` |
 | DownloadSection + Footer | Dark ink panel, then the paper footer with legal, support and language access | `components/home/download-section.tsx` and `components/site/site-footer.tsx` |
@@ -50,9 +51,18 @@ Notes from reading the files:
   counter, reduced-motion gating via `matchMedia`, and touch swipe with
   `SWIPE_MIN_DISTANCE = 48` / `SWIPE_MAX_DURATION = 300` ("Deliberate travel, so
   an unsteady hand does not change slides by accident").
-- **`SCREENSHOT_PATHS` is exported** from `screenshot-gallery.tsx` and is
+- **Both carousels share `useCarousel`.** `components/home/use-carousel.ts` holds
+  the slide state, the wrap-around, the key handling, the swipe thresholds above
+  and the reduced-motion gate; `ScreenshotGallery` and `StageCarousel` differ
+  only in what they draw. The gesture an older reader learns in the hero is the
+  same gesture in the gallery, by construction rather than by discipline.
+- **`SCREENSHOT_PATHS` is exported** from `lib/screenshots.ts` and is
   index-aligned with the caption array in every locale file, as the prototype
-  requires.
+  requires. `LIFE_STAGE_ART` in `lib/life-stages.ts` is the same arrangement for
+  the hero: index-aligned with `stages.items` and `stages.artAlts`. Both lists
+  sit outside their `"use client"` components because a value exported from a
+  client module reaches a server component as a module-reference proxy, so
+  reading `.length` there yields nothing.
 
 ## Proposed beyond the current implementation
 
@@ -117,7 +127,8 @@ invented app screen. Status below is from listing
 | Asset | Status | Size |
 | --- | --- | --- |
 | `design-assets/hero-source.png` | the master, moved out of `public/` so it is not deployed | 1,822,440 bytes |
-| `public/lifepoem/hero-portrait.webp` | present and used — this is what the hero renders | 93,338 bytes |
+| `design-assets/hero-portrait.webp` | present, no longer served — the hero renders the stage paintings now, and this is the style reference they were generated against | 93,338 bytes |
+| `public/lifepoem/stages/1–7.webp` | seven generated life-stage paintings, 820x1025 — this is what the hero renders | 1.6 MB total |
 | `public/lifepoem/app-store-badge.svg` | present — official Apple artwork | 10,804 bytes |
 | `public/lifepoem/google-play-badge.svg` | present — **hand-drawn imitation, not Google's artwork** | 744 bytes |
 | `public/lifepoem/og-image.webp` | present and used in `app/[locale]/layout.tsx` metadata | 142,468 bytes |
@@ -128,12 +139,18 @@ invented app screen. Status below is from listing
 
 The prototype asked for the brand artwork shown at 4:5 in the framed
 presentation. The 1.8 MB original now lives at `design-assets/hero-source.png`,
-outside the deployed directory.
-`components/home/hero-section.tsx` renders `/lifepoem/hero-portrait.webp` at
-`width={820} height={1025}` — a 4:5 crop. Its comment records the reason for the
-crop: it "deliberately takes the left of the original, which carries no baked-in
-text, so the hero reads the same in every locale and the headline above is real
-translatable HTML." Treat `hero.png` as the source original, not a live asset.
+outside the deployed directory, and its 4:5 crop at
+`design-assets/hero-portrait.webp`. Treat both as source originals, not live
+assets.
+
+What the frame holds now is `components/home/stage-carousel.tsx`: seven
+paintings at the same 820x1025 box, one per life stage, listed in
+`lib/life-stages.ts`. They were generated against the old crop as a style
+reference and carry no baked-in text, for the reason that crop was chosen in the
+first place — one file has to read correctly in all four locales while the
+headline beside it stays translatable HTML. `design-assets/README.md` records the
+brief and how the served WebP are derived; `docs/deviations.md` records why the
+hero became a carousel at all.
 
 ### Screenshots
 

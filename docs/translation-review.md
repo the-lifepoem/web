@@ -13,7 +13,7 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 
 ## Chinese (Simplified) (`zh`)
 
-164 strings: 153 interface copy, 11 sample-story prose.
+182 strings: 171 interface copy, 11 sample-story prose.
 
 ### Sample story prose — read for tone
 
@@ -51,9 +51,25 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `hero.lead` | Speak a memory, answer a few gentle questions, and turn it into a story to keep and share with the people you love. | 说出一段回忆，回答几个温和的问题，就能变成一篇故事，自己收着，也分享给您牵挂的人。 |
 | `hero.seeHow` | See how it works ↓ | 看看怎么用 ↓ |
 | `hero.availableIn` | Available in English · 中文 · Bahasa Melayu · தமிழ் | 支持 English · 中文 · Bahasa Melayu · தமிழ் |
-| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | 一幅水彩画：一对老夫妻坐在长椅上，看着夕阳落在湖上，旁边放着一捆扎好的信件和几张旧照片。 |
 | `hero.chipEyebrow` | Life stage | 人生阶段 |
-| `hero.chipValue` | Childhood | 童年 |
+| `stages.eyebrow` | The seven life stages | 七个人生阶段 |
+| `stages.heading` | A life, in seven stages | 一生，分成七个阶段 |
+| `stages.lead` | LifePoem asks about them in order — one stage, one conversation, one story. Nothing is timed, and you can stop after any of them. | LifePoem 会按顺序一个一个地问 —— 一个阶段，一次聊天，一篇故事。不计时，讲完哪一个都可以停下来。 |
+| `stages.imageAlt` | An illustration of a path winding through seven small scenes: a paper boat, an open book, a work bag, two cups of tea set down together, a house beside a tree, a lit lantern, and a paper plane rising into the sky. | 一幅插画：一条小路蜿蜒穿过七个小场景 —— 一只纸船、一本摊开的书、一个公文包、并排放着的两杯茶、树旁的一间屋子、一盏点亮的灯笼，还有一架飞向天空的纸飞机。 |
+| `stages.artAlts[0]` | A watercolour painting of a small child crouched at the edge of a stream at sunset, seen from behind, setting a folded paper boat onto the water, with a wooden house on stilts among the palms beyond. | 一幅水彩画：夕阳下，一个孩子蹲在溪边，背对着我们，把一只折好的纸船放到水面上；远处椰树间有一间高脚木屋。 |
+| `stages.artAlts[1]` | A watercolour painting of an open exercise book and a leather satchel on a wooden school desk beside a shuttered window, with a jar of pencils and a blackboard behind, in morning light. | 一幅水彩画：百叶窗边的木课桌上摊着一本练习簿，旁边放着一个皮书包和一罐铅笔，身后是一块黑板，晨光洒在桌面上。 |
+| `stages.artAlts[2]` | A watercolour painting of a worn leather work bag and a bicycle leaning against a shophouse wall at first light, with a quiet street of tiled roofs beyond. | 一幅水彩画：天刚亮，一个用旧了的皮公文包和一辆自行车靠在老店屋的墙边，远处是一条安静的街和一片瓦顶。 |
+| `stages.artAlts[3]` | A watercolour painting of two cups of tea set down together on a small round table between two rattan chairs on a veranda, with flowers in bloom nearby and the sun setting behind the trees. | 一幅水彩画：走廊上两把藤椅之间的小圆桌上，并排放着两杯茶，旁边花开着，太阳正落到树林后面。 |
+| `stages.artAlts[4]` | A watercolour painting of a timber house under a broad tree in the late afternoon, with washing on a line, small shoes left at the steps, and a family sitting together on the veranda. | 一幅水彩画：午后的大树下有一间木屋，晾衣绳上挂着衣裳，台阶上放着一双小鞋子，一家人坐在廊下。 |
+| `stages.artAlts[5]` | A watercolour painting of a lit lantern and a scatter of old photographs on a small table at dusk, with an empty rattan chair beside them and the sun going down over the water. | 一幅水彩画：黄昏时分，小桌上点着一盏油灯，摊着几张旧照片，旁边是一把空着的藤椅，远处夕阳落在水面上。 |
+| `stages.artAlts[6]` | A watercolour painting of a child standing at the water's edge in the morning, seen from behind, watching a paper plane climb into a wide sky above the sea. | 一幅水彩画：清晨，一个孩子站在海边，背对着我们，望着一架纸飞机飞向辽阔的天空。 |
+| `stages.items[0]` | Childhood | 童年 |
+| `stages.items[1]` | School | 求学 |
+| `stages.items[2]` | Career | 工作 |
+| `stages.items[3]` | Romance | 恋爱 |
+| `stages.items[4]` | Family | 家庭 |
+| `stages.items[5]` | Reflections | 人生感悟 |
+| `stages.items[6]` | Wishes | 心愿寄语 |
 | `store.appStoreAlt` | Download LifePoem on the App Store | 在 App Store 下载 LifePoem |
 | `store.playStoreAlt` | Get LifePoem on Google Play | 在 Google Play 获取 LifePoem |
 | `howItWorks.eyebrow` | How it works | 怎么用 |
@@ -186,12 +202,14 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `a11y.screenshotSlides` | Screenshot slides | 截图轮播 |
 | `a11y.showScreen` | Show screen {current} of {total} | 显示第 {current} 个画面，共 {total} 个 |
 | `a11y.galleryPosition` | Screen {current} of {total} | 第 {current} 个画面，共 {total} 个 |
+| `a11y.stageRegion` | Life stage paintings | 人生阶段插画 |
+| `a11y.showStage` | Show the {stage} life stage | 显示「{stage}」这个人生阶段 |
 | `a11y.chooseLanguage` | Choose a language | 选择语言 |
 | `a11y.skipToContent` | Skip to content | 跳到正文 |
 
 ## Bahasa Melayu (`ms`)
 
-163 strings: 152 interface copy, 11 sample-story prose.
+181 strings: 170 interface copy, 11 sample-story prose.
 
 ### Sample story prose — read for tone
 
@@ -229,9 +247,25 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `hero.lead` | Speak a memory, answer a few gentle questions, and turn it into a story to keep and share with the people you love. | Ceritakan satu kenangan, jawab beberapa soalan yang lembut, dan jadikannya sebuah cerita untuk disimpan dan dikongsi dengan orang yang anda sayang. |
 | `hero.seeHow` | See how it works ↓ | Lihat caranya ↓ |
 | `hero.availableIn` | Available in English · 中文 · Bahasa Melayu · தமிழ் | Tersedia dalam English · 中文 · Bahasa Melayu · தமிழ் |
-| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | Lukisan cat air sepasang warga emas duduk di atas bangku, memandang matahari terbenam di atas tasik, dengan seikat surat yang diikat dan beberapa gambar lama di sebelah mereka. |
 | `hero.chipEyebrow` | Life stage | Peringkat kehidupan |
-| `hero.chipValue` | Childhood | Kanak-kanak |
+| `stages.eyebrow` | The seven life stages | Tujuh peringkat kehidupan |
+| `stages.heading` | A life, in seven stages | Satu kehidupan, dalam tujuh peringkat |
+| `stages.lead` | LifePoem asks about them in order — one stage, one conversation, one story. Nothing is timed, and you can stop after any of them. | LifePoem bertanya mengikut urutan — satu peringkat, satu perbualan, satu cerita. Tiada masa yang dikira, dan anda boleh berhenti selepas mana-mana satu. |
+| `stages.imageAlt` | An illustration of a path winding through seven small scenes: a paper boat, an open book, a work bag, two cups of tea set down together, a house beside a tree, a lit lantern, and a paper plane rising into the sky. | Ilustrasi sebatang denai berliku yang melalui tujuh adegan kecil: sebuah perahu kertas, sebuah buku yang terbuka, sebuah beg kerja, dua cawan teh yang diletakkan bersebelahan, sebuah rumah di sisi pokok, sebuah tanglung yang menyala, dan sebuah kapal terbang kertas yang naik ke langit. |
+| `stages.artAlts[0]` | A watercolour painting of a small child crouched at the edge of a stream at sunset, seen from behind, setting a folded paper boat onto the water, with a wooden house on stilts among the palms beyond. | Lukisan cat air seorang kanak-kanak mencangkung di tepi anak sungai ketika matahari terbenam, dilihat dari belakang, sedang melepaskan sebuah perahu kertas ke atas air, dengan sebuah rumah kayu berpanggung antara pokok-pokok kelapa di kejauhan. |
+| `stages.artAlts[1]` | A watercolour painting of an open exercise book and a leather satchel on a wooden school desk beside a shuttered window, with a jar of pencils and a blackboard behind, in morning light. | Lukisan cat air sebuah buku latihan yang terbuka dan sebuah beg kulit di atas meja sekolah kayu di sisi tingkap berbidai, dengan sebalang pensel dan sebuah papan hitam di belakangnya, dalam cahaya pagi. |
+| `stages.artAlts[2]` | A watercolour painting of a worn leather work bag and a bicycle leaning against a shophouse wall at first light, with a quiet street of tiled roofs beyond. | Lukisan cat air sebuah beg kerja kulit yang lusuh dan sebuah basikal bersandar pada dinding rumah kedai pada awal pagi, dengan sebuah jalan yang sunyi dan bumbung-bumbung berjubin di kejauhan. |
+| `stages.artAlts[3]` | A watercolour painting of two cups of tea set down together on a small round table between two rattan chairs on a veranda, with flowers in bloom nearby and the sun setting behind the trees. | Lukisan cat air dua cawan teh yang diletakkan bersebelahan di atas meja bulat kecil antara dua buah kerusi rotan di beranda, dengan bunga-bunga yang sedang berkembang berdekatan dan matahari terbenam di sebalik pepohonan. |
+| `stages.artAlts[4]` | A watercolour painting of a timber house under a broad tree in the late afternoon, with washing on a line, small shoes left at the steps, and a family sitting together on the veranda. | Lukisan cat air sebuah rumah kayu di bawah sebatang pokok rendang pada lewat petang, dengan pakaian tersidai, sepasang kasut kecil di tangga, dan sebuah keluarga duduk bersama di beranda. |
+| `stages.artAlts[5]` | A watercolour painting of a lit lantern and a scatter of old photographs on a small table at dusk, with an empty rattan chair beside them and the sun going down over the water. | Lukisan cat air sebuah pelita yang menyala dan beberapa gambar lama terbentang di atas meja kecil pada waktu senja, dengan sebuah kerusi rotan kosong di sebelahnya dan matahari turun di atas air. |
+| `stages.artAlts[6]` | A watercolour painting of a child standing at the water's edge in the morning, seen from behind, watching a paper plane climb into a wide sky above the sea. | Lukisan cat air seorang kanak-kanak berdiri di pinggir air pada waktu pagi, dilihat dari belakang, memerhatikan sebuah kapal terbang kertas naik ke langit yang luas di atas laut. |
+| `stages.items[0]` | Childhood | Kanak-kanak |
+| `stages.items[1]` | School | Persekolahan |
+| `stages.items[2]` | Career | Kerjaya |
+| `stages.items[3]` | Romance | Percintaan |
+| `stages.items[4]` | Family | Keluarga |
+| `stages.items[5]` | Reflections | Renungan |
+| `stages.items[6]` | Wishes | Harapan |
 | `store.appStoreAlt` | Download LifePoem on the App Store | Muat turun LifePoem di App Store |
 | `store.playStoreAlt` | Get LifePoem on Google Play | Dapatkan LifePoem di Google Play |
 | `howItWorks.eyebrow` | How it works | Cara ia berfungsi |
@@ -363,12 +397,14 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `a11y.screenshotSlides` | Screenshot slides | Slaid tangkapan skrin |
 | `a11y.showScreen` | Show screen {current} of {total} | Tunjukkan skrin {current} daripada {total} |
 | `a11y.galleryPosition` | Screen {current} of {total} | Skrin {current} daripada {total} |
+| `a11y.stageRegion` | Life stage paintings | Lukisan peringkat kehidupan |
+| `a11y.showStage` | Show the {stage} life stage | Tunjukkan peringkat kehidupan {stage} |
 | `a11y.chooseLanguage` | Choose a language | Pilih bahasa |
 | `a11y.skipToContent` | Skip to content | Langkau ke kandungan |
 
 ## Tamil (`ta`)
 
-163 strings: 152 interface copy, 11 sample-story prose.
+181 strings: 170 interface copy, 11 sample-story prose.
 
 ### Sample story prose — read for tone
 
@@ -406,9 +442,25 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `hero.lead` | Speak a memory, answer a few gentle questions, and turn it into a story to keep and share with the people you love. | ஒரு நினைவைச் சொல்லுங்கள், சில மென்மையான கேள்விகளுக்குப் பதில் சொல்லுங்கள் — அது நீங்கள் நேசிப்பவர்களுடன் பகிர்ந்து பாதுகாக்கும் ஒரு கதையாக மாறும். |
 | `hero.seeHow` | See how it works ↓ | எப்படி வேலை செய்கிறது என்று பாருங்கள் ↓ |
 | `hero.availableIn` | Available in English · 中文 · Bahasa Melayu · தமிழ் | English · 中文 · Bahasa Melayu · தமிழ் ஆகிய மொழிகளில் கிடைக்கிறது |
-| `hero.imageAlt` | A watercolour painting of an elderly couple sitting on a bench, watching the sun set over a lake, with a bundle of tied letters and old photographs resting nearby. | கயிற்றால் கட்டிய கடிதங்களும் சில பழைய புகைப்படங்களும் அருகில் இருக்க, ஒரு பெஞ்சில் அமர்ந்து ஏரியின் மேல் சூரியன் மறைவதைப் பார்த்திருக்கும் ஒரு முதிய தம்பதியரின் நீர்வண்ண ஓவியக் காட்சி. |
 | `hero.chipEyebrow` | Life stage | வாழ்க்கைப் பகுதி |
-| `hero.chipValue` | Childhood | குழந்தை |
+| `stages.eyebrow` | The seven life stages | ஏழு வாழ்க்கைப் பகுதிகள் |
+| `stages.heading` | A life, in seven stages | ஒரு வாழ்க்கை, ஏழு பகுதிகளாக |
+| `stages.lead` | LifePoem asks about them in order — one stage, one conversation, one story. Nothing is timed, and you can stop after any of them. | LifePoem அவற்றை வரிசையாகக் கேட்கும் — ஒரு பகுதி, ஒரு உரையாடல், ஒரு கதை. நேரக் கணக்கு இல்லை; எந்தப் பகுதிக்குப் பிறகும் நிறுத்திக்கொள்ளலாம். |
+| `stages.imageAlt` | An illustration of a path winding through seven small scenes: a paper boat, an open book, a work bag, two cups of tea set down together, a house beside a tree, a lit lantern, and a paper plane rising into the sky. | ஏழு சிறிய காட்சிகளைக் கடந்து செல்லும் ஒரு வளைந்த பாதையின் ஓவியம்: ஒரு காகிதப் படகு, திறந்த புத்தகம், ஒரு வேலைப் பை, அருகருகே வைக்கப்பட்ட இரண்டு தேநீர்க் கோப்பைகள், மரத்தின் அருகே ஒரு வீடு, எரியும் ஒரு விளக்கு, மற்றும் வானில் எழும்பும் ஒரு காகித விமானம். |
+| `stages.artAlts[0]` | A watercolour painting of a small child crouched at the edge of a stream at sunset, seen from behind, setting a folded paper boat onto the water, with a wooden house on stilts among the palms beyond. | மாலைச் சூரியன் மறையும் வேளையில், ஓடையின் கரையில் குனிந்தமர்ந்து, மடித்த ஒரு காகிதப் படகை நீரில் விடும் ஒரு குழந்தையின் நீர்வண்ண ஓவியக் காட்சி; தொலைவில் தென்னை மரங்களுக்கு நடுவே ஒரு கால்கள் மேல் எழுப்பப்பட்ட மரவீடு தெரிகிறது. |
+| `stages.artAlts[1]` | A watercolour painting of an open exercise book and a leather satchel on a wooden school desk beside a shuttered window, with a jar of pencils and a blackboard behind, in morning light. | பலகணிச் சாளரத்தின் அருகே உள்ள மரப் பள்ளி மேசையில் திறந்த ஒரு பயிற்சிப் புத்தகமும் ஒரு தோல் பையும், அருகில் பென்சில்கள் நிறைந்த ஒரு ஜாடியும், பின்னால் ஒரு கரும்பலகையும் இருக்க, காலை ஒளி விழும் நீர்வண்ண ஓவியக் காட்சி. |
+| `stages.artAlts[2]` | A watercolour painting of a worn leather work bag and a bicycle leaning against a shophouse wall at first light, with a quiet street of tiled roofs beyond. | அதிகாலை ஒளியில், கடைவீட்டுச் சுவரில் சாய்ந்திருக்கும் ஒரு பழைய தோல் வேலைப் பையும் ஒரு சைக்கிளும், தொலைவில் அமைதியான ஒரு தெருவும் ஓட்டுக் கூரைகளும் தெரியும் நீர்வண்ண ஓவியக் காட்சி. |
+| `stages.artAlts[3]` | A watercolour painting of two cups of tea set down together on a small round table between two rattan chairs on a veranda, with flowers in bloom nearby and the sun setting behind the trees. | திண்ணையில் இரண்டு பிரம்பு நாற்காலிகளுக்கு நடுவே இருக்கும் சிறிய வட்ட மேசையில் அருகருகே வைக்கப்பட்ட இரண்டு தேநீர்க் கோப்பைகள், அருகில் பூத்திருக்கும் மலர்கள், மரங்களுக்குப் பின்னால் மறையும் சூரியன் — இவற்றைக் கொண்ட நீர்வண்ண ஓவியக் காட்சி. |
+| `stages.artAlts[4]` | A watercolour painting of a timber house under a broad tree in the late afternoon, with washing on a line, small shoes left at the steps, and a family sitting together on the veranda. | பிற்பகல் வேளையில் பரந்த ஒரு மரத்தின் கீழ் ஒரு மரவீடு, காயப் போட்ட துணிகள், படிக்கட்டில் விடப்பட்ட ஒரு ஜோடி சிறிய செருப்புகள், திண்ணையில் சேர்ந்து அமர்ந்திருக்கும் ஒரு குடும்பம் — இவற்றைக் கொண்ட நீர்வண்ண ஓவியக் காட்சி. |
+| `stages.artAlts[5]` | A watercolour painting of a lit lantern and a scatter of old photographs on a small table at dusk, with an empty rattan chair beside them and the sun going down over the water. | மாலை மயங்கும் நேரத்தில் சிறிய ஒரு மேசையில் எரியும் விளக்கும், பரப்பி வைத்த பழைய புகைப்படங்களும், அருகில் காலியான ஒரு பிரம்பு நாற்காலியும், நீர்ப்பரப்பின் மேல் மறையும் சூரியனும் கொண்ட நீர்வண்ண ஓவியக் காட்சி. |
+| `stages.artAlts[6]` | A watercolour painting of a child standing at the water's edge in the morning, seen from behind, watching a paper plane climb into a wide sky above the sea. | காலை வேளையில் கடற்கரையில் நின்று, கடலுக்கு மேலே விரிந்த வானில் எழும்பும் ஒரு காகித விமானத்தைப் பார்த்திருக்கும் ஒரு குழந்தையின் நீர்வண்ண ஓவியக் காட்சி; குழந்தை பின்புறமாகத் தெரிகிறது. |
+| `stages.items[0]` | Childhood | குழந்தை |
+| `stages.items[1]` | School | பள்ளி |
+| `stages.items[2]` | Career | தொழில் |
+| `stages.items[3]` | Romance | காதல் |
+| `stages.items[4]` | Family | குடும்பம் |
+| `stages.items[5]` | Reflections | சிந்தனைகள் |
+| `stages.items[6]` | Wishes | விருப்பங்கள் |
 | `store.appStoreAlt` | Download LifePoem on the App Store | App Store இல் LifePoem ஐப் பதிவிறக்குங்கள் |
 | `store.playStoreAlt` | Get LifePoem on Google Play | Google Play இல் LifePoem ஐப் பெறுங்கள் |
 | `howItWorks.eyebrow` | How it works | எப்படி வேலை செய்கிறது |
@@ -540,6 +592,8 @@ Regenerate with `node scripts/write-translation-review.mjs`.
 | `a11y.screenshotSlides` | Screenshot slides | திரைக்காட்சிப் படங்கள் |
 | `a11y.showScreen` | Show screen {current} of {total} | {total} இல் {current} ஆவது திரையைக் காட்டு |
 | `a11y.galleryPosition` | Screen {current} of {total} | {total} இல் {current} ஆவது திரை |
+| `a11y.stageRegion` | Life stage paintings | வாழ்க்கைப் பகுதிகளின் ஓவியங்கள் |
+| `a11y.showStage` | Show the {stage} life stage | {stage} பகுதியைக் காட்டு |
 | `a11y.chooseLanguage` | Choose a language | ஒரு மொழியைத் தேர்ந்தெடுங்கள் |
 | `a11y.skipToContent` | Skip to content | உள்ளடக்கத்திற்குச் செல் |
 

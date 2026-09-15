@@ -77,6 +77,55 @@ the screens do not support the stronger claim:
   show that control, and the settings caption claims only a clear view of the
   status.
 
+## The hero artwork is seven paintings, not one
+
+The prototype's hero holds a single framed portrait with a chip beside it reading
+"Life stage · Childhood" — a fixed label on a fixed picture, and the picture is
+of an elderly couple at sunset, which is not childhood. The label was decoration.
+
+What ships is a carousel: one painting per life stage, in the order the app opens
+them, with the chip naming the stage on show. The label is now true by
+construction, and the seven stages are introduced at the top of the page rather
+than only listed at the bottom of it.
+
+- **The paintings were generated, and the brief is recorded.** One prompt per
+  stage over a shared style block — soft watercolour and ink wash, sepia and
+  antique gold, gold-leaf sprigs over the corners, a Southeast Asian mid-century
+  setting, full bleed — with the previous hero portrait attached to every prompt
+  as the style reference, so the set reads as a continuation of the brand
+  artwork rather than a replacement for it. Each scene reuses the motif that
+  stage already has in `stages.imageAlt`: the paper boat, the open book, the work
+  bag, two cups of tea, the house beside a tree, the lit lantern, the paper
+  plane. Masters and the full brief are in `design-assets/stages/`.
+- **The briefs forbade text and legible faces.** Text for the reason the old
+  hero was cropped the way it was — one file serves four locales, and baked-in
+  writing would break three of them. Faces because a painting that reads as a
+  particular person reads as a photograph of a storyteller, which these are not.
+- **The scenes are Southeast Asian.** The app is used in Singapore and Malaysia
+  in four languages; the first generation came back with a European child at an
+  English stream, and was redone.
+- **No previous/next buttons here, unlike the gallery.** Swipe, arrow keys,
+  Home/End and one indicator per stage. The hero column already carries both
+  store badges and the primary link, and the gallery further down the page is
+  where the full control set belongs.
+- **The indicators are named, not numbered.** Each is labelled with its stage —
+  "Show the Romance life stage" — rather than "slide 4 of 7". Seven dots is more
+  than a listener can hold, and the names are already the site's vocabulary.
+- **The chip is an `aria-live` region.** For a screen-reader user the stage name
+  is the only thing that changes when the picture does.
+- **`useCarousel` is shared with the gallery.** Slide state, wrap-around,
+  arrow/Home/End, the 48px/300ms swipe threshold and the reduced-motion gate now
+  live in `components/home/use-carousel.ts`. The two carousels have to feel
+  identical: an audience that learns the gesture once should not meet a second
+  set of rules half a page later.
+- **Two dictionary keys were deleted.** `hero.imageAlt` described a picture that
+  is no longer rendered, and `hero.chipValue` was the hard-coded word
+  "Childhood"; the chip reads `stages.items[index]` now. The seven descriptions
+  live in `stages.artAlts`, index-aligned with the names and the files.
+- **`hero-portrait.webp` moved to `design-assets/`.** Nothing serves it any
+  more. It is kept because it is the style reference the seven were generated
+  against.
+
 ## The support form's result type differs from the spec
 
 The spec inlined the result union as `{ ok: true } | { fieldErrors } |
@@ -160,8 +209,19 @@ The Mobile, locale-adaptation, Design system and Handoff tabs became
 
 ## Beyond what the spec asked for
 
-Two small additions, recorded because they were not requested:
+Three small additions, recorded because they were not requested:
 
+- **The seven life stages close the hero.** The prototype names the stages only
+  in passing, inside a screenshot caption. They are now shown in full — an
+  illustration and the seven names in the order the app opens them — in the
+  lower half of the hero section, and again as the hero artwork itself (see
+  "The hero artwork is seven paintings, not one" above). The names are not translated here: they are
+  lifted from the app's own string table (`stage_1`…`stage_7` in
+  `lib/app_strings.dart`) in all four locales, so the site cannot disagree with
+  the screen a storyteller sees. The copy says the app asks about the stages
+  *in order* because that is what it does — future stages are locked until the
+  one before has a story, so "start anywhere" would have been the same class of
+  falsehood as the four corrected above.
 - **Security headers** in `vercel.json` — HSTS, `X-Frame-Options: DENY`,
   `X-Content-Type-Options: nosniff` and a referrer policy. The spec asked only
   for Vercel configuration; writing that file without them seemed worse than

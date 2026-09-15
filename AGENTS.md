@@ -16,8 +16,9 @@ This is absolute for colours, shadows, radii, spacing and touch targets — ther
 is a token for every value the design uses, and a raw one is always a mistake.
 If the design needs a size the scale does not have, **add a named token for it**
 rather than writing `text-[22px]` at the call site; that is how `--text-wordmark`
-and `--text-control` came to exist. The one sanctioned inline style is the
-gallery's transform, which has to be computed per slide.
+and `--text-control` came to exist. The only sanctioned inline styles are the two
+carousels' transforms — the hero's life-stage paintings and the app gallery —
+which have to be computed per slide.
 
 Rules that are not negotiable, because the audience is older adults:
 
@@ -31,8 +32,9 @@ Rules that are not negotiable, because the audience is older adults:
   not remove it on any element, badge links and gallery indicators included.
 - **Status is never colour alone.** Error and success states pair the colour with
   an icon and wording.
-- Motion respects `prefers-reduced-motion`; the gallery checks it directly
-  because its transition is applied inline.
+- Motion respects `prefers-reduced-motion`; both carousels check it directly, in
+  `components/home/use-carousel.ts`, because their transitions are applied
+  inline.
 
 # Content rules
 
@@ -40,9 +42,11 @@ Rules that are not negotiable, because the audience is older adults:
   key paths, array lengths and `{placeholders}` exactly — run
   `npm run check:locales`. The `Dictionary` type is derived from the English
   file, so a missing key is a build error, not a runtime surprise.
-- The screenshot image list in `components/home/screenshot-gallery.tsx` and the
-  `gallery.slides` array in every locale file are **index-aligned**. Changing one
-  without the others mislabels a screen.
+- The screenshot image list in `lib/screenshots.ts` and the `gallery.slides`
+  array in every locale file are **index-aligned**. Changing one without the
+  others mislabels a screen. The same holds for `LIFE_STAGE_ART` in
+  `lib/life-stages.ts`, which is index-aligned with both `stages.items` and
+  `stages.artAlts`: slide *n* is that stage's painting, name and description.
 - Use the vocabulary in `CONTEXT.md`. In particular: **life stage**, not
   "chapter"; the fourth stage is **Romance**, not "love"; reading size is a
   control inside the app's conversation and story views, not a setting; and

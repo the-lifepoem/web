@@ -18,7 +18,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <SiteShell locale={locale} dict={dict} onHome>
       <main id="main-content">
-        <HeroSection hero={dict.hero} store={dict.store} />
+        <HeroSection hero={dict.hero} stages={dict.stages} store={dict.store} a11y={dict.a11y} />
         <HowItWorks content={dict.howItWorks} />
         <PaceSection content={dict.pace} />
         <GallerySection gallery={dict.gallery} a11y={dict.a11y} />
