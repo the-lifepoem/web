@@ -11,8 +11,6 @@ type LocaleMenuProps = {
   locale: Locale;
   localeNames: Record<Locale, string>;
   labels: { languageWith: string; chooseLanguage: string; switchKeepsPage: string };
-  /** The footer renders the same choice as a flat row of pills. */
-  variant?: "menu" | "pills";
 };
 
 /** Fonts must follow the script of the label, not the page. */
@@ -30,21 +28,13 @@ function stripLocale(pathname: string): string {
   return pathname === "/" ? "" : pathname;
 }
 
-export function LocaleMenu({ locale, localeNames, labels, variant = "menu" }: LocaleMenuProps) {
+export function LocaleMenu({ locale, localeNames, labels }: LocaleMenuProps) {
   const router = useRouter();
   const pathname = usePathname();
   const menuId = useId();
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLUListElement>(null);
-
-  /**
-   * Path only. The query string and fragment are added by the click handler from
-   * window.location, which avoids useSearchParams — that hook would opt every
-   * page carrying this header out of static rendering. Copying the link address
-   * without clicking yields the path, which is the right fallback.
-   */
-  const hrefFor = useCallback((next: Locale) => `/${next}${stripLocale(pathname ?? "/")}`, [pathname]);
 
   const choose = useCallback(
     (next: Locale) => (event: React.MouseEvent) => {
@@ -92,27 +82,6 @@ export function LocaleMenu({ locale, localeNames, labels, variant = "menu" }: Lo
     };
   }, [open]);
 
-  if (variant === "pills") {
-    return (
-      <ul className="flex flex-wrap gap-2" aria-label={labels.chooseLanguage}>
-        {locales.map((option) => (
-          <li key={option}>
-            <a
-              href={hrefFor(option)}
-              onClick={choose(option)}
-              aria-current={option === locale ? "true" : undefined}
-              className={`inline-flex min-h-tap items-center rounded-control border border-edge px-4 text-row no-underline ${
-                option === locale ? "bg-tint font-semibold text-ink" : "bg-card text-ink"
-              } ${SCRIPT_FONT[option] ?? ""}`}
-            >
-              {localeNames[option]}
-            </a>
-          </li>
-        ))}
-      </ul>
-    );
-  }
-
   return (
     <div className="relative">
       <button
@@ -122,9 +91,9 @@ export function LocaleMenu({ locale, localeNames, labels, variant = "menu" }: Lo
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
-        className="flex min-h-tap items-center gap-2 rounded-control border border-edge bg-card px-4 py-2.5 text-small font-semibold text-ink"
+        className="flex min-h-tap-xl items-center justify-center gap-2 rounded-control border border-edge bg-card px-5 py-3 text-body font-semibold text-ink"
       >
-        <span aria-hidden="true" className="text-small">
+        <span aria-hidden="true">
           🌐
         </span>
         <span>{interpolate(labels.languageWith, { name: localeNames[locale] })}</span>

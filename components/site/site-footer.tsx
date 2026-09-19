@@ -3,7 +3,6 @@ import Link from "next/link";
 import type { Dictionary } from "../../lib/i18n/dictionary";
 import type { Locale } from "../../lib/i18n/config";
 import { interpolate } from "../../lib/i18n/interpolate";
-import { LocaleMenu } from "./locale-menu";
 
 type SiteFooterProps = {
   locale: Locale;
@@ -32,6 +31,7 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
             <span className="font-display-zh text-lockup-sm text-muted">{dict.brand.chinese}</span>
           </p>
           <p className="max-w-[34ch] text-row text-muted">{dict.footer.blurb}</p>
+          <p className="text-small text-muted">{dict.footer.supportLine}</p>
         </div>
 
         <nav aria-label={dict.footer.legalNav} className="flex flex-col gap-2">
@@ -46,21 +46,6 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
             ))}
           </ul>
         </nav>
-
-        <div className="flex flex-col gap-3">
-          <h2 className="text-label font-semibold uppercase text-brand">{dict.footer.languageHeading}</h2>
-          <LocaleMenu
-            locale={locale}
-            localeNames={dict.localeNames}
-            labels={{
-              languageWith: dict.nav.languageWith,
-              chooseLanguage: dict.a11y.chooseLanguage,
-              switchKeepsPage: dict.nav.switchKeepsPage,
-            }}
-            variant="pills"
-          />
-          <p className="text-small text-muted">{dict.footer.supportLine}</p>
-        </div>
       </div>
 
       <div className="mx-auto mt-10 max-w-section border-t border-edge pt-6">

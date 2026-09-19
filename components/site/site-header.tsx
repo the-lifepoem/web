@@ -59,7 +59,7 @@ export function SiteHeader({ locale, nav, brand, localeNames, chooseLanguage, on
           </div>
           <Link
             href={downloadHref}
-            className="ml-1 inline-flex min-h-tap items-center rounded-control bg-brand px-5 py-3 text-body font-semibold text-white no-underline hover:bg-brand-hover"
+            className="ml-1 inline-flex min-h-tap-xl items-center justify-center rounded-control border border-transparent bg-brand px-5 py-3 text-body font-semibold text-white no-underline hover:bg-brand-hover"
           >
             {nav.download}
           </Link>
@@ -115,7 +115,7 @@ export function SiteHeader({ locale, nav, brand, localeNames, chooseLanguage, on
             <Link
               href={downloadHref}
               onClick={() => setMenuOpen(false)}
-              className="flex min-h-tap-lg items-center justify-center rounded-control bg-brand px-5 text-body font-semibold text-white no-underline"
+              className="flex min-h-tap-xl items-center justify-center rounded-control border border-transparent bg-brand px-5 py-3 text-body font-semibold text-white no-underline"
             >
               {nav.download}
             </Link>
